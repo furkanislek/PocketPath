@@ -1,4 +1,4 @@
-import 'package:cost_management/services/auth.dart';
+import 'package:cost_management/services/services.dart';
 import 'package:get/get.dart';
 
 class AddTargetController extends GetxController {

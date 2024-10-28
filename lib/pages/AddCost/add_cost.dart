@@ -17,6 +17,7 @@ class AddCost extends StatelessWidget {
     [Icons.fastfood, 'Food'],
     [Icons.school, 'School'],
     [Icons.airplanemode_active, 'Holiday'],
+    [Icons.computer_outlined, 'Electronic'],
     [Icons.help_outline_sharp, 'Other'],
   ];
 
@@ -25,6 +26,7 @@ class AddCost extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF2F2F2),
       appBar: AppBar(
+        backgroundColor: const Color(0xFFF2F2F2),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -34,54 +36,48 @@ class AddCost extends StatelessWidget {
             );
           },
         ),
-        title: const Text('Set New Plan'),
+        title: const Text('Add Cost'),
         centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {},
-          ),
-        ],
       ),
       bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
-          child: ElevatedButton(
-            onPressed: () {
-              final name = controller.selectedTypeName.value;
-              final category =
-                  controller.selectedCategory.value; // Use the reactive value
-              final budgetString = controller.selectedBudget.value;
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
+        child: ElevatedButton(
+          onPressed: () {
+            final name = controller.selectedTypeName.value;
+            final category = controller.selectedCategory.value;
+            final budgetString = controller.selectedBudget.value;
 
-              if (name.isNotEmpty &&
-                  category.isNotEmpty &&
-                  budgetString.isNotEmpty) {
-                final budget = double.tryParse(budgetString);
-                if (budget != null) {
-                  controller.saveExpense();
-                } else {
-                  Get.snackbar('Error', 'Invalid budget amount');
-                }
+            if (name.isNotEmpty &&
+                category.isNotEmpty &&
+                budgetString.isNotEmpty) {
+              final budget = double.tryParse(budgetString);
+              if (budget != null) {
+                controller.saveExpense();
               } else {
-                Get.snackbar('Error', 'Please fill all fields');
+                Get.snackbar('Error', 'Invalid budget amount');
               }
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF8256DF),
-              padding:
-                  const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            } else {
+              Get.snackbar('Error', 'Please fill all fields');
+            }
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF0996C7),
+            padding:
+                const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
             ),
-            child: const Text(
-              'Save',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          child: const Text(
+            'Save',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
-          )),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -93,49 +89,148 @@ class AddCost extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 8),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Obx(() => DropdownButton<String>(
-                      isExpanded: true,
-                      hint: const Text("Select an active target"),
-                      value: controller.selectedTargetId.value.isEmpty
-                          ? null
-                          : controller.selectedTargetId.value,
-                      items: controller.activeTargets.map((target) {
-                        return DropdownMenuItem<String>(
-                          alignment: Alignment.center,
-                          value: target["id"],
-                          child: Text(target["name"]),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        final selectedTarget = controller.activeTargets
-                            .firstWhere((target) => target["id"] == newValue);
-                        controller.setSelectedTarget(
-                          selectedTarget["id"],
-                          selectedTarget["name"],
-                        );
-                      },
-                    )),
-              ),
-              const SizedBox(height: 24),
-              const Text(
-                'Name',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(height: 8),
-              TextField(
-                onChanged: (value) {
-                  controller.selectedTypeName(value);
-                },
-                decoration: InputDecoration(
-                  hintText: 'Type Name',
-                  border: OutlineInputBorder(
+              GestureDetector(
+                onTap: () => _showTargetSelectionBottomSheet(context),
+                child: Container(
+                  height: 70,
+                  width: double.infinity,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(8.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 2,
+                        blurRadius: 5,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
                   ),
+                  child: Obx(() {
+                    return Text(
+                      controller.selectedTargetId.value.isEmpty
+                          ? "Select an active target"
+                          : controller.activeTargets.firstWhere((target) =>
+                              target["id"] ==
+                              controller.selectedTargetId.value)["name"],
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: controller.selectedTargetId.value.isEmpty
+                              ? const Color.fromARGB(220, 168, 163, 161)
+                              : const Color(0xFF282625)),
+                    );
+                  }),
                 ),
               ),
-              const SizedBox(height: 24),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Cost Type",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 5.0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 10),
+                        TextField(
+                          onChanged: (value) {
+                            controller.selectedTypeName(value);
+                          },
+                          textInputAction: TextInputAction.done,
+                          keyboardType: TextInputType.text,
+                          maxLength: 25,
+                          decoration: InputDecoration(
+                            hintText: "Type Name.",
+                            hintStyle: TextStyle(
+                                color: controller.selectedTypeName.value.isEmpty
+                                    ? const Color.fromARGB(220, 168, 163, 161)
+                                    : const Color(0xFF282625)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Budget Amount",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 10.0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 10),
+                        TextField(
+                          onChanged: (value) {
+                            controller.selectedBudget(value);
+                          },
+                          keyboardType: TextInputType.number,
+                          textInputAction: TextInputAction.done,
+                          decoration: InputDecoration(
+                            suffixIcon: Icon(Icons.attach_money),
+                            hintText: "0",
+                            hintStyle: TextStyle(
+                                color: controller.selectedTypeName.value.isEmpty
+                                    ? const Color.fromARGB(220, 168, 163, 161)
+                                    : const Color(0xFF282625)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
               const Text(
                 'Category',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
@@ -186,62 +281,51 @@ class AddCost extends StatelessWidget {
                   },
                 ),
               ),
-              const SizedBox(height: 24),
-              const Text(
-                'Budget',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(height: 8),
-              TextField(
-                onChanged: (value) {
-                  controller.selectedBudget(value);
-                },
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  hintText: 'Type Amount',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  suffixIcon: const Icon(Icons.attach_money),
-                ),
-              ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: Obx(() => ElevatedButton(
+                    child: Obx(() => OutlinedButton(
                           onPressed: () {
                             controller.toggleSelection(true);
                           },
-                          style: ElevatedButton.styleFrom(
+                          style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
-                            backgroundColor: controller.isExpenseSelected.value
-                                ? Colors.red
-                                : Colors.red[100],
+                            side: BorderSide(
+                              color: controller.isExpenseSelected.value
+                                  ? Colors.red
+                                  : Colors.red[100]!,
+                              width: 2,
+                            ),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text('Expense'),
+                          child: const Text('Expense',
+                              style: TextStyle(color: Colors.red)),
                         )),
                   ),
                   const SizedBox(width: 16),
                   Expanded(
-                    child: Obx(() => ElevatedButton(
+                    child: Obx(() => OutlinedButton(
                           onPressed: () {
                             controller.toggleSelection(false);
                           },
-                          style: ElevatedButton.styleFrom(
+                          style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
-                            backgroundColor: controller.isExpenseSelected.value
-                                ? Colors.green[100]
-                                : Colors.green,
+                            side: BorderSide(
+                              color: controller.isExpenseSelected.value
+                                  ? Colors.green[100]!
+                                  : Colors.green,
+                              width: 2,
+                            ),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text('Income'),
+                          child: const Text('Income',
+                              style: TextStyle(color: Colors.green)),
                         )),
                   ),
                 ],
@@ -251,6 +335,50 @@ class AddCost extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _showTargetSelectionBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (context) {
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Select a Target',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 16),
+              Obx(() {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: controller.activeTargets.length,
+                  itemBuilder: (context, index) {
+                    final target = controller.activeTargets[index];
+                    return ListTile(
+                      title: Text(target['name']),
+                      onTap: () {
+                        controller.setSelectedTarget(
+                            target['id'], target['name']);
+                        Navigator.pop(context);
+                      },
+                    );
+                  },
+                );
+              }),
+            ],
+          ),
+        );
+      },
     );
   }
 }

@@ -14,21 +14,19 @@ class AddTarget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2),
       appBar: AppBar(
         backgroundColor: const Color(0xFFF2F2F2),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => Menu()),
-            );
+                context, MaterialPageRoute(builder: (context) => Menu()));
           },
         ),
         title: const Text('Set New Plan'),
         centerTitle: true,
       ),
+      backgroundColor: Color(0xFFF2F2F2),
       bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
           child: ElevatedButton(

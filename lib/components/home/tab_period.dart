@@ -47,7 +47,7 @@ class TabSelection extends StatelessWidget {
           label,
           style: TextStyle(
             color: tabController.selectedIndex.value == index
-                ? Colors.blue
+                ? Color(0xFF2CBABB)
                 : Colors.grey,
             fontWeight: FontWeight.w500,
           ),

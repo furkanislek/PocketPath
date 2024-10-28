@@ -1,6 +1,6 @@
 import 'package:cost_management/pages/Login/register.dart';
 import 'package:cost_management/pages/home/home.dart';
-import 'package:cost_management/services/auth.dart';
+import 'package:cost_management/services/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

@@ -27,7 +27,7 @@ class Menu extends StatelessWidget {
             (route) => false,
           );
         },
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFF2CBABB),
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),

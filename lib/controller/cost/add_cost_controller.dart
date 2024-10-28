@@ -1,4 +1,5 @@
-import 'package:cost_management/services/auth.dart';
+import 'package:cost_management/controller/target/target_controller.dart';
+import 'package:cost_management/services/services.dart';
 import 'package:get/get.dart';
 
 class AddCostController extends GetxController {
@@ -7,11 +8,12 @@ class AddCostController extends GetxController {
   var selectedTypeName = ''.obs;
   var selectedBudget = ''.obs;
 
-  var activeTargets = <Map<String, dynamic>>[].obs; // Aktif hedefler
-  var selectedTargetId = ''.obs; // Seçilen hedef ID
-  var selectedTargetName = ''.obs; // Seçilen hedef ismi
+  var activeTargets = <Map<String, dynamic>>[].obs;
+  var selectedTargetId = ''.obs;
+  var selectedTargetName = ''.obs;
 
   final Auth authService = Auth();
+  final TargetController controller = Get.put(TargetController());
 
   @override
   void onInit() {
@@ -46,10 +48,13 @@ class AddCostController extends GetxController {
 
   Future<void> saveExpense() async {
     await authService.saveExpense(
-      name: selectedTypeName.value,
-      category: selectedCategory.value,
-      budget: double.parse(selectedBudget.value),
-      isExpense: isExpenseSelected.value,
-    );
+        name: selectedTypeName.value,
+        category: selectedCategory.value,
+        budget: double.parse(selectedBudget.value),
+        isExpense: isExpenseSelected.value,
+        targetId: selectedTargetId.value,
+        targetName: selectedTargetName.value);
+
+    await controller.fetchTargets();
   }
 }
