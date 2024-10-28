@@ -1,4 +1,3 @@
-import 'package:cost_management/controller/formatter.dart';
 import 'package:cost_management/controller/home/budget_controller.dart';
 import 'package:cost_management/controller/target/target_controller.dart';
 import 'package:flutter/material.dart';
@@ -12,17 +11,10 @@ class Budget extends StatelessWidget {
   final TargetController controller = Get.put(TargetController());
   final BudgetController maincontroller = Get.put(BudgetController());
 
-  Future<void> fetchData() async {
-    controller.selectedTargetId.value = maincontroller.selectedTargetId.value;
-    await controller.fetchTargetsById();
-  }
-
-  final formatter = NumberFormat("#,###.00");
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: fetchData(),
+      future: fetchData(), // Fetch data asynchronously
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
@@ -67,11 +59,11 @@ class Budget extends StatelessWidget {
                         (target) =>
                             target['id'] ==
                             maincontroller.selectedTargetId.value,
-                        orElse: () => {},
+                        orElse: () => {}, // Handle empty case
                       );
+
                       if (selectedTarget.isNotEmpty) {
-                        var endDate = selectedTarget['endDate']
-                            .toDate(); // Convert Timestamp to DateTime
+                        var endDate = selectedTarget['endDate'].toDate();
                         var formattedDate =
                             DateFormat('MMM yyyy').format(endDate);
 
@@ -104,10 +96,10 @@ class Budget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Obx(() {
-                              if (controller.list.isNotEmpty) {
-                                var target = controller.list.first;
+                              if (controller.listById.isNotEmpty) {
+                                var target = controller.listById.first;
                                 return Text(
-                                  '\$${formatter.format(target['remainingBudget'])}',
+                                  '₺${target['remainingBudget'].toStringAsFixed(2)}',
                                   style: const TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold),
@@ -131,15 +123,14 @@ class Budget extends StatelessWidget {
                       Column(
                         children: [
                           Obx(() {
-                            double progress = controller.list.isNotEmpty
-                                ? controller.list.first['progress']
+                            double progress = controller.listById.isNotEmpty
+                                ? controller.listById.first['progress']
                                 : 0;
                             return CircularPercentIndicator(
                               radius: 50.0,
                               lineWidth: 8.0,
                               animation: true,
-                              percent: progress.clamp(0.0,
-                                  1.0), // Limit the progress to valid range
+                              percent: progress.clamp(0.0, 1.0),
                               center: Text(
                                 "${(progress > 1 ? 100.00 : progress * 100).toStringAsFixed(0)}%",
                                 style: TextStyle(
@@ -182,6 +173,12 @@ class Budget extends StatelessWidget {
     );
   }
 
+  Future<void> fetchData() async {
+    controller.selectedTargetId.value = maincontroller.selectedTargetId.value;
+    print("controllerselectedTarget : ${controller.selectedTargetId.value}");
+    await controller.fetchTargetsById();
+  }
+
   void showBottomModal(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -198,7 +195,6 @@ class Budget extends StatelessWidget {
             children: [
               Expanded(
                 child: Obx(() {
-                  // Display active targets from maincontroller
                   return ListView.builder(
                     itemCount: maincontroller.activeTargets.length,
                     itemBuilder: (context, index) {
@@ -227,8 +223,7 @@ class Budget extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(target['name']),
-                                  Text(
-                                      'Budget: ₺${Formatter().numberFormatter.format(target['budget'])}')
+                                  Text('Budget: ₺${target['budget']}')
                                 ]),
                           ),
                         ),

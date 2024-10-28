@@ -6,12 +6,12 @@ class TargetController extends GetxController {
   var selectedTargetId = ''.obs;
 
   var list = [].obs;
-  
+  var listById = [].obs;
 
   @override
   void onInit() {
     super.onInit();
-    fetchTargets(); 
+    fetchTargets();
   }
 
   Future<void> fetchTargets() async {
@@ -19,7 +19,6 @@ class TargetController extends GetxController {
       list.clear();
       List<Map<String, dynamic>> targets;
 
-      
       if (selectedTab.value == 0) {
         targets = await Auth().getPassiveTargets();
       } else if (selectedTab.value == 1) {
@@ -53,6 +52,7 @@ class TargetController extends GetxController {
         list.sort(
             (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
       }
+      print("listtttttttttttt : $list");
     } catch (e) {
       print(e.toString());
     }
@@ -60,7 +60,7 @@ class TargetController extends GetxController {
 
   Future<void> fetchTargetsById() async {
     try {
-      list.clear();
+      listById.clear();
       List<Map<String, dynamic>> targets =
           await Auth().getTargetById(selectedTargetId.value);
       List<Map<String, dynamic>> expenses = await Auth().getExpenses();
@@ -76,15 +76,17 @@ class TargetController extends GetxController {
               .fold(0, (prev, amount) => prev + amount);
           double remainingBudget = totalExpense;
 
-          list.add({
+          listById.add({
             'target': target,
             'remainingBudget': remainingBudget,
             'progress': remainingBudget / budget,
           });
         }
 
-        list.sort(
-            (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
+        listById.sort(
+            (a, b) => a['target']['endDate'].compareTo(b['target']['endDate']));
+
+        print("ttttttttttttt : $listById");
       }
     } catch (e) {
       print(e.toString());
