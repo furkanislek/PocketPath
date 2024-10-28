@@ -20,6 +20,8 @@ class CostController extends GetxController {
         fetchDailyCosts();
       } else if (index == 1) {
         fetchsCosts();
+      } else if (index == 2) {
+        fetchYearlyCosts();
       }
     });
 
@@ -35,6 +37,12 @@ class CostController extends GetxController {
 
   Future<void> fetchDailyCosts() async {
     activeCoast.value = await authService.getDailyExpenses(
+      selectedTargetId: budgetController.selectedTargetId.value,
+    );
+  }
+
+  Future<void> fetchYearlyCosts() async {
+    activeCoast.value = await authService.getYearlyExpenses(
       selectedTargetId: budgetController.selectedTargetId.value,
     );
   }

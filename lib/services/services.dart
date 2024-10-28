@@ -65,7 +65,7 @@ class Auth {
     try {
       // Şu anki kullanıcıyı al
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("User Not Found");
+      if (user == null) throw Exception("User Not Found!");
 
       // Veriyi Firestore'a kaydet
       await _firestore
@@ -95,7 +95,7 @@ class Auth {
     try {
       // Şu anki kullanıcıyı al
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("User Not Found");
+      if (user == null) throw Exception("User Not Found!");
 
       // Veriyi Firestore'a kaydet
       await _firestore
@@ -117,7 +117,7 @@ class Auth {
     try {
       // Firestore'dan tüm expenses verilerini çek
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
       QuerySnapshot snapshot = await _firestore
           .collection('users')
           .doc(user.uid)
@@ -152,7 +152,7 @@ class Auth {
   }) async {
     try {
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
 
       // Step 1: Fetch expenses only by targetId
       QuerySnapshot snapshot = await _firestore
@@ -189,7 +189,7 @@ class Auth {
   Future<List<Map<String, dynamic>>> getActiveTargets() async {
     try {
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
 
       DateTime now = DateTime.now();
 
@@ -216,7 +216,7 @@ class Auth {
   Future<List<Map<String, dynamic>>> getPassiveTargets() async {
     try {
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
 
       DateTime now = DateTime.now();
 
@@ -239,7 +239,7 @@ class Auth {
   Future<List<Map<String, dynamic>>> getAllTargets() async {
     try {
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
 
       QuerySnapshot querySnapshot = await _firestore
           .collection('users')
@@ -251,7 +251,6 @@ class Auth {
           .map((doc) => doc.data() as Map<String, dynamic>)
           .toList();
     } catch (e) {
-      print("Hata oluştu: $e");
       return [];
     }
   }
@@ -259,7 +258,7 @@ class Auth {
   Future<List<Map<String, dynamic>>> getTargetById(String targetId) async {
     try {
       User? user = _firebaseAuth.currentUser;
-      if (user == null) throw Exception("Kullanıcı bulunamadı");
+      if (user == null) throw Exception("User Not Found!");
 
       QuerySnapshot querySnapshot = await _firestore
           .collection('users')
@@ -286,7 +285,6 @@ class Auth {
         startDate: startOfMonth,
         nowdate: endOfMonth);
 
-    print("Result : $result");
     return result;
   }
 
@@ -294,12 +292,22 @@ class Auth {
       {required String selectedTargetId}) async {
     DateTime now = DateTime.now();
     DateTime startOfMonth = now.subtract(Duration(days: 1));
-    print("Start : $startOfMonth");
     DateTime endOfMonth = now;
-    print("endOfMonth : $endOfMonth");
+
     return await getExpensesByTargetIdWithDate(
         targetId: selectedTargetId,
         startDate: startOfMonth,
         nowdate: endOfMonth);
+  }
+
+  Future<List<Map<String, dynamic>>> getYearlyExpenses(
+      {required String selectedTargetId}) async {
+    DateTime now = DateTime.now();
+    DateTime startOfYear = DateTime(now.year - 1, now.month, now.day, now.hour,
+        now.minute, now.second, now.millisecond, now.microsecond);
+    DateTime endOfYear = now;
+
+    return await getExpensesByTargetIdWithDate(
+        targetId: selectedTargetId, startDate: startOfYear, nowdate: endOfYear);
   }
 }

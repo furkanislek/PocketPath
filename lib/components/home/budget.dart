@@ -133,7 +133,7 @@ class Budget extends StatelessWidget {
                               percent: progress.clamp(0.0, 1.0),
                               center: Text(
                                 "${(progress > 1 ? 100.00 : progress * 100).toStringAsFixed(0)}%",
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
                                 ),

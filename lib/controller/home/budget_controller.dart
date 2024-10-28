@@ -15,16 +15,11 @@ class BudgetController extends GetxController {
   }
 
   Future<void> loadActiveTargets() async {
-    // Load active targets
     activeTargets.value = await authService.getActiveTargets();
-    print("Active : $activeTargets");
-    // Check if there are active targets and set the last one as selected
     if (activeTargets.isNotEmpty) {
       final lastTarget = activeTargets.first;
-      print("last : $lastTarget");
       setSelectedTarget(lastTarget['id'], lastTarget['name']);
     }
-    print("Selected Target ID : ${selectedTargetId}");
   }
 
   void setSelectedTarget(String targetId, String targetName) {

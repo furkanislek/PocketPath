@@ -127,7 +127,14 @@ class Costs extends StatelessWidget {
                               .format(costs['date'].toDate()),
                           style: const TextStyle(color: Color(0xFF868B88)),
                         ),
-                        Text(costs['isExpense'] ? 'Expense' : 'Income'),
+                        Text(
+                          costs['isExpense'] ? 'Expense' : 'Income',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: costs['isExpense']
+                                  ? const Color(0xFFE12D48)
+                                  : const Color(0xFF55BB7D)),
+                        ),
                       ],
                     ),
                   ),
