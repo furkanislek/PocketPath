@@ -1,3 +1,4 @@
+import 'package:cost_management/controller/formatter.dart';
 import 'package:cost_management/controller/menu/bottom_navigator.dart';
 import 'package:cost_management/controller/target/target_controller.dart';
 import 'package:cost_management/pages/Target/add_target.dart';
@@ -147,7 +148,10 @@ class Targets extends StatelessWidget {
                                                             .spaceBetween,
                                                     children: [
                                                       Text(
-                                                        target['remainingBudget']
+                                                        Formatter()
+                                                            .numberFormatter
+                                                            .format(target[
+                                                                'remainingBudget'])
                                                             .toString(),
                                                         style: TextStyle(
                                                             color:
@@ -160,8 +164,11 @@ class Targets extends StatelessWidget {
                                                             fontSize: 15),
                                                       ),
                                                       Text(
-                                                        target['target']
-                                                                ['budget']
+                                                        Formatter()
+                                                            .numberFormatter
+                                                            .format(
+                                                                target['target']
+                                                                    ['budget'])
                                                             .toString(),
                                                         style: TextStyle(
                                                           color:
@@ -197,10 +204,14 @@ class Targets extends StatelessWidget {
                                                       lineWidth: 8.0,
                                                       animation: true,
                                                       percent: target[
-                                                                  'progress'] >
+                                                                  'progress'] <
                                                               1.0
-                                                          ? 1.0
-                                                          : target['progress'],
+                                                          ? 0.0
+                                                          : target['progress'] >
+                                                                  1.0
+                                                              ? 1.0
+                                                              : target[
+                                                                  'progress'],
                                                       center: Text(
                                                         "${(target['progress'] > 1.0 ? 100.00 : target['progress'] * 100).toStringAsFixed(2)}%",
                                                         style: TextStyle(

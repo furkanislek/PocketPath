@@ -45,6 +45,13 @@ class Costs extends StatelessWidget {
       colorIcon = const Color(0xFF2D47D3);
     }
 
+    DateTime date = DateTime.fromMillisecondsSinceEpoch(
+        costs['timestamp'] * 1000,
+        isUtc: true);
+
+    DateTime userDateTime = date.toLocal();
+    String formattedDate = DateFormat('EEEE, dd MMMM').format(userDateTime);
+
     return Container(
       width: double.infinity,
       height: height / 12,
@@ -123,9 +130,10 @@ class Costs extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          DateFormat('dd MMMM yy hh:mm')
-                              .format(costs['date'].toDate()),
-                          style: const TextStyle(color: Color(0xFF868B88)),
+                          formattedDate,
+                          style: const TextStyle(
+                              color: Color(0xFF868B88),
+                              fontSize: kDefaultFontSize * 0.8),
                         ),
                         Text(
                           costs['isExpense'] ? 'Expense' : 'Income',

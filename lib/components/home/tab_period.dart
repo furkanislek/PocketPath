@@ -1,4 +1,5 @@
 import 'package:cost_management/controller/home/tab_controller.dart';
+import 'package:cost_management/controller/home/cost_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +10,7 @@ class TabSelection extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
     double height = MediaQuery.sizeOf(context).height;
+
     return Obx(() {
       return Container(
         width: double.infinity,
@@ -32,7 +34,19 @@ class TabSelection extends StatelessWidget {
 
   Widget _buildTab(String label, int index) {
     return GestureDetector(
-      onTap: () => tabController.selectTab(index),
+      onTap: () {
+        tabController.selectTab(index);
+
+        // Tab değiştiğinde doğrudan CostController'da ilgili fetch metodunu çağırma
+        CostController costController = Get.find<CostController>();
+        if (index == 0) {
+          costController.fetchDailyCosts();
+        } else if (index == 1) {
+          costController.fetchsCosts();
+        } else if (index == 2) {
+          costController.fetchYearlyCosts();
+        }
+      },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 50),
         curve: Curves.fastOutSlowIn,

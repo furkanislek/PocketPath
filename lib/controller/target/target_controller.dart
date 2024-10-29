@@ -52,7 +52,6 @@ class TargetController extends GetxController {
         list.sort(
             (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
       }
-      print("listtttttttttttt : $list");
     } catch (e) {
       print(e.toString());
     }

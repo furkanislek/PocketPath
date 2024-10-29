@@ -1,7 +1,6 @@
 import 'package:cost_management/controller/menu/bottom_navigator.dart';
 import 'package:cost_management/pages/AddCost/add_cost.dart';
-import 'package:cost_management/pages/Profile/profile.dart';
-import 'package:cost_management/pages/Statistics/statistics.dart';
+import 'package:cost_management/pages/Target/add_target.dart';
 import 'package:cost_management/pages/Target/target.dart';
 import 'package:cost_management/pages/home/home.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ class Menu extends StatelessWidget {
   final BottomNavigationController controller =
       Get.put(BottomNavigationController());
 
-  final List<Widget> pages = [Home(), Statistics(), Targets(), Profile()];
+  final List<Widget> pages = [Home(), Targets(), AddTarget()];
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class Menu extends StatelessWidget {
             (route) => false,
           );
         },
-        backgroundColor: Color(0xFF2CBABB),
+        backgroundColor: const Color(0xFF2CBABB),
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),
@@ -45,16 +44,12 @@ class Menu extends StatelessWidget {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart_outlined),
-              label: 'Statistics',
+              icon: Icon(Icons.pattern_outlined),
+              label: 'Targets',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.pattern_outlined),
-              label: 'Target',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.pattern_outlined),
-              label: 'Profile',
+              icon: Icon(Icons.add_circle_outline),
+              label: 'Add Target',
             ),
           ],
         ),

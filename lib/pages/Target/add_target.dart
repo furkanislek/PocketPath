@@ -1,5 +1,5 @@
+import 'package:cost_management/controller/menu/bottom_navigator.dart';
 import 'package:cost_management/controller/target/add_target_controller.dart';
-import 'package:cost_management/pages/Menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,10 +7,11 @@ class AddTarget extends StatelessWidget {
   AddTarget({Key? key}) : super(key: key);
 
   final AddTargetController controller = Get.put(AddTargetController());
+  final BottomNavigationController bottomNavigationController =
+      Get.put(BottomNavigationController());
 
   final TextEditingController typeController = TextEditingController();
   final TextEditingController budgetController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,14 +20,13 @@ class AddTarget extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => Menu()));
+            bottomNavigationController.currentIndex(0);
           },
         ),
-        title: const Text('Set New Plan'),
+        title: const Text('Set New Target'),
         centerTitle: true,
       ),
-      backgroundColor: Color(0xFFF2F2F2),
+      backgroundColor: const Color(0xFFF2F2F2),
       bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
           child: ElevatedButton(
@@ -41,6 +41,7 @@ class AddTarget extends StatelessWidget {
                 final budget = double.tryParse(budgetString);
                 if (budget != null) {
                   controller.saveTarget();
+                  Get.snackbar("", "Target Saved!");
                 } else {
                   Get.snackbar('Error', 'Invalid budget amount');
                 }
@@ -49,7 +50,7 @@ class AddTarget extends StatelessWidget {
               }
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF8256DF),
+              backgroundColor: const Color(0xFF0996C7),
               padding:
                   const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100.0),
               shape: RoundedRectangleBorder(
@@ -67,81 +68,198 @@ class AddTarget extends StatelessWidget {
           )),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Name',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: 8),
-            TextField(
-              onChanged: (value) {
-                controller.selectedTypeName(value);
-              },
-              decoration: InputDecoration(
-                hintText: 'Type Name',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                suffixIcon: const Icon(Icons.info_outline),
-              ),
-            ),
-            const SizedBox(height: 24),
-            const Text(
-              'Date',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: 8),
-            Obx(() => TextField(
-                  readOnly: true,
-                  controller: TextEditingController(
-                    text: controller.selectedDate.value != null
-                        ? controller.selectedDate.value.toString().split(' ')[0]
-                        : '', // Tarih seçilmediyse boş gösterir
-                  ),
-                  decoration: InputDecoration(
-                    hintText: 'Select End Date',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.calendar_today),
-                      onPressed: () async {
-                        DateTime? pickedDate = await showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime.now(),
-                          lastDate: DateTime(2101),
-                        );
-                        if (pickedDate != null) {
-                          controller.setSelectedDate(pickedDate);
-                        }
-                      },
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Target Type",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                   ),
-                )),
-            const SizedBox(height: 24),
-            const Text(
-              'Budget',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: 8),
-            TextField(
-              onChanged: (value) {
-                controller.selectedBudget(value);
-              },
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                hintText: 'Savings Target Amount',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                suffixIcon: const Icon(Icons.attach_money),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 5.0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 10),
+                        TextField(
+                          onChanged: (value) {
+                            controller.selectedTypeName(value);
+                          },
+                          textInputAction: TextInputAction.done,
+                          keyboardType: TextInputType.text,
+                          maxLength: 15,
+                          decoration: InputDecoration(
+                            hintText: "Type Name",
+                            suffixIcon: Icon(Icons.info_outline),
+                            hintStyle: TextStyle(
+                                color: controller.selectedTypeName.value.isEmpty
+                                    ? const Color.fromARGB(220, 168, 163, 161)
+                                    : const Color(0xFF282625)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            ),
-            const SizedBox(height: 24),
-          ],
+              const SizedBox(height: 12),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Date Picker",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Obx(
+                    () => Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 10.0),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFFFFF),
+                        borderRadius: BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10),
+                          TextField(
+                            readOnly: true,
+                            controller: TextEditingController(
+                              text: controller.selectedDate.value != null
+                                  ? controller.selectedDate.value
+                                      .toString()
+                                      .split(' ')[0]
+                                  : '', // Tarih seçilmediyse boş gösterir
+                            ),
+                            onChanged: (value) {
+                              controller.selectedBudget(value);
+                            },
+                            keyboardType: TextInputType.number,
+                            textInputAction: TextInputAction.done,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                icon: const Icon(Icons.calendar_today),
+                                onPressed: () async {
+                                  DateTime? pickedDate = await showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime.now(),
+                                    lastDate: DateTime(2101),
+                                  );
+                                  if (pickedDate != null) {
+                                    controller.setSelectedDate(pickedDate);
+                                  }
+                                },
+                              ),
+                              hintText: "Select Date",
+                              hintStyle: TextStyle(
+                                  color: controller
+                                          .selectedTypeName.value.isEmpty
+                                      ? const Color.fromARGB(220, 168, 163, 161)
+                                      : const Color(0xFF282625)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 12),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Budget Amount",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 10.0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 10),
+                        TextField(
+                          onChanged: (value) {
+                            controller.selectedBudget(value);
+                          },
+                          keyboardType: TextInputType.number,
+                          textInputAction: TextInputAction.done,
+                          decoration: InputDecoration(
+                            suffixIcon: Icon(Icons.attach_money),
+                            hintText: "0",
+                            hintStyle: TextStyle(
+                                color: controller.selectedTypeName.value.isEmpty
+                                    ? const Color.fromARGB(220, 168, 163, 161)
+                                    : const Color(0xFF282625)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

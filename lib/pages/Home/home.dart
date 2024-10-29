@@ -3,6 +3,8 @@ import 'package:cost_management/components/home/cost.dart';
 import 'package:cost_management/components/home/tab_period.dart';
 import 'package:cost_management/components/home/title.dart';
 import 'package:cost_management/controller/home/cost_controller.dart';
+import 'package:cost_management/pages/Login/login.dart';
+import 'package:cost_management/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +20,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFaFaFa),
-        toolbarHeight: 20,
+        toolbarHeight: 30,
       ),
       backgroundColor: const Color(0xFFFaFaFa),
       body: Padding(
@@ -27,7 +29,16 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Row(
-              children: [HomeTitle()],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                HomeTitle(),
+                IconButton(
+                    onPressed: () {
+                      Auth().signOut();
+                      Get.off(() => Login());
+                    },
+                    icon: Icon(Icons.logout_outlined))
+              ],
             ),
             SizedBox(height: height / 40),
             Row(
@@ -50,7 +61,7 @@ class Home extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 3),
                         child: Costs(costs: costs),
-                      ); // Pass the costs without creating a new controller
+                      );
                     },
                   );
                 }),

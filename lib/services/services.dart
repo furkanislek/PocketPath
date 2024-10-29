@@ -16,18 +16,30 @@ class Auth {
       required String password,
       required String firstName,
       required String surname}) async {
-    await _firebaseAuth.createUserWithEmailAndPassword(
-        email: email, password: password);
+    UserCredential userCredential = await _firebaseAuth
+        .createUserWithEmailAndPassword(email: email, password: password);
 
     await FirebaseFirestore.instance
         .collection('users')
         .doc(currentUser?.uid)
         .set({"firstName": firstName, "surname": surname});
+
+    await userCredential.user?.sendEmailVerification();
+
+    await signOut();
   }
 
   Future<void> signIn({required String email, required String password}) async {
-    await _firebaseAuth.signInWithEmailAndPassword(
-        email: email, password: password);
+    UserCredential userCredential = await _firebaseAuth
+        .signInWithEmailAndPassword(email: email, password: password);
+
+    if (userCredential.user?.emailVerified == false) {
+      await _firebaseAuth.signOut();
+      throw FirebaseAuthException(
+        code: 'email-not-verified',
+        message: 'Please verify your email address before logging in.',
+      );
+    }
   }
 
   Future<void> signOut() async {
@@ -63,6 +75,7 @@ class Auth {
       required String targetId,
       required String targetName}) async {
     try {
+      int currentTimestamp = DateTime.now().millisecondsSinceEpoch ~/ 1000;
       // Şu anki kullanıcıyı al
       User? user = _firebaseAuth.currentUser;
       if (user == null) throw Exception("User Not Found!");
@@ -78,6 +91,7 @@ class Auth {
         'budget': budget,
         'isExpense': isExpense,
         'date': DateTime.now(),
+        'timestamp': currentTimestamp,
         'targetId': targetId,
         'targetName': targetName,
         'uid': user.uid,
@@ -145,16 +159,13 @@ class Auth {
     }
   }
 
-  Future<List<Map<String, dynamic>>> getExpensesByTargetIdWithDate({
-    required String targetId,
-    required DateTime nowdate,
-    required DateTime startDate,
-  }) async {
+  Future<List<Map<String, dynamic>>> getExpensesByTargetId(
+      {required String targetId}) async {
     try {
+      print("Targets : $targetId");
+      // Firestore'dan tüm expenses verilerini çek
       User? user = _firebaseAuth.currentUser;
       if (user == null) throw Exception("User Not Found!");
-
-      // Step 1: Fetch expenses only by targetId
       QuerySnapshot snapshot = await _firestore
           .collection('users')
           .doc(user.uid)
@@ -162,23 +173,53 @@ class Auth {
           .where('targetId', isEqualTo: targetId)
           .get();
 
-      // Step 2: Filter the documents by date within the code
+      // expenses listesini oluştur
+      List<Map<String, dynamic>> expenses = snapshot.docs.map((doc) {
+        return {
+          'budget': doc['budget'],
+          'category': doc['category'],
+          'date': doc['date'],
+          'isExpense': doc['isExpense'],
+          'name': doc['name'],
+          'targetId': doc['targetId'],
+          'targetName': doc['targetName'],
+          'uid': doc['uid'],
+        };
+      }).toList();
+
+      print("Str : $expenses");
+      return expenses;
+    } catch (e) {
+      print("Error fetching expenses: $e");
+      return [];
+    }
+  }
+
+  Future<List<Map<String, dynamic>>> getExpensesByTargetIdWithDate({
+    required String targetId,
+    required int startDate,
+  }) async {
+    try {
+      User? user = _firebaseAuth.currentUser;
+      if (user == null) throw Exception("User Not Found!");
+
+      QuerySnapshot snapshot = await _firestore
+          .collection('users')
+          .doc(user.uid)
+          .collection('expenses')
+          .where('targetId', isEqualTo: targetId)
+          .get();
+
       List<Map<String, dynamic>> expenses = snapshot.docs
           .map((doc) {
             final data = doc.data() as Map<String, dynamic>;
-            final expenseDate = (data['date'] as Timestamp).toDate();
-
-            // Apply date filter in code
-            if (expenseDate.isAfter(startDate) &&
-                expenseDate.isBefore(nowdate)) {
+            if (data['timestamp'] * 1000 > startDate) {
               return data;
             }
-            return null; // Return null for items outside date range
+            return null;
           })
-          .whereType<Map<String, dynamic>>() // Remove null entries
+          .whereType<Map<String, dynamic>>()
           .toList();
-
-      print("Expenses :   ${expenses.toString()}");
       return expenses;
     } catch (e) {
       print("Error fetching expenses: $e");
@@ -278,12 +319,11 @@ class Auth {
   Future<List<Map<String, dynamic>>> getMonthlyExpenses(
       {required String selectedTargetId}) async {
     DateTime now = DateTime.now();
-    DateTime startOfMonth = DateTime(now.year, now.month - 1, 0);
-    DateTime endOfMonth = DateTime.now();
+    DateTime startOfMonth = DateTime(now.year, now.month - 1, 0).toLocal();
     var result = await getExpensesByTargetIdWithDate(
-        targetId: selectedTargetId,
-        startDate: startOfMonth,
-        nowdate: endOfMonth);
+      targetId: selectedTargetId,
+      startDate: startOfMonth.millisecondsSinceEpoch,
+    );
 
     return result;
   }
@@ -291,13 +331,11 @@ class Auth {
   Future<List<Map<String, dynamic>>> getDailyExpenses(
       {required String selectedTargetId}) async {
     DateTime now = DateTime.now();
-    DateTime startOfMonth = now.subtract(Duration(days: 1));
-    DateTime endOfMonth = now;
+    DateTime startOfDay = now.subtract(const Duration(hours: 24)).toLocal();
 
     return await getExpensesByTargetIdWithDate(
         targetId: selectedTargetId,
-        startDate: startOfMonth,
-        nowdate: endOfMonth);
+        startDate: startOfDay.millisecondsSinceEpoch);
   }
 
   Future<List<Map<String, dynamic>>> getYearlyExpenses(
@@ -305,9 +343,9 @@ class Auth {
     DateTime now = DateTime.now();
     DateTime startOfYear = DateTime(now.year - 1, now.month, now.day, now.hour,
         now.minute, now.second, now.millisecond, now.microsecond);
-    DateTime endOfYear = now;
 
     return await getExpensesByTargetIdWithDate(
-        targetId: selectedTargetId, startDate: startOfYear, nowdate: endOfYear);
+        targetId: selectedTargetId,
+        startDate: startOfYear.millisecondsSinceEpoch);
   }
 }

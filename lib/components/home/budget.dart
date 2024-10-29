@@ -175,7 +175,6 @@ class Budget extends StatelessWidget {
 
   Future<void> fetchData() async {
     controller.selectedTargetId.value = maincontroller.selectedTargetId.value;
-    print("controllerselectedTarget : ${controller.selectedTargetId.value}");
     await controller.fetchTargetsById();
   }
 

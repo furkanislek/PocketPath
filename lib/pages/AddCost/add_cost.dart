@@ -1,4 +1,5 @@
 import 'package:cost_management/controller/cost/add_cost_controller.dart';
+import 'package:cost_management/controller/menu/bottom_navigator.dart';
 import 'package:cost_management/pages/Menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,8 @@ class AddCost extends StatelessWidget {
 
   final TextEditingController typeController = TextEditingController();
   final TextEditingController budgetController = TextEditingController();
-
+  final BottomNavigationController controllerMenu =
+      Get.put(BottomNavigationController());
   final List<List<dynamic>> _categories = [
     [Icons.shopping_cart, 'Shopping'],
     [Icons.favorite, 'Healthy'],
@@ -53,6 +55,12 @@ class AddCost extends StatelessWidget {
               final budget = double.tryParse(budgetString);
               if (budget != null) {
                 controller.saveExpense();
+                Get.snackbar('', 'Cost successfully recorded');
+                controllerMenu.changeTabIndex(0);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Menu()),
+                );
               } else {
                 Get.snackbar('Error', 'Invalid budget amount');
               }
@@ -163,7 +171,7 @@ class AddCost extends StatelessWidget {
                           },
                           textInputAction: TextInputAction.done,
                           keyboardType: TextInputType.text,
-                          maxLength: 25,
+                          maxLength: 15,
                           decoration: InputDecoration(
                             hintText: "Type Name.",
                             hintStyle: TextStyle(

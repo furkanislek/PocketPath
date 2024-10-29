@@ -1,9 +1,12 @@
 import 'package:cost_management/pages/Login/register.dart';
-import 'package:cost_management/pages/home/home.dart';
+import 'package:cost_management/pages/Login/resetPassword.dart';
+import 'package:cost_management/pages/Menu/menu.dart';
 import 'package:cost_management/services/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -16,54 +19,43 @@ class _LoginState extends State<Login> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  bool isPasswordVisible = false;
   String? errorMessage;
 
   Future<void> signIn() async {
     try {
-      await Auth()
-          .signIn(
-              email: emailController.text, password: passwordController.text)
-          .timeout(Duration(seconds: 1), onTimeout: () {
-        setState(() {
-          errorMessage = "Login attempt timed out.";
-        });
-      });
+      await Auth().signIn(
+          email: emailController.text, password: passwordController.text);
 
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Home()),
-        );
+        Get.off(() => Menu());
       }
     } on FirebaseAuthException catch (e) {
       String? errorText;
       switch (e.code) {
         case 'invalid-email':
-          errorText = "Geçersiz e-posta adresi girdiniz.";
+          errorText = "You entered an invalid e-mail address.";
           break;
         case 'user-disabled':
-          errorText = "Kullanıcı devre dışı bırakıldı.";
+          errorText = "The user has been deactivated.";
           break;
         case 'user-not-found':
-          errorText = "Girilen bilgiler hatalı. Lütfen tekrar deneyin.";
-          break;
         case 'invalid-credential':
-          errorText = "Girilen bilgiler hatalı. Lütfen tekrar deneyin.";
-          break;
         case 'wrong-password':
-          errorText = "Girilen bilgiler hatalı. Lütfen tekrar deneyin.";
+          errorText = "The information entered is incorrect. Please try again.";
           break;
         case 'email-already-in-use':
-          errorText = "Bu e-posta adresi zaten kullanılıyor.";
+          errorText = "This email address is already in use.";
           break;
         case 'operation-not-allowed':
-          errorText = "Bu işlem izin verilmedi.";
+          errorText = "This process was not allowed.";
           break;
+        case 'email-not-verified':
+          errorText = 'Please verify your email address before logging in.';
         default:
-          errorText = "Bir hata oluştu. Lütfen tekrar deneyin.";
+          errorText = "An error has occurred. Please try again later.";
       }
-
       setState(() {
         errorMessage = errorText;
       });
@@ -97,181 +89,134 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
     double height = MediaQuery.sizeOf(context).height;
+
     return Scaffold(
       backgroundColor: const Color(0xFFF2F2F2),
       body: Padding(
-        padding: EdgeInsets.only(
-            left: width / 13.7, right: width / 13.7, top: height / 17.8),
+        padding:
+            EdgeInsets.symmetric(horizontal: width / 12, vertical: height / 18),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: height / 74.17),
+              SvgPicture.asset(
+                'assets/svg/login.svg',
+                height: height / 3.75,
+              ),
+              SizedBox(height: height / 20),
               Text(
-                "Tekrar Hoşgeldin 🤗",
+                "Login into your account",
                 style: TextStyle(
-                    fontSize: height / 31,
-                    fontFamily: "Poppins-Bold",
-                    fontWeight: FontWeight.bold),
+                    fontSize: height / 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87),
               ),
-              SizedBox(height: height / 30),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(
-                    vertical: height / 74.16, horizontal: width / 34.25),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFFFFFF),
-                  borderRadius: BorderRadius.circular(25.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              SizedBox(height: height / 80),
+              RichText(
+                text: TextSpan(
+                  text: "Don't have an account? ",
+                  style: TextStyle(color: Colors.grey[700]),
                   children: [
-                    TextField(
-                      controller: emailController,
-                      textInputAction: TextInputAction.done,
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.only(right: width / 34.25),
-                          child: const Icon(Icons.email),
-                        ),
-                        hintText: "email",
-                        hintStyle: TextStyle(
-                            color: emailController.text.isEmpty
-                                ? const Color.fromARGB(220, 168, 163, 161)
-                                : const Color(0xFF282625)),
-                      ),
+                    TextSpan(
+                      text: "Sign Up",
+                      style: TextStyle(
+                          color: const Color(0xFF8256DF),
+                          fontWeight: FontWeight.bold),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Register()),
+                          );
+                        },
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: height / 30),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(12.0),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFFFFFF),
-                  borderRadius: BorderRadius.circular(25.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
+              SizedBox(height: height / 20),
+              TextField(
+                controller: emailController,
+                textInputAction: TextInputAction.next,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: "Your e-mail",
+                  prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextField(
-                      controller: passwordController,
-                      obscureText: true,
-                      textInputAction: TextInputAction.done,
-                      keyboardType: TextInputType.visiblePassword,
-                      decoration: InputDecoration(
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.only(right: 12.0),
-                          child: Icon(Icons.lock),
-                        ),
-                        hintText: "*********",
-                        hintStyle: TextStyle(
-                            color: emailController.text.isEmpty
-                                ? const Color.fromARGB(220, 168, 163, 161)
-                                : const Color(0xFF282625)),
-                      ),
-                    ),
-                  ],
+              ),
+              SizedBox(height: height / 30),
+              TextField(
+                controller: passwordController,
+                obscureText: !isPasswordVisible,
+                textInputAction: TextInputAction.done,
+                decoration: InputDecoration(
+                  labelText: "Type your password",
+                  prefixIcon: const Icon(Icons.lock),
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          isPasswordVisible = !isPasswordVisible;
+                        });
+                      },
+                      icon: const Icon(Icons.visibility)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
               ),
               if (errorMessage != null)
                 Padding(
-                  padding: EdgeInsets.only(top: height / 81.1),
-                  child: Text(errorMessage!,
-                      style: const TextStyle(color: Colors.red)),
+                  padding: EdgeInsets.only(top: height / 50),
+                  child: Text(
+                    errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  ),
                 ),
-              SizedBox(height: height / 55),
-              SizedBox(
+              SizedBox(height: height / 30),
+              Container(
                 width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      vertical: height / 44, horizontal: width / 41),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      signIn();
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF8256DF),
-                      padding: EdgeInsets.symmetric(
-                          vertical: height / 56.33, horizontal: width / 4),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                child: ElevatedButton(
+                  onPressed: signIn,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF8256DF),
+                    padding: EdgeInsets.symmetric(
+                        vertical: height / 56.33, horizontal: width / 4),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Text(
-                      'Giriş Yap',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: height / 50,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  ),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: height / 50,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: height / 55),
+              SizedBox(height: height / 40),
               GestureDetector(
                 onTap: () {
-                  resetPassword();
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPassword()),
+                  );
                 },
                 child: Text(
-                  "Şifremi Unuttum?",
+                  "Forgot Password?",
                   style: TextStyle(
                     color: const Color(0xFF8256DF),
-                    fontSize: height / 60,
-                    fontFamily: "Poppins-Bold",
                     fontWeight: FontWeight.bold,
+                    fontSize: height / 55,
                   ),
                 ),
               ),
-              SizedBox(height: height / 81),
-              GestureDetector(
-                child: Text.rich(
-                  TextSpan(
-                    text: "Henüz Hesabın Yok Mu? ",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: height / 60,
-                        fontFamily: "Poppins-Bold",
-                        fontWeight: FontWeight.w700),
-                    children: [
-                      TextSpan(
-                        text: "Kayıt Ol 😊",
-                        style: const TextStyle(
-                          color: Color(0xFF8256DF),
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Register()),
-                            );
-                          },
-                      ),
-                    ],
-                  ),
-                ),
-              )
             ],
           ),
         ),
