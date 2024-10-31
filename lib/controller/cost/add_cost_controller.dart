@@ -1,6 +1,6 @@
-import 'package:cost_management/controller/home/cost_controller.dart';
-import 'package:cost_management/controller/target/target_controller.dart';
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/controller/home/cost_controller.dart';
+import 'package:pocketPath/controller/target/target_controller.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 
 class AddCostController extends GetxController {
@@ -49,8 +49,6 @@ class AddCostController extends GetxController {
   }
 
   Future<void> saveExpense() async {
-    // Saniye cinsine çevir
-
     await authService.saveExpense(
         name: selectedTypeName.value,
         category: selectedCategory.value,
@@ -60,6 +58,6 @@ class AddCostController extends GetxController {
         targetName: selectedTargetName.value);
 
     await controller.fetchTargets();
-    await costController.activeCoast();
+    await costController.fetchsCosts(); // Notify CostController to reload costs
   }
 }

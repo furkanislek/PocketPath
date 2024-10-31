@@ -1,8 +1,8 @@
-import 'package:cost_management/controller/menu/bottom_navigator.dart';
-import 'package:cost_management/pages/AddCost/add_cost.dart';
-import 'package:cost_management/pages/Target/add_target.dart';
-import 'package:cost_management/pages/Target/target.dart';
-import 'package:cost_management/pages/home/home.dart';
+import 'package:pocketPath/controller/menu/bottom_navigator.dart';
+import 'package:pocketPath/pages/AddCost/add_cost.dart';
+import 'package:pocketPath/pages/Target/add_target.dart';
+import 'package:pocketPath/pages/Target/target.dart';
+import 'package:pocketPath/pages/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

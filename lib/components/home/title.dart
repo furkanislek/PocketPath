@@ -1,4 +1,4 @@
-import 'package:cost_management/controller/home/home_controller.dart';
+import 'package:pocketPath/controller/home/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

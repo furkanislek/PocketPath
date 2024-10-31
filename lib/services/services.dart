@@ -94,10 +94,31 @@ class Auth {
         'timestamp': currentTimestamp,
         'targetId': targetId,
         'targetName': targetName,
+        'expensesId': uuid.v4(),
         'uid': user.uid,
       });
     } catch (e) {
       print("Hata oluştu: $e");
+    }
+  }
+
+  Future<void> deleteCost(String docId) async {
+    try {
+      User? user = _firebaseAuth.currentUser;
+      if (user == null) throw Exception("User Not Found!");
+
+      final costs =
+          _firestore.collection('users').doc(user.uid).collection('expenses');
+      QuerySnapshot snapshot =
+          await costs.where('expensesId', isEqualTo: docId).get();
+
+      if (snapshot.docs.isNotEmpty) {
+        await snapshot.docs.first.reference.delete();
+      } else {
+        print("Cost document not found");
+      }
+    } catch (e) {
+      print("Error deleting cost: $e");
     }
   }
 
@@ -143,6 +164,7 @@ class Auth {
         return {
           'budget': doc['budget'],
           'category': doc['category'],
+          'expensesId': doc['expensesId'],
           'date': doc['date'],
           'isExpense': doc['isExpense'],
           'name': doc['name'],
@@ -178,6 +200,7 @@ class Auth {
         return {
           'budget': doc['budget'],
           'category': doc['category'],
+          'expensesId': doc['expensesId'],
           'date': doc['date'],
           'isExpense': doc['isExpense'],
           'name': doc['name'],

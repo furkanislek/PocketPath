@@ -1,5 +1,6 @@
-import 'package:cost_management/controller/home/budget_controller.dart';
-import 'package:cost_management/controller/target/target_controller.dart';
+import 'package:pocketPath/controller/home/budget_controller.dart';
+import 'package:pocketPath/controller/target/target_controller.dart';
+import 'package:pocketPath/pages/Target/add_target.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -85,85 +86,135 @@ class Budget extends StatelessWidget {
                       }
                     }),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: height / 11,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Obx(() {
-                              if (controller.listById.isNotEmpty) {
-                                var target = controller.listById.first;
-                                return Text(
-                                  '₺${target['remainingBudget'].toStringAsFixed(2)}',
-                                  style: const TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
-                                );
-                              } else {
-                                return const Text(
-                                  "₺0.00",
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
-                                );
-                              }
-                            }),
-                            const Text(
-                              "Balance",
-                              style: TextStyle(color: Color(0xFF55BB7D)),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Column(
+                  Obx(() {
+                    if (maincontroller.activeTargets.isNotEmpty) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Obx(() {
-                            double progress = controller.listById.isNotEmpty
-                                ? controller.listById.first['progress']
-                                : 0;
-                            return CircularPercentIndicator(
-                              radius: 50.0,
-                              lineWidth: 8.0,
-                              animation: true,
-                              percent: progress.clamp(0.0, 1.0),
-                              center: Text(
-                                "${(progress > 1 ? 100.00 : progress * 100).toStringAsFixed(0)}%",
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0,
+                          SizedBox(
+                            height: height / 11,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Obx(() {
+                                  if (controller.listById.isNotEmpty) {
+                                    var target = controller.listById.first;
+                                    return Text(
+                                      '₺${target['remainingBudget'].toStringAsFixed(2)}',
+                                      style: const TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold),
+                                    );
+                                  } else {
+                                    return const Text(
+                                      "₺0.00",
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold),
+                                    );
+                                  }
+                                }),
+                                const Text(
+                                  "Balance",
+                                  style: TextStyle(color: Color(0xFF55BB7D)),
                                 ),
-                              ),
-                              circularStrokeCap: CircularStrokeCap.round,
-                              progressColor: const Color(0xFF55BB7D),
-                            );
-                          }),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: SizedBox(
-                          width: width / 1.2,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              side: const BorderSide(color: Color(0xFF55BB7D)),
-                              foregroundColor: const Color(0xFF55BB7D),
+                              ],
                             ),
-                            onPressed: () => showBottomModal(context),
-                            child: const Text("Select Target Plan"),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
+                          Column(
+                            children: [
+                              Obx(() {
+                                double progress = controller.listById.isNotEmpty
+                                    ? controller.listById.first['progress']
+                                    : 0;
+                                return CircularPercentIndicator(
+                                  radius: 50.0,
+                                  lineWidth: 8.0,
+                                  animation: true,
+                                  percent: progress.clamp(0.0, 1.0),
+                                  center: Text(
+                                    "${(progress > 1 ? 100.00 : progress * 100).toStringAsFixed(0)}%",
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0,
+                                    ),
+                                  ),
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  progressColor: const Color(0xFF55BB7D),
+                                );
+                              }),
+                            ],
+                          ),
+                        ],
+                      );
+                    } else {
+                      return const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "You Have Not Entered A Target Yet",
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                            ),
+                          )
+                        ],
+                      );
+                    }
+                  }),
+                  Obx(() {
+                    if (maincontroller.activeTargets.isEmpty) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            child: TextButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  side: const BorderSide(
+                                      color: Color(0xFF55BB7D)),
+                                  foregroundColor: const Color(0xFF55BB7D),
+                                ),
+                                onPressed: () {
+                                  Get.to(() => AddTarget());
+                                },
+                                child: SizedBox(
+                                  width: width / 1.8,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Text("Create New Task"),
+                                      SizedBox(width: width / 10),
+                                      const Icon(Icons.add),
+                                    ],
+                                  ),
+                                )),
+                          ),
+                        ],
+                      );
+                    } else {
+                      return Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              width: width / 1.2,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  side: const BorderSide(
+                                      color: Color(0xFF55BB7D)),
+                                  foregroundColor: const Color(0xFF55BB7D),
+                                ),
+                                onPressed: () => showBottomModal(context),
+                                child: const Text("Select Target Plan"),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                  }),
                 ],
               ),
             ),

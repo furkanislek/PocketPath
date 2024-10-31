@@ -1,6 +1,6 @@
-import 'package:cost_management/pages/Login/login.dart';
-import 'package:cost_management/pages/Login/register_confirm.dart';
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/pages/Login/login.dart';
+import 'package:pocketPath/pages/Login/register_confirm.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

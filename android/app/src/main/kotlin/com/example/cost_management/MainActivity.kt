@@ -1,4 +1,4 @@
-package com.example.cost_management
+package com.example.pocketPath
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,5 @@
-import 'package:cost_management/pages/Login/login.dart';
-import 'package:cost_management/pages/Login/password_confirm.dart';
+import 'package:pocketPath/pages/Login/login.dart';
+import 'package:pocketPath/pages/Login/password_confirm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';

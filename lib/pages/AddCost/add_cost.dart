@@ -1,6 +1,6 @@
-import 'package:cost_management/controller/cost/add_cost_controller.dart';
-import 'package:cost_management/controller/menu/bottom_navigator.dart';
-import 'package:cost_management/pages/Menu/menu.dart';
+import 'package:pocketPath/controller/cost/add_cost_controller.dart';
+import 'package:pocketPath/controller/menu/bottom_navigator.dart';
+import 'package:pocketPath/pages/Menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,10 +32,8 @@ class AddCost extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => Menu()),
-            );
+            Get.off(() => Menu());
+            controllerMenu.currentIndex(0);
           },
         ),
         title: const Text('Add Cost'),
@@ -55,7 +53,8 @@ class AddCost extends StatelessWidget {
               final budget = double.tryParse(budgetString);
               if (budget != null) {
                 controller.saveExpense();
-                Get.snackbar('', 'Cost successfully recorded');
+                Get.snackbar('Recorded', 'Cost successfully recorded !',
+                    icon: Icon(Icons.add_alert_sharp));
                 controllerMenu.changeTabIndex(0);
                 Navigator.pushReplacement(
                   context,
@@ -176,7 +175,7 @@ class AddCost extends StatelessWidget {
                             hintText: "Type Name.",
                             hintStyle: TextStyle(
                                 color: controller.selectedTypeName.value.isEmpty
-                                    ? const Color.fromARGB(220, 168, 163, 161)
+                                    ? const Color.fromARGB(220, 219, 219, 219)
                                     : const Color(0xFF282625)),
                           ),
                         ),

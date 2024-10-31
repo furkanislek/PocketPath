@@ -1,11 +1,13 @@
-import 'package:cost_management/controller/home/budget_controller.dart';
-import 'package:cost_management/controller/home/tab_controller.dart';
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/controller/home/budget_controller.dart';
+import 'package:pocketPath/controller/home/tab_controller.dart';
+import 'package:pocketPath/controller/target/target_controller.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 
 class CostController extends GetxController {
   final BudgetController budgetController = Get.put(BudgetController());
   final HomeTabController homeTabController = Get.put(HomeTabController());
+  final TargetController targetController = Get.put(TargetController());
 
   var activeCoast = <Map<String, dynamic>>[].obs;
 
@@ -49,5 +51,11 @@ class CostController extends GetxController {
     activeCoast.value = await authService.getYearlyExpenses(
       selectedTargetId: budgetController.selectedTargetId.value,
     );
+  }
+
+  Future<void> deleteCost(String docId) async {
+    await authService.deleteCost(docId);
+    await targetController.fetchTargetsById();
+    fetchsCosts(); // Refresh the costs after deletion
   }
 }

@@ -1,7 +1,7 @@
-import 'package:cost_management/controller/auth/auth_controller.dart';
-import 'package:cost_management/firebase_options.dart';
-import 'package:cost_management/pages/Login/login.dart';
-import 'package:cost_management/pages/Menu/menu.dart';
+import 'package:pocketPath/controller/auth/auth_controller.dart';
+import 'package:pocketPath/firebase_options.dart';
+import 'package:pocketPath/pages/Login/login.dart';
+import 'package:pocketPath/pages/Menu/menu.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
       home: Obx(() {
         final authController = Get.find<AuthController>();
 
-        // Kullanıcı durumu kontrolü
         return authController.user.value == null
             ? const Login() // Kullanıcı giriş yapmamış
             : Menu(); // Kullanıcı giriş yapmış

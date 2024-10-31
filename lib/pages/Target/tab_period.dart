@@ -1,4 +1,4 @@
-import 'package:cost_management/controller/target/target_controller.dart';
+import 'package:pocketPath/controller/target/target_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,13 +16,14 @@ class TargetPeriodSelector extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: width / 25),
       child: Obx(() {
         return Container(
-          width: double.infinity,
+          width: width / 1.05,
           padding: EdgeInsets.symmetric(vertical: height / 110),
           decoration: BoxDecoration(
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Expanded(
+          child: SizedBox(
+            width: width * 0.85,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

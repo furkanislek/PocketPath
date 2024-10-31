@@ -1,4 +1,4 @@
-import 'package:cost_management/pages/Login/login.dart';
+import 'package:pocketPath/pages/Login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

@@ -1,4 +1,4 @@
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 
 class TargetController extends GetxController {
@@ -11,7 +11,6 @@ class TargetController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    fetchTargets();
   }
 
   Future<void> fetchTargets() async {
@@ -30,6 +29,7 @@ class TargetController extends GetxController {
       }
 
       List<Map<String, dynamic>> expenses = await Auth().getExpenses();
+
       if (targets.isNotEmpty) {
         for (var target in targets) {
           String targetId = target['id'];

@@ -1,7 +1,8 @@
-import 'package:cost_management/controller/menu/bottom_navigator.dart';
-import 'package:cost_management/controller/target/add_target_controller.dart';
+import 'package:pocketPath/controller/menu/bottom_navigator.dart';
+import 'package:pocketPath/controller/target/add_target_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pocketPath/pages/Menu/menu.dart';
 
 class AddTarget extends StatelessWidget {
   AddTarget({Key? key}) : super(key: key);
@@ -20,7 +21,8 @@ class AddTarget extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            bottomNavigationController.currentIndex(0);
+            Get.off(() => Menu());
+            bottomNavigationController.currentIndex(1);
           },
         ),
         title: const Text('Set New Target'),
@@ -41,7 +43,8 @@ class AddTarget extends StatelessWidget {
                 final budget = double.tryParse(budgetString);
                 if (budget != null) {
                   controller.saveTarget();
-                  Get.snackbar("", "Target Saved!");
+                  Get.snackbar('Recorded', 'Target successfully recorded !',
+                      icon: const Icon(Icons.add_alert_sharp));
                 } else {
                   Get.snackbar('Error', 'Invalid budget amount');
                 }

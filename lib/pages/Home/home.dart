@@ -1,10 +1,10 @@
-import 'package:cost_management/components/home/budget.dart';
-import 'package:cost_management/components/home/cost.dart';
-import 'package:cost_management/components/home/tab_period.dart';
-import 'package:cost_management/components/home/title.dart';
-import 'package:cost_management/controller/home/cost_controller.dart';
-import 'package:cost_management/pages/Login/login.dart';
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/components/home/budget.dart';
+import 'package:pocketPath/components/home/cost.dart';
+import 'package:pocketPath/components/home/tab_period.dart';
+import 'package:pocketPath/components/home/title.dart';
+import 'package:pocketPath/controller/home/cost_controller.dart';
+import 'package:pocketPath/pages/Login/login.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

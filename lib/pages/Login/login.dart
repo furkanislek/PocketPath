@@ -1,7 +1,7 @@
-import 'package:cost_management/pages/Login/register.dart';
-import 'package:cost_management/pages/Login/resetPassword.dart';
-import 'package:cost_management/pages/Menu/menu.dart';
-import 'package:cost_management/services/services.dart';
+import 'package:pocketPath/Introduction/introduction_screens.dart';
+import 'package:pocketPath/pages/Login/register.dart';
+import 'package:pocketPath/pages/Login/resetPassword.dart';
+import 'package:pocketPath/services/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
 
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        Get.off(() => Menu());
+        Get.off(() => const IntroductionScreens());
       }
     } on FirebaseAuthException catch (e) {
       String? errorText;
@@ -100,11 +100,12 @@ class _LoginState extends State<Login> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: height / 20),
               SvgPicture.asset(
                 'assets/svg/login.svg',
                 height: height / 3.75,
               ),
-              SizedBox(height: height / 20),
+              SizedBox(height: height / 50),
               Text(
                 "Login into your account",
                 style: TextStyle(
