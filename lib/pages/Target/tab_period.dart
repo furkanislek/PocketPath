@@ -40,9 +40,10 @@ class TargetPeriodSelector extends StatelessWidget {
 
   Widget _buildTab(String label, int index, double width) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
         controller.selectedTab.value = index;
-        controller.fetchTargets();
+        await controller.fetchTargets();
+        controller.list.refresh();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 50),

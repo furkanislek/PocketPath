@@ -25,6 +25,7 @@ class AddCostController extends GetxController {
 
   Future<void> loadActiveTargets() async {
     activeTargets.value = await authService.getActiveTargets();
+    activeTargets.refresh();
   }
 
   void toggleSelection(bool isExpense) {
@@ -58,6 +59,7 @@ class AddCostController extends GetxController {
         targetName: selectedTargetName.value);
 
     await controller.fetchTargets();
-    await costController.fetchsCosts(); // Notify CostController to reload costs
+    await costController.fetchsCosts();
+    costController.activeCoast.refresh();
   }
 }

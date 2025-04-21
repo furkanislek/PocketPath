@@ -45,6 +45,11 @@ class AddTarget extends StatelessWidget {
                   controller.saveTarget();
                   Get.snackbar('Recorded', 'Target successfully recorded !',
                       icon: const Icon(Icons.add_alert_sharp));
+                  Future.delayed(const Duration(seconds: 1), () {
+                    Get.off(() => Menu());
+                    bottomNavigationController
+                        .currentIndex(0); // Ana ekrana yönlendir (0 = Home)
+                  });
                 } else {
                   Get.snackbar('Error', 'Invalid budget amount');
                 }

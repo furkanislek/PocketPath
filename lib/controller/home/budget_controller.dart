@@ -16,6 +16,7 @@ class BudgetController extends GetxController {
 
   Future<void> loadActiveTargets() async {
     activeTargets.value = await authService.getActiveTargets();
+    activeTargets.refresh();
     if (activeTargets.isNotEmpty) {
       final lastTarget = activeTargets.first;
       setSelectedTarget(lastTarget['id'], lastTarget['name']);

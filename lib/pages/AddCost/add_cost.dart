@@ -25,6 +25,7 @@ class AddCost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    controller.loadActiveTargets();
     return Scaffold(
       backgroundColor: const Color(0xFFF2F2F2),
       appBar: AppBar(
@@ -346,6 +347,7 @@ class AddCost extends StatelessWidget {
   }
 
   void _showTargetSelectionBottomSheet(BuildContext context) {
+    controller.loadActiveTargets();
     showModalBottomSheet(
       context: context,
       showDragHandle: true,

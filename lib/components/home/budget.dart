@@ -102,14 +102,14 @@ class Budget extends StatelessWidget {
                                   if (controller.listById.isNotEmpty) {
                                     var target = controller.listById.first;
                                     return Text(
-                                      '₺${target['remainingBudget'].toStringAsFixed(2)}',
+                                      '\$ ${target['remainingBudget'].toStringAsFixed(2)}',
                                       style: const TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
                                     );
                                   } else {
                                     return const Text(
-                                      "₺0.00",
+                                      "\$ 0.00",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
@@ -273,7 +273,7 @@ class Budget extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(target['name']),
-                                  Text('Budget: ₺${target['budget']}')
+                                  Text('Budget: \$${target['budget']}')
                                 ]),
                           ),
                         ),

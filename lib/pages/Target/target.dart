@@ -175,10 +175,10 @@ class Targets extends StatelessWidget {
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            Formatter()
+                                                            '\$ ${ Formatter()
                                                                 .numberFormatter
                                                                 .format(target[
-                                                                    'remainingBudget'])
+                                                                    'remainingBudget'])}'
                                                                 .toString(),
                                                             style: TextStyle(
                                                                 color: target[
@@ -191,11 +191,11 @@ class Targets extends StatelessWidget {
                                                                 fontSize: 15),
                                                           ),
                                                           Text(
-                                                            Formatter()
+                                                           '\$ ${ Formatter()
                                                                 .numberFormatter
                                                                 .format(target[
                                                                         'target']
-                                                                    ['budget'])
+                                                                    ['budget'])}'
                                                                 .toString(),
                                                             style: TextStyle(
                                                               color: target[

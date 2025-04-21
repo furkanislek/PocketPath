@@ -39,23 +39,27 @@ class CostController extends GetxController {
     activeCoast.value = await authService.getMonthlyExpenses(
       selectedTargetId: budgetController.selectedTargetId.value,
     );
+    activeCoast.refresh();
   }
 
   Future<void> fetchDailyCosts() async {
     activeCoast.value = await authService.getDailyExpenses(
       selectedTargetId: budgetController.selectedTargetId.value,
     );
+    activeCoast.refresh();
   }
 
   Future<void> fetchYearlyCosts() async {
     activeCoast.value = await authService.getYearlyExpenses(
       selectedTargetId: budgetController.selectedTargetId.value,
     );
+    activeCoast.refresh();
   }
 
   Future<void> deleteCost(String docId) async {
     await authService.deleteCost(docId);
     await targetController.fetchTargetsById();
     fetchsCosts(); // Refresh the costs after deletion
+    activeCoast.refresh();
   }
 }

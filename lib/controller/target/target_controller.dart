@@ -51,6 +51,7 @@ class TargetController extends GetxController {
 
         list.sort(
             (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
+        list.refresh();
       }
     } catch (e) {
       print(e.toString());
@@ -84,6 +85,7 @@ class TargetController extends GetxController {
 
         listById.sort(
             (a, b) => a['target']['endDate'].compareTo(b['target']['endDate']));
+        listById.refresh();
       }
     } catch (e) {
       print(e.toString());

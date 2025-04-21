@@ -34,18 +34,20 @@ class TabSelection extends StatelessWidget {
 
   Widget _buildTab(String label, int index) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
         tabController.selectTab(index);
 
         // Tab değiştiğinde doğrudan CostController'da ilgili fetch metodunu çağırma
         CostController costController = Get.find<CostController>();
         if (index == 0) {
-          costController.fetchDailyCosts();
+          await costController.fetchDailyCosts();
         } else if (index == 1) {
-          costController.fetchsCosts();
+          await costController.fetchsCosts();
         } else if (index == 2) {
-          costController.fetchYearlyCosts();
+          await costController.fetchYearlyCosts();
         }
+
+        costController.activeCoast.refresh();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 50),
