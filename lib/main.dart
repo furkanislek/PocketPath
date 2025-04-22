@@ -5,12 +5,15 @@ import 'package:pocketPath/pages/Menu/menu.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pocketPath/services/ad_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  final adService = AdService();
+  await adService.initialize();
   Get.put(AuthController());
   runApp(const MyApp());
 }

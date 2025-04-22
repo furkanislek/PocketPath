@@ -1,5 +1,6 @@
 import 'package:pocketPath/controller/home/cost_controller.dart';
 import 'package:pocketPath/controller/target/target_controller.dart';
+import 'package:pocketPath/services/ad_service.dart';
 import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 
@@ -16,11 +17,13 @@ class AddCostController extends GetxController {
   final Auth authService = Auth();
   final TargetController controller = Get.put(TargetController());
   final CostController costController = Get.put(CostController());
+  final AdService adService = AdService();
 
   @override
   void onInit() {
     super.onInit();
     loadActiveTargets();
+    adService.initialize();
   }
 
   Future<void> loadActiveTargets() async {
@@ -61,5 +64,6 @@ class AddCostController extends GetxController {
     await controller.fetchTargets();
     await costController.fetchsCosts();
     costController.activeCoast.refresh();
+    adService.onCostAdded();
   }
 }

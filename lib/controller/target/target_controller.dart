@@ -1,3 +1,4 @@
+import 'package:pocketPath/services/ad_service.dart';
 import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 
@@ -8,9 +9,12 @@ class TargetController extends GetxController {
   var list = [].obs;
   var listById = [].obs;
 
+  final AdService adService = AdService(); 
+
   @override
   void onInit() {
     super.onInit();
+    adService.initialize();
   }
 
   Future<void> fetchTargets() async {

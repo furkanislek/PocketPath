@@ -1,4 +1,5 @@
 import 'package:pocketPath/controller/target/target_controller.dart';
+import 'package:pocketPath/services/ad_service.dart';
 import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
 import 'package:pocketPath/controller/home/budget_controller.dart'; // Import BudgetController
@@ -9,6 +10,15 @@ class AddTargetController extends GetxController {
   var selectedBudget = ''.obs;
   var selectedDate = Rxn<DateTime>();
 
+  final Auth authService = Auth();
+  final AdService adService = AdService();
+
+  @override
+  void onInit() {
+    super.onInit();
+    adService.initialize(); 
+  }
+  
   void setTypeName(String typename) {
     selectedTypeName.value = typename;
   }
@@ -28,6 +38,8 @@ class AddTargetController extends GetxController {
       budget: double.tryParse(selectedBudget.value) ?? 0.0,
       endDate: selectedDate.value ?? DateTime.now(),
     );
+
+    adService.onTargetAdded();
 
     await controller.fetchTargets();
     await Get.find<BudgetController>().loadActiveTargets();
