@@ -1,4 +1,4 @@
-package com.example.pocketPath
+package com.pocket.pocketPath
 
 import io.flutter.embedding.android.FlutterActivity
 

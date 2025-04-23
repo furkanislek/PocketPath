@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '733315032485',
     projectId: 'pocket--path',
     storageBucket: 'pocket--path.appspot.com',
-    iosBundleId: 'com.example.costManagement',
+    iosBundleId: 'com.pocket.costManagement',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '733315032485',
     projectId: 'pocket--path',
     storageBucket: 'pocket--path.appspot.com',
-    iosBundleId: 'com.example.costManagement',
+    iosBundleId: 'com.pocket.costManagement',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
