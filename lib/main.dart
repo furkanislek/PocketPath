@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
         final authController = Get.find<AuthController>();
 
         return authController.user.value == null
-            ? const Login() // Kullanıcı giriş yapmamış
-            : Menu(); // Kullanıcı giriş yapmış
+            ? const Login() 
+            : Menu(); 
       }),
     );
   }

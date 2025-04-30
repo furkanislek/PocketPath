@@ -29,7 +29,8 @@ class _LoginState extends State<Login> {
 
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        Get.off(() => const IntroductionScreens());
+        Get.offAll(() =>
+            const IntroductionScreens()); // Use offAll to clear login stack
       }
     } on FirebaseAuthException catch (e) {
       String? errorText;
@@ -126,11 +127,7 @@ class _LoginState extends State<Login> {
                           fontWeight: FontWeight.bold),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Register()),
-                          );
+                          Get.to(() => const Register());
                         },
                     ),
                   ],

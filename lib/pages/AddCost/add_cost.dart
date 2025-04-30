@@ -1,8 +1,8 @@
 import 'package:pocketPath/controller/cost/add_cost_controller.dart';
 import 'package:pocketPath/controller/menu/bottom_navigator.dart';
-import 'package:pocketPath/pages/Menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pocketPath/pages/Menu/menu.dart';
 
 class AddCost extends StatelessWidget {
   AddCost({Key? key}) : super(key: key);
@@ -33,8 +33,7 @@ class AddCost extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Get.off(() => Menu());
-            controllerMenu.currentIndex(0);
+            Get.back();
           },
         ),
         title: const Text('Add Cost'),
@@ -57,7 +56,7 @@ class AddCost extends StatelessWidget {
                 Get.snackbar('Recorded', 'Cost successfully recorded !',
                     icon: Icon(Icons.add_alert_sharp));
                 controllerMenu.changeTabIndex(0);
-                Navigator.pushReplacement(
+                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => Menu()),
                 );
@@ -300,9 +299,9 @@ class AddCost extends StatelessWidget {
                           },
                           style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
-                            backgroundColor:!controller.isExpenseSelected.value
+                            backgroundColor: !controller.isExpenseSelected.value
                                 ? Colors.transparent
-                                : Colors.red[100], 
+                                : Colors.red[100],
                             side: BorderSide(
                               color: controller.isExpenseSelected.value
                                   ? Colors.red
@@ -314,8 +313,10 @@ class AddCost extends StatelessWidget {
                             ),
                           ),
                           child: Text('Expense',
-                              style: TextStyle(color:!controller
-                                      .isExpenseSelected.value ? Colors.red :  Color.fromARGB(255, 226, 21, 7))),
+                              style: TextStyle(
+                                  color: !controller.isExpenseSelected.value
+                                      ? Colors.red
+                                      : Color.fromARGB(255, 226, 21, 7))),
                         )),
                   ),
                   const SizedBox(width: 16),
@@ -340,8 +341,10 @@ class AddCost extends StatelessWidget {
                             ),
                           ),
                           child: Text('Income',
-                              style: TextStyle(color: controller
-                                      .isExpenseSelected.value ? Colors.green : const Color.fromARGB(255, 27, 71, 28))),
+                              style: TextStyle(
+                                  color: controller.isExpenseSelected.value
+                                      ? Colors.green
+                                      : const Color.fromARGB(255, 27, 71, 28))),
                         )),
                   ),
                 ],

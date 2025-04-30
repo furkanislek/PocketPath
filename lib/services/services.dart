@@ -95,8 +95,7 @@ class Auth {
         'expensesId': uuid.v4(),
         'uid': user.uid,
       });
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   Future<void> deleteCost(String docId) async {
@@ -111,10 +110,8 @@ class Auth {
 
       if (snapshot.docs.isNotEmpty) {
         await snapshot.docs.first.reference.delete();
-      } else {
-      }
-    } catch (e) {
-    }
+      } else {}
+    } catch (e) {}
   }
 
   Future<void> saveNewTarget({
@@ -176,7 +173,7 @@ class Auth {
     }
   }
 
-  Future<List<Map<String, dynamic>>> getExpensesByTargetId( 
+  Future<List<Map<String, dynamic>>> getExpensesByTargetId(
       {required String targetId}) async {
     try {
       // Firestore'dan tüm expenses verilerini çek

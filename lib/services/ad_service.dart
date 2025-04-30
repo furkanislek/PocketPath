@@ -13,14 +13,12 @@ class AdService {
   InterstitialAd? _interstitialAd;
   bool _isAdLoaded = false;
 
-  // Reklam yükleme sayaçları
   int _costAddCounter = 0;
   int _targetAddCounter = 0;
 
-  // Test reklamları için ID'ler
   final String _interstitialAdUnitId = kDebugMode
-      ? 'ca-app-pub-3940256099942544/1033173712' // Test ID
-      : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // Gerçek ID'nizi buraya ekleyin
+      ? 'ca-app-pub-3940256099942544/1033173712' 
+      : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; 
 
   Future<void> initialize() async {
     await MobileAds.instance.initialize();
@@ -55,32 +53,27 @@ class AdService {
         onAdFailedToLoad: (LoadAdError error) {
           _isAdLoaded = false;
           _interstitialAd = null;
-          // Belirli bir süre sonra tekrar yüklemeyi dene
           Future.delayed(const Duration(minutes: 1), _loadInterstitialAd);
         },
       ),
     );
   }
 
-  // Cost eklendiğinde çağrılacak metod
   void onCostAdded() {
     _costAddCounter++;
 
-    // 2 cost eklendiğinde reklam göster
     if (_costAddCounter >= 2) {
       showInterstitialAd();
-      _costAddCounter = 0; // Sayacı sıfırla
+      _costAddCounter = 0; 
     }
   }
 
-  // Target eklendiğinde çağrılacak metod
   void onTargetAdded() {
     _targetAddCounter++;
 
-    // 1 target eklendiğinde reklam göster
     if (_targetAddCounter >= 1) {
       showInterstitialAd();
-      _targetAddCounter = 0; // Sayacı sıfırla
+      _targetAddCounter = 0; 
     }
   }
 
@@ -89,12 +82,10 @@ class AdService {
     if (_interstitialAd != null && _isAdLoaded) {
       _interstitialAd!.show();
     } else {
-      // Reklam yüklü değilse yeni reklam yükle
       _loadInterstitialAd();
     }
   }
 
-  // Uygulama kapatıldığında reklamı temizle
   void dispose() {
     _interstitialAd?.dispose();
   }
