@@ -58,7 +58,6 @@ class TargetController extends GetxController {
         list.refresh();
       }
     } catch (e) {
-      print(e.toString());
     }
   }
 
@@ -92,7 +91,6 @@ class TargetController extends GetxController {
         listById.refresh();
       }
     } catch (e) {
-      print(e.toString());
     }
   }
 }

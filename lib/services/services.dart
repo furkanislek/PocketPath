@@ -58,11 +58,9 @@ class Auth {
       if (userDoc.exists) {
         return userDoc.data() as Map<String, dynamic>;
       } else {
-        print("User document does not exist");
         return null;
       }
     } catch (e) {
-      print("Error fetching user data: $e");
       return null;
     }
   }
@@ -98,7 +96,6 @@ class Auth {
         'uid': user.uid,
       });
     } catch (e) {
-      print("Hata oluştu: $e");
     }
   }
 
@@ -115,10 +112,8 @@ class Auth {
       if (snapshot.docs.isNotEmpty) {
         await snapshot.docs.first.reference.delete();
       } else {
-        print("Cost document not found");
       }
     } catch (e) {
-      print("Error deleting cost: $e");
     }
   }
 
@@ -181,10 +176,9 @@ class Auth {
     }
   }
 
-  Future<List<Map<String, dynamic>>> getExpensesByTargetId(
+  Future<List<Map<String, dynamic>>> getExpensesByTargetId( 
       {required String targetId}) async {
     try {
-      print("Targets : $targetId");
       // Firestore'dan tüm expenses verilerini çek
       User? user = _firebaseAuth.currentUser;
       if (user == null) throw Exception("User Not Found!");
@@ -210,7 +204,6 @@ class Auth {
         };
       }).toList();
 
-      print("Str : $expenses");
       return expenses;
     } catch (e) {
       print("Error fetching expenses: $e");
@@ -272,7 +265,6 @@ class Auth {
 
       return result;
     } catch (e) {
-      print("Hata oluştu: $e");
       return [];
     }
   }
@@ -295,7 +287,6 @@ class Auth {
           .map((doc) => doc.data() as Map<String, dynamic>)
           .toList();
     } catch (e) {
-      print("Hata oluştu: $e");
       return [];
     }
   }

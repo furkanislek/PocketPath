@@ -18,7 +18,6 @@ class CostController extends GetxController {
     super.onInit();
     fetchsCosts();
     ever(budgetController.selectedTargetId, (_) {
-      print("Target ID değişti, fetchsCosts çağrılıyor");
       fetchsCosts();
     });
     ever(homeTabController.selectedIndex, (index) {

@@ -119,7 +119,7 @@ class AddCost extends StatelessWidget {
                   child: Obx(() {
                     return Text(
                       controller.selectedTargetId.value.isEmpty
-                          ? "Select an active target"
+                          ? "Select an active target like \"Stock Wallet\""
                           : controller.activeTargets.firstWhere((target) =>
                               target["id"] ==
                               controller.selectedTargetId.value)["name"],
@@ -173,7 +173,7 @@ class AddCost extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           maxLength: 15,
                           decoration: InputDecoration(
-                            hintText: "Type Name.",
+                            hintText: "Type Name Like \"NASDAQ ETF\"",
                             hintStyle: TextStyle(
                                 color: controller.selectedTypeName.value.isEmpty
                                     ? const Color.fromARGB(220, 219, 219, 219)
@@ -300,6 +300,9 @@ class AddCost extends StatelessWidget {
                           },
                           style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
+                            backgroundColor:!controller.isExpenseSelected.value
+                                ? Colors.transparent
+                                : Colors.red[100], 
                             side: BorderSide(
                               color: controller.isExpenseSelected.value
                                   ? Colors.red
@@ -310,8 +313,9 @@ class AddCost extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text('Expense',
-                              style: TextStyle(color: Colors.red)),
+                          child: Text('Expense',
+                              style: TextStyle(color:!controller
+                                      .isExpenseSelected.value ? Colors.red :  Color.fromARGB(255, 226, 21, 7))),
                         )),
                   ),
                   const SizedBox(width: 16),
@@ -322,6 +326,9 @@ class AddCost extends StatelessWidget {
                           },
                           style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
+                            backgroundColor: controller.isExpenseSelected.value
+                                ? Colors.transparent
+                                : Colors.green[100],
                             side: BorderSide(
                               color: controller.isExpenseSelected.value
                                   ? Colors.green[100]!
@@ -332,8 +339,9 @@ class AddCost extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text('Income',
-                              style: TextStyle(color: Colors.green)),
+                          child: Text('Income',
+                              style: TextStyle(color: controller
+                                      .isExpenseSelected.value ? Colors.green : const Color.fromARGB(255, 27, 71, 28))),
                         )),
                   ),
                 ],
