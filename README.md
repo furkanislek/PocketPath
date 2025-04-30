@@ -81,3 +81,5 @@ This project is currently unlicensed (or check the repository for a specific lic
 
 ### ScreenShots
 ![Cream Simple Get App Instagram Story Kopyası](https://github.com/user-attachments/assets/30148249-26a8-443e-b704-83d1db32272c)![Cream Simple Get App Instagram Story Kopyası Kopyası](https://github.com/user-attachments/assets/8df09039-cd95-438d-a3eb-d4278304d9bb)
+
+
