@@ -100,5 +100,36 @@ const Map<String, String> jaJP = {
   "intro.page3.title": "次のステップ",
   "intro.page3.text": "目標を確認し、それに応じて支出と収入を設定できます。定期的な支出や達成した目標を追跡できます。",
   "intro.page3.quote": "行き先を知らない船乗りには、順風は吹かない。",
-  "intro.page3.author": "- セネカ"
+  "intro.page3.author": "- セネカ",
+
+  // Home Page Components
+  "home.title.hello": "こんにちは",
+  "home.title.welcomeBack": "おかえりなさい！",
+  "home.budget.balance": "残高",
+  "home.budget.noTarget": "まだ目標を入力していません",
+  "home.budget.createNewTask": "新しいタスクを作成",
+  "home.budget.selectTargetPlan": "目標計画を選択",
+  "home.budget.budget": "予算：",
+
+  // Tab Period
+  "home.tab.day": "日",
+  "home.tab.month": "月",
+  "home.tab.yearly": "年間",
+
+  // Cost Component
+  "home.cost.expense": "支出",
+  "home.cost.income": "収入",
+  "home.cost.delete.title": "コストを削除",
+  "home.cost.delete.message": "このコストを削除してもよろしいですか？",
+  "home.cost.delete.cancel": "キャンセル",
+  "home.cost.delete.confirm": "削除",
+
+  // Categories
+  "category.shopping": "ショッピング",
+  "category.healthy": "健康",
+  "category.food": "食品",
+  "category.school": "学校",
+  "category.holiday": "休日",
+  "category.electronic": "電子機器",
+  "category.other": "その他",
 };

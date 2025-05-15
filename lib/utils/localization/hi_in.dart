@@ -110,5 +110,36 @@ const Map<String, String> hiIN = {
       "आप लक्ष्यों को देख सकते हैं और तदनुसार खर्च और आय निर्धारित कर सकते हैं। आप अपने नियमित खर्चों और अपने पूरे किए गए लक्ष्यों का ट्रैक रख सकते हैं।",
   "intro.page3.quote":
       "उस नाविक के लिए कोई अनुकूल हवा नहीं है जो नहीं जानता कि वह कहां जा रहा है।",
-  "intro.page3.author": "- सेनेका"
+  "intro.page3.author": "- सेनेका",
+
+  // Home Page Components
+  "home.title.hello": "नमस्ते",
+  "home.title.welcomeBack": "वापसी पर स्वागत है!",
+  "home.budget.balance": "शेष राशि",
+  "home.budget.noTarget": "आपने अभी तक कोई लक्ष्य नहीं दर्ज किया है",
+  "home.budget.createNewTask": "नया कार्य बनाएं",
+  "home.budget.selectTargetPlan": "लक्ष्य योजना चुनें",
+  "home.budget.budget": "बजट:",
+
+  // Tab Period
+  "home.tab.day": "दिन",
+  "home.tab.month": "माह",
+  "home.tab.yearly": "वार्षिक",
+
+  // Cost Component
+  "home.cost.expense": "व्यय",
+  "home.cost.income": "आय",
+  "home.cost.delete.title": "लागत हटाएं",
+  "home.cost.delete.message": "क्या आप वाकई इस लागत को हटाना चाहते हैं?",
+  "home.cost.delete.cancel": "रद्द करें",
+  "home.cost.delete.confirm": "हटाएं",
+
+  // Categories
+  "category.shopping": "खरीदारी",
+  "category.healthy": "स्वास्थ्य",
+  "category.food": "भोजन",
+  "category.school": "स्कूल",
+  "category.holiday": "छुट्टी",
+  "category.electronic": "इलेक्ट्रॉनिक",
+  "category.other": "अन्य"
 };

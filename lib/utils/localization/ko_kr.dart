@@ -103,5 +103,36 @@ const Map<String, String> koKR = {
   "intro.page3.text":
       "목표를 확인하고 그에 따라 지출과 수입을 설정할 수 있습니다. 정기적인 지출과 완료된 목표를 추적할 수 있습니다.",
   "intro.page3.quote": "어디로 가야 할지 모르는 선원에게는 순풍이 없다.",
-  "intro.page3.author": "- 세네카"
+  "intro.page3.author": "- 세네카",
+
+  // Home Page Components
+  "home.title.hello": "안녕하세요",
+  "home.title.welcomeBack": "다시 오신 것을 환영합니다!",
+  "home.budget.balance": "잔액",
+  "home.budget.noTarget": "아직 목표를 입력하지 않았습니다",
+  "home.budget.createNewTask": "새 작업 만들기",
+  "home.budget.selectTargetPlan": "목표 계획 선택",
+  "home.budget.budget": "예산:",
+
+  // Tab Period
+  "home.tab.day": "일",
+  "home.tab.month": "월",
+  "home.tab.yearly": "연간",
+
+  // Cost Component
+  "home.cost.expense": "지출",
+  "home.cost.income": "수입",
+  "home.cost.delete.title": "비용 삭제",
+  "home.cost.delete.message": "이 비용을 삭제하시겠습니까?",
+  "home.cost.delete.cancel": "취소",
+  "home.cost.delete.confirm": "삭제",
+
+  // Categories
+  "category.shopping": "쇼핑",
+  "category.healthy": "건강",
+  "category.food": "음식",
+  "category.school": "학교",
+  "category.holiday": "휴일",
+  "category.electronic": "전자제품",
+  "category.other": "기타",
 };

@@ -111,5 +111,36 @@ const Map<String, String> itIT = {
       "Puoi vedere gli obiettivi e impostare spese e entrate di conseguenza. Puoi tenere traccia delle tue spese periodiche e dei tuoi obiettivi completati.",
   "intro.page3.quote":
       "Non c'è vento favorevole per il marinaio che non sa dove andare.",
-  "intro.page3.author": "- Seneca"
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Ciao",
+  "home.title.welcomeBack": "Bentornato!",
+  "home.budget.balance": "Saldo",
+  "home.budget.noTarget": "Non hai ancora inserito un obiettivo",
+  "home.budget.createNewTask": "Crea nuovo compito",
+  "home.budget.selectTargetPlan": "Seleziona piano obiettivo",
+  "home.budget.budget": "Budget:",
+
+  // Tab Period
+  "home.tab.day": "Giorno",
+  "home.tab.month": "Mese",
+  "home.tab.yearly": "Annuale",
+
+  // Cost Component
+  "home.cost.expense": "Spesa",
+  "home.cost.income": "Entrata",
+  "home.cost.delete.title": "Elimina costo",
+  "home.cost.delete.message": "Sei sicuro di voler eliminare questo costo?",
+  "home.cost.delete.cancel": "Annulla",
+  "home.cost.delete.confirm": "Elimina",
+
+  // Categories
+  "category.shopping": "Shopping",
+  "category.healthy": "Salute",
+  "category.food": "Cibo",
+  "category.school": "Scuola",
+  "category.holiday": "Vacanza",
+  "category.electronic": "Elettronica",
+  "category.other": "Altro",
 };

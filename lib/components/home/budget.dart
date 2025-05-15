@@ -116,8 +116,8 @@ class Budget extends StatelessWidget {
                                     );
                                   }
                                 }),
-                                const Text(
-                                  "Balance",
+                                Text(
+                                  "home.budget.balance".tr,
                                   style: TextStyle(color: Color(0xFF55BB7D)),
                                 ),
                               ],
@@ -150,11 +150,11 @@ class Budget extends StatelessWidget {
                         ],
                       );
                     } else {
-                      return const Row(
+                      return Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "You Have Not Entered A Target Yet",
+                            "home.budget.noTarget".tr,
                             style: TextStyle(
                               fontFamily: 'Poppins',
                             ),
@@ -184,7 +184,7 @@ class Budget extends StatelessWidget {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      const Text("Create New Task"),
+                                      Text("home.budget.createNewTask".tr),
                                       SizedBox(width: width / 10),
                                       const Icon(Icons.add),
                                     ],
@@ -207,7 +207,7 @@ class Budget extends StatelessWidget {
                                   foregroundColor: const Color(0xFF55BB7D),
                                 ),
                                 onPressed: () => showBottomModal(context),
-                                child: const Text("Select Target Plan"),
+                                child: Text("home.budget.selectTargetPlan".tr),
                               ),
                             ),
                           ),
@@ -273,7 +273,8 @@ class Budget extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(target['name']),
-                                  Text('Budget: \$${target['budget']}')
+                                  Text(
+                                      "${"home.budget.budget".tr} \$${target['budget']}")
                                 ]),
                           ),
                         ),

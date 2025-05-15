@@ -110,5 +110,36 @@ const Map<String, String> idID = {
       "Anda dapat melihat tujuan dan menetapkan pengeluaran dan pendapatan sesuai dengan itu. Anda dapat melacak pengeluaran berkala Anda, dan target-target yang telah selesai.",
   "intro.page3.quote":
       "Tidak ada angin yang menguntungkan bagi pelaut yang tidak tahu ke mana harus pergi.",
-  "intro.page3.author": "- Seneca"
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Halo",
+  "home.title.welcomeBack": "Selamat datang kembali!",
+  "home.budget.balance": "Saldo",
+  "home.budget.noTarget": "Anda Belum Memasukkan Target",
+  "home.budget.createNewTask": "Buat Tugas Baru",
+  "home.budget.selectTargetPlan": "Pilih Rencana Target",
+  "home.budget.budget": "Anggaran:",
+
+  // Tab Period
+  "home.tab.day": "Hari",
+  "home.tab.month": "Bulan",
+  "home.tab.yearly": "Tahunan",
+
+  // Cost Component
+  "home.cost.expense": "Pengeluaran",
+  "home.cost.income": "Pendapatan",
+  "home.cost.delete.title": "Hapus Biaya",
+  "home.cost.delete.message": "Apakah Anda yakin ingin menghapus biaya ini?",
+  "home.cost.delete.cancel": "Batal",
+  "home.cost.delete.confirm": "Hapus",
+
+  // Categories
+  "category.shopping": "Belanja",
+  "category.healthy": "Kesehatan",
+  "category.food": "Makanan",
+  "category.school": "Sekolah",
+  "category.holiday": "Liburan",
+  "category.electronic": "Elektronik",
+  "category.other": "Lainnya",
 };

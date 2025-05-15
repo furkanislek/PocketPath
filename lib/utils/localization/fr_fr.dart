@@ -112,5 +112,36 @@ const Map<String, String> frFR = {
       "Vous pouvez voir les objectifs et définir les dépenses et les revenus en conséquence. Vous pouvez suivre vos dépenses périodiques et vos objectifs atteints.",
   "intro.page3.quote":
       "Il n'y a pas de vent favorable pour le marin qui ne sait pas où aller.",
-  "intro.page3.author": "- Sénèque"
+  "intro.page3.author": "- Sénèque",
+
+  // Home Page Components
+  "home.title.hello": "Bonjour",
+  "home.title.welcomeBack": "Bon retour !",
+  "home.budget.balance": "Solde",
+  "home.budget.noTarget": "Vous n'avez pas encore entré d'objectif",
+  "home.budget.createNewTask": "Créer une nouvelle tâche",
+  "home.budget.selectTargetPlan": "Sélectionner un plan d'objectif",
+  "home.budget.budget": "Budget :",
+
+  // Tab Period
+  "home.tab.day": "Jour",
+  "home.tab.month": "Mois",
+  "home.tab.yearly": "Annuel",
+
+  // Cost Component
+  "home.cost.expense": "Dépense",
+  "home.cost.income": "Revenu",
+  "home.cost.delete.title": "Supprimer le coût",
+  "home.cost.delete.message": "Êtes-vous sûr de vouloir supprimer ce coût ?",
+  "home.cost.delete.cancel": "Annuler",
+  "home.cost.delete.confirm": "Supprimer",
+
+  // Categories
+  "category.shopping": "Shopping",
+  "category.healthy": "Santé",
+  "category.food": "Nourriture",
+  "category.school": "École",
+  "category.holiday": "Vacances",
+  "category.electronic": "Électronique",
+  "category.other": "Autre",
 };

@@ -106,7 +106,38 @@ const Map<String, String> arSA = {
   // Introduction Page 3
   "intro.page3.title": "الخطوة الثانية",
   "intro.page3.text":
-      "يمكنك رؤية الأهداف وتحديد الإنفاق والدخل وفقًا لذلك. يمكنك تتبع نفقاتك الدورية وأهدافك المنجزة.",
-  "intro.page3.quote": "لا توجد رياح مواتية للبحار الذي لا يعرف إلى أين يتجه.",
-  "intro.page3.author": "- سينيكا"
+      "يمكنك رؤية الأهداف وتحديد الإنفاق والدخل وفقًا لذلك. يمكنك تتبع نفقاتك الدورية وأهدافك المكتملة.",
+  "intro.page3.quote": "لا توجد ريح مواتية للبحار الذي لا يعرف إلى أين يتجه.",
+  "intro.page3.author": "- سينيكا",
+
+  // Home Page Components
+  "home.title.hello": "مرحبًا",
+  "home.title.welcomeBack": "مرحبًا بعودتك!",
+  "home.budget.balance": "الرصيد",
+  "home.budget.noTarget": "لم تقم بإدخال هدف بعد",
+  "home.budget.createNewTask": "إنشاء مهمة جديدة",
+  "home.budget.selectTargetPlan": "اختيار خطة الهدف",
+  "home.budget.budget": "الميزانية:",
+
+  // Tab Period
+  "home.tab.day": "يوم",
+  "home.tab.month": "شهر",
+  "home.tab.yearly": "سنوي",
+
+  // Cost Component
+  "home.cost.expense": "مصروف",
+  "home.cost.income": "دخل",
+  "home.cost.delete.title": "حذف التكلفة",
+  "home.cost.delete.message": "هل أنت متأكد من أنك تريد حذف هذه التكلفة؟",
+  "home.cost.delete.cancel": "إلغاء",
+  "home.cost.delete.confirm": "حذف",
+
+  // Categories
+  "category.shopping": "تسوق",
+  "category.healthy": "صحة",
+  "category.food": "طعام",
+  "category.school": "مدرسة",
+  "category.holiday": "عطلة",
+  "category.electronic": "إلكترونيات",
+  "category.other": "أخرى",
 };

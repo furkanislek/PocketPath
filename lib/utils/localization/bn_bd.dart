@@ -108,5 +108,36 @@ const Map<String, String> bnBD = {
       "আপনি লক্ষ্যগুলি দেখতে পারেন এবং সেই অনুযায়ী খরচ ও আয় নির্ধারণ করতে পারেন। আপনি আপনার নিয়মিত খরচ এবং সম্পন্ন করা লক্ষ্যগুলি ট্র্যাক করতে পারেন।",
   "intro.page3.quote":
       "যে নাবিক জানে না সে কোথায় যাচ্ছে, তার জন্য কোন অনুকূল বাতাস নেই।",
-  "intro.page3.author": "- সেনেকা"
+  "intro.page3.author": "- সেনেকা",
+
+  // Home Page Components
+  "home.title.hello": "হ্যালো",
+  "home.title.welcomeBack": "আবার স্বাগতম!",
+  "home.budget.balance": "ব্যালেন্স",
+  "home.budget.noTarget": "আপনি এখনও কোন লক্ষ্য প্রবেশ করাননি",
+  "home.budget.createNewTask": "নতুন কাজ তৈরি করুন",
+  "home.budget.selectTargetPlan": "লক্ষ্য পরিকল্পনা নির্বাচন করুন",
+  "home.budget.budget": "বাজেট:",
+
+  // Tab Period
+  "home.tab.day": "দিন",
+  "home.tab.month": "মাস",
+  "home.tab.yearly": "বার্ষিক",
+
+  // Cost Component
+  "home.cost.expense": "ব্যয়",
+  "home.cost.income": "আয়",
+  "home.cost.delete.title": "খরচ মুছুন",
+  "home.cost.delete.message": "আপনি কি নিশ্চিত যে আপনি এই খরচ মুছতে চান?",
+  "home.cost.delete.cancel": "বাতিল করুন",
+  "home.cost.delete.confirm": "মুছুন",
+
+  // Categories
+  "category.shopping": "কেনাকাটা",
+  "category.healthy": "স্বাস্থ্য",
+  "category.food": "খাবার",
+  "category.school": "স্কুল",
+  "category.holiday": "ছুটি",
+  "category.electronic": "ইলেকট্রনিক",
+  "category.other": "অন্যান্য",
 };

@@ -109,8 +109,39 @@ const Map<String, String> enUS = {
   // Introduction Page 3
   "intro.page3.title": "Second step",
   "intro.page3.text":
-      "You can see the goals and set spending and income accordingly. You can keep track of your periodic expenditures, and your finished targets.",
+      "You can see goals and set expenses and income accordingly. You can track your periodic expenses, and your completed goals.",
   "intro.page3.quote":
       "There is no favorable wind for the sailor who doesn't know where to go.",
-  "intro.page3.author": "- Seneca"
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Hello",
+  "home.title.welcomeBack": "Welcome Back!",
+  "home.budget.balance": "Balance",
+  "home.budget.noTarget": "You Have Not Entered A Target Yet",
+  "home.budget.createNewTask": "Create New Task",
+  "home.budget.selectTargetPlan": "Select Target Plan",
+  "home.budget.budget": "Budget:",
+
+  // Tab Period
+  "home.tab.day": "Day",
+  "home.tab.month": "Month",
+  "home.tab.yearly": "Yearly",
+
+  // Cost Component
+  "home.cost.expense": "Expense",
+  "home.cost.income": "Income",
+  "home.cost.delete.title": "Delete Cost",
+  "home.cost.delete.message": "Are you sure you want to delete this cost?",
+  "home.cost.delete.cancel": "Cancel",
+  "home.cost.delete.confirm": "Delete",
+
+  // Categories
+  "category.shopping": "Shopping",
+  "category.healthy": "Healthy",
+  "category.food": "Food",
+  "category.school": "School",
+  "category.holiday": "Holiday",
+  "category.electronic": "Electronic",
+  "category.other": "Other",
 };

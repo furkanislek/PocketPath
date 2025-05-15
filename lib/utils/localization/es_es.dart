@@ -113,8 +113,40 @@ const Map<String, String> esES = {
   // Introduction Page 3
   "intro.page3.title": "Segundo Paso",
   "intro.page3.text":
-      "Puedes ver los objetivos y establecer gastos e ingresos en consecuencia. Puedes realizar un seguimiento de tus gastos periódicos y tus objetivos terminados.",
+      "Puedes ver los objetivos y establecer gastos e ingresos de acuerdo con ellos. Puedes hacer un seguimiento de tus gastos periódicos y tus objetivos completados.",
   "intro.page3.quote":
-      "No hay viento favorable para el marinero que no sabe adónde va.",
-  "intro.page3.author": "- Séneca"
+      "No hay viento favorable para el marinero que no sabe a dónde va.",
+  "intro.page3.author": "- Séneca",
+
+  // Home Page Components
+  "home.title.hello": "Hola",
+  "home.title.welcomeBack": "¡Bienvenido de nuevo!",
+  "home.budget.balance": "Balance",
+  "home.budget.noTarget": "Aún no has ingresado un objetivo",
+  "home.budget.createNewTask": "Crear nueva tarea",
+  "home.budget.selectTargetPlan": "Seleccionar plan objetivo",
+  "home.budget.budget": "Presupuesto:",
+
+  // Tab Period
+  "home.tab.day": "Día",
+  "home.tab.month": "Mes",
+  "home.tab.yearly": "Anual",
+
+  // Cost Component
+  "home.cost.expense": "Gasto",
+  "home.cost.income": "Ingreso",
+  "home.cost.delete.title": "Eliminar costo",
+  "home.cost.delete.message":
+      "¿Estás seguro de que quieres eliminar este costo?",
+  "home.cost.delete.cancel": "Cancelar",
+  "home.cost.delete.confirm": "Eliminar",
+
+  // Categories
+  "category.shopping": "Compras",
+  "category.healthy": "Salud",
+  "category.food": "Comida",
+  "category.school": "Escuela",
+  "category.holiday": "Vacaciones",
+  "category.electronic": "Electrónica",
+  "category.other": "Otro",
 };

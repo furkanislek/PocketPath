@@ -109,8 +109,40 @@ const Map<String, String> deDE = {
   // Introduction Page 3
   "intro.page3.title": "Zweiter Schritt",
   "intro.page3.text":
-      "Sie können die Ziele sehen und entsprechend Ausgaben und Einnahmen festlegen. Sie können Ihre regelmäßigen Ausgaben und Ihre erreichten Ziele verfolgen.",
+      "Sie können Ziele einsehen und entsprechend Ausgaben und Einnahmen festlegen. Sie können Ihre regelmäßigen Ausgaben und Ihre erreichten Ziele verfolgen.",
   "intro.page3.quote":
       "Es gibt keinen günstigen Wind für den Seemann, der nicht weiß, wohin er segeln will.",
-  "intro.page3.author": "- Seneca"
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Hallo",
+  "home.title.welcomeBack": "Willkommen zurück!",
+  "home.budget.balance": "Saldo",
+  "home.budget.noTarget": "Sie haben noch kein Ziel eingegeben",
+  "home.budget.createNewTask": "Neue Aufgabe erstellen",
+  "home.budget.selectTargetPlan": "Zielplan auswählen",
+  "home.budget.budget": "Budget:",
+
+  // Tab Period
+  "home.tab.day": "Tag",
+  "home.tab.month": "Monat",
+  "home.tab.yearly": "Jährlich",
+
+  // Cost Component
+  "home.cost.expense": "Ausgabe",
+  "home.cost.income": "Einnahme",
+  "home.cost.delete.title": "Kosten löschen",
+  "home.cost.delete.message":
+      "Sind Sie sicher, dass Sie diese Kosten löschen möchten?",
+  "home.cost.delete.cancel": "Abbrechen",
+  "home.cost.delete.confirm": "Löschen",
+
+  // Categories
+  "category.shopping": "Einkaufen",
+  "category.healthy": "Gesundheit",
+  "category.food": "Lebensmittel",
+  "category.school": "Schule",
+  "category.holiday": "Urlaub",
+  "category.electronic": "Elektronik",
+  "category.other": "Sonstiges",
 };

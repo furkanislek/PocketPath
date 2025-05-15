@@ -107,8 +107,39 @@ const Map<String, String> trTR = {
   // Tanıtım Sayfası 3
   "intro.page3.title": "İkinci Adım",
   "intro.page3.text":
-      "Hedeflerinizi görebilir ve buna göre harcama ve gelir belirleyebilirsiniz. Periyodik harcamalarınızı ve tamamlanmış hedeflerinizi takip edebilirsiniz.",
+      "Hedeflerinizi görebilir ve ona göre harcama ve gelir ayarlayabilirsiniz. Düzenli harcamalarınızı ve tamamladığınız hedeflerinizi takip edebilirsiniz.",
   "intro.page3.quote":
-      "Nereye gideceğini bilmeyen denizciye uygun rüzgar yoktur.",
-  "intro.page3.author": "- Seneca"
+      "Nereye gittiğini bilmeyen denizciye uygun rüzgar esintisi yoktur.",
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Merhaba",
+  "home.title.welcomeBack": "Tekrar Hoşgeldiniz!",
+  "home.budget.balance": "Bakiye",
+  "home.budget.noTarget": "Henüz Bir Hedef Girmediniz",
+  "home.budget.createNewTask": "Yeni Görev Oluştur",
+  "home.budget.selectTargetPlan": "Hedef Planı Seç",
+  "home.budget.budget": "Bütçe:",
+
+  // Tab Period
+  "home.tab.day": "Gün",
+  "home.tab.month": "Ay",
+  "home.tab.yearly": "Yıllık",
+
+  // Cost Component
+  "home.cost.expense": "Gider",
+  "home.cost.income": "Gelir",
+  "home.cost.delete.title": "Maliyeti Sil",
+  "home.cost.delete.message": "Bu maliyeti silmek istediğinizden emin misiniz?",
+  "home.cost.delete.cancel": "İptal",
+  "home.cost.delete.confirm": "Sil",
+
+  // Categories
+  "category.shopping": "Alışveriş",
+  "category.healthy": "Sağlık",
+  "category.food": "Yemek",
+  "category.school": "Okul",
+  "category.holiday": "Tatil",
+  "category.electronic": "Elektronik",
+  "category.other": "Diğer"
 };

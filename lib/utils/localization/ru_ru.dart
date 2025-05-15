@@ -107,8 +107,39 @@ const Map<String, String> ruRU = {
   // Introduction Page 3
   "intro.page3.title": "Второй шаг",
   "intro.page3.text":
-      "Вы можете видеть цели и соответственно устанавливать расходы и доходы. Вы можете отслеживать свои периодические расходы и достигнутые цели.",
+      "Вы можете видеть цели и соответствующим образом устанавливать расходы и доходы. Вы можете отслеживать свои периодические расходы и выполненные цели.",
   "intro.page3.quote":
-      "Нет попутного ветра для того, кто не знает, куда плыть.",
-  "intro.page3.author": "- Сенека"
+      "Для моряка, который не знает, куда плыть, нет попутного ветра.",
+  "intro.page3.author": "- Сенека",
+
+  // Home Page Components
+  "home.title.hello": "Здравствуйте",
+  "home.title.welcomeBack": "С возвращением!",
+  "home.budget.balance": "Баланс",
+  "home.budget.noTarget": "Вы еще не ввели цель",
+  "home.budget.createNewTask": "Создать новую задачу",
+  "home.budget.selectTargetPlan": "Выбрать целевой план",
+  "home.budget.budget": "Бюджет:",
+
+  // Tab Period
+  "home.tab.day": "День",
+  "home.tab.month": "Месяц",
+  "home.tab.yearly": "Годовой",
+
+  // Cost Component
+  "home.cost.expense": "Расход",
+  "home.cost.income": "Доход",
+  "home.cost.delete.title": "Удалить расход",
+  "home.cost.delete.message": "Вы уверены, что хотите удалить этот расход?",
+  "home.cost.delete.cancel": "Отмена",
+  "home.cost.delete.confirm": "Удалить",
+
+  // Categories
+  "category.shopping": "Покупки",
+  "category.healthy": "Здоровье",
+  "category.food": "Еда",
+  "category.school": "Школа",
+  "category.holiday": "Праздник",
+  "category.electronic": "Электроника",
+  "category.other": "Другое",
 };

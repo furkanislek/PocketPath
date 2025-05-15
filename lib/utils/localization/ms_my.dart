@@ -110,5 +110,36 @@ const Map<String, String> msMY = {
       "Anda boleh melihat matlamat dan menetapkan perbelanjaan dan pendapatan sewajarnya. Anda boleh menjejaki perbelanjaan berkala anda, dan sasaran yang telah selesai.",
   "intro.page3.quote":
       "Tiada angin yang baik untuk pelaut yang tidak tahu ke mana hendak pergi.",
-  "intro.page3.author": "- Seneca"
+  "intro.page3.author": "- Seneca",
+
+  // Home Page Components
+  "home.title.hello": "Halo",
+  "home.title.welcomeBack": "Selamat kembali!",
+  "home.budget.balance": "Baki",
+  "home.budget.noTarget": "Anda Belum Memasukkan Sasaran",
+  "home.budget.createNewTask": "Cipta Tugas Baru",
+  "home.budget.selectTargetPlan": "Pilih Pelan Sasaran",
+  "home.budget.budget": "Bajet:",
+
+  // Tab Period
+  "home.tab.day": "Hari",
+  "home.tab.month": "Bulan",
+  "home.tab.yearly": "Tahunan",
+
+  // Cost Component
+  "home.cost.expense": "Perbelanjaan",
+  "home.cost.income": "Pendapatan",
+  "home.cost.delete.title": "Padam Kos",
+  "home.cost.delete.message": "Adakah anda pasti mahu memadam kos ini?",
+  "home.cost.delete.cancel": "Batal",
+  "home.cost.delete.confirm": "Padam",
+
+  // Categories
+  "category.shopping": "Membeli-belah",
+  "category.healthy": "Kesihatan",
+  "category.food": "Makanan",
+  "category.school": "Sekolah",
+  "category.holiday": "Percutian",
+  "category.electronic": "Elektronik",
+  "category.other": "Lain-lain"
 };

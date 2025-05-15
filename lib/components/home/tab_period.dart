@@ -23,9 +23,9 @@ class TabSelection extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildTab("Day", 0),
-            _buildTab("Month", 1),
-            _buildTab("Yearly", 2),
+            _buildTab("home.tab.day".tr, 0),
+            _buildTab("home.tab.month".tr, 1),
+            _buildTab("home.tab.yearly".tr, 2),
           ],
         ),
       );
@@ -37,7 +37,6 @@ class TabSelection extends StatelessWidget {
       onTap: () async {
         tabController.selectTab(index);
 
-        // Tab değiştiğinde doğrudan CostController'da ilgili fetch metodunu çağırma
         CostController costController = Get.find<CostController>();
         if (index == 0) {
           await costController.fetchDailyCosts();

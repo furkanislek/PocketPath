@@ -97,7 +97,38 @@ const Map<String, String> zhCN = {
 
   // Introduction Page 3
   "intro.page3.title": "第二步",
-  "intro.page3.text": "您可以看到目标并相应地设定支出和收入。您可以跟踪您的定期支出和完成的目标。",
-  "intro.page3.quote": "对于不知道去向何方的水手来说，没有顺风。",
-  "intro.page3.author": "- 塞内卡"
+  "intro.page3.text": "您可以查看目标并相应设置支出和收入。您可以跟踪定期支出和已完成的目标。",
+  "intro.page3.quote": "对于不知道去向的水手来说，没有顺风。",
+  "intro.page3.author": "- 塞内卡",
+
+  // Home Page Components
+  "home.title.hello": "您好",
+  "home.title.welcomeBack": "欢迎回来！",
+  "home.budget.balance": "余额",
+  "home.budget.noTarget": "您尚未输入目标",
+  "home.budget.createNewTask": "创建新任务",
+  "home.budget.selectTargetPlan": "选择目标计划",
+  "home.budget.budget": "预算：",
+
+  // Tab Period
+  "home.tab.day": "日",
+  "home.tab.month": "月",
+  "home.tab.yearly": "年",
+
+  // Cost Component
+  "home.cost.expense": "支出",
+  "home.cost.income": "收入",
+  "home.cost.delete.title": "删除费用",
+  "home.cost.delete.message": "您确定要删除此费用吗？",
+  "home.cost.delete.cancel": "取消",
+  "home.cost.delete.confirm": "删除",
+
+  // Categories
+  "category.shopping": "购物",
+  "category.healthy": "健康",
+  "category.food": "食品",
+  "category.school": "学校",
+  "category.holiday": "假期",
+  "category.electronic": "电子产品",
+  "category.other": "其他",
 };

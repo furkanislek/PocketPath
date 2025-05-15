@@ -15,7 +15,7 @@ class HomeTitle extends StatelessWidget {
         Row(
           children: [
             Obx(() => Text(
-                'Hello ${controller.userName.value} ${controller.surName.value}', // Kullanıcı adı burada görüntülenir
+                '${'home.title.hello'.tr} ${controller.userName.value} ${controller.surName.value}',
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -25,7 +25,7 @@ class HomeTitle extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Welcome Back!",
+              "home.title.welcomeBack".tr,
               style: TextStyle(fontSize: 14, color: Color(0xFF868B88)),
             )
           ],

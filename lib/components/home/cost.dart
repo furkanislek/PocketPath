@@ -140,7 +140,9 @@ class Costs extends StatelessWidget {
                                 fontSize: kDefaultFontSize * 0.8),
                           ),
                           Text(
-                            costs['isExpense'] ? 'Expense' : 'Income',
+                            costs['isExpense']
+                                ? 'home.cost.expense'.tr
+                                : 'home.cost.income'.tr,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: costs['isExpense']
@@ -163,17 +165,17 @@ class Costs extends StatelessWidget {
   void _showDeleteDialog(BuildContext context, String docId) {
     Get.dialog(
       AlertDialog(
-        title: const Text("Delete Cost"),
-        content: const Text("Are you sure you want to delete this cost?"),
+        title: Text("home.cost.delete.title".tr),
+        content: Text("home.cost.delete.message".tr),
         actions: [
           TextButton(
-            child: const Text("Cancel"),
+            child: Text("home.cost.delete.cancel".tr),
             onPressed: () {
               Navigator.of(context).pop();
             },
           ),
           TextButton(
-            child: const Text("Delete"),
+            child: Text("home.cost.delete.confirm".tr),
             onPressed: () {
               costController.deleteCost(docId);
               Navigator.of(context).pop();
