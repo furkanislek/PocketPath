@@ -182,5 +182,24 @@ const Map<String, String> deDE = {
   "menu.analysis": "Analyse",
   "menu.targets": "Ziele",
   "menu.add_target": "Ziel hinzufügen",
-  "menu.profile": "Profil"
+  "menu.profile": "Profil",
+
+  // Target Pages
+  "target.title": "Ziel",
+  "target.balance": "Saldo",
+  "target.target_type": "Zieltyp",
+  "target.type_name": "Typname",
+  "target.date_picker": "Datumsauswahl",
+  "target.select_date": "Datum auswählen",
+  "target.budget_amount": "Budgetbetrag",
+  "target.save": "Speichern",
+  "target.recorded": "Aufgezeichnet",
+  "target.success": "Ziel erfolgreich aufgezeichnet!",
+  "target.error": "Fehler",
+  "target.invalid_budget": "Ungültiger Budgetbetrag",
+  "target.fill_fields": "Bitte füllen Sie alle Felder aus",
+  "target.set_new_target": "Neues Ziel festlegen",
+  "target.passive": "Passiv",
+  "target.active": "Aktiv",
+  "target.all": "Alle"
 };

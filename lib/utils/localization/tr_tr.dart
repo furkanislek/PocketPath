@@ -178,5 +178,24 @@ const Map<String, String> trTR = {
   "menu.analysis": "Analiz",
   "menu.targets": "Hedefler",
   "menu.add_target": "Hedef Ekle",
-  "menu.profile": "Profil"
+  "menu.profile": "Profil",
+
+  // Target Pages
+  "target.title": "Hedef",
+  "target.balance": "Bakiye",
+  "target.target_type": "Hedef Türü",
+  "target.type_name": "Tür Adı",
+  "target.date_picker": "Tarih Seçici",
+  "target.select_date": "Tarih Seç",
+  "target.budget_amount": "Bütçe Miktarı",
+  "target.save": "Kaydet",
+  "target.recorded": "Kaydedildi",
+  "target.success": "Hedef başarıyla kaydedildi!",
+  "target.error": "Hata",
+  "target.invalid_budget": "Geçersiz bütçe miktarı",
+  "target.fill_fields": "Lütfen tüm alanları doldurun",
+  "target.set_new_target": "Yeni Hedef Belirle",
+  "target.passive": "Pasif",
+  "target.active": "Aktif",
+  "target.all": "Tümü"
 };

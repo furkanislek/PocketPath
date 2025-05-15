@@ -171,5 +171,24 @@ const Map<String, String> koKR = {
   "menu.analysis": "분석",
   "menu.targets": "목표",
   "menu.add_target": "목표 추가",
-  "menu.profile": "프로필"
+  "menu.profile": "프로필",
+
+  // Target Pages
+  "target.title": "목표",
+  "target.balance": "잔액",
+  "target.target_type": "목표 유형",
+  "target.type_name": "유형 이름",
+  "target.date_picker": "날짜 선택기",
+  "target.select_date": "날짜 선택",
+  "target.budget_amount": "예산 금액",
+  "target.save": "저장",
+  "target.recorded": "기록됨",
+  "target.success": "목표가 성공적으로 기록되었습니다!",
+  "target.error": "오류",
+  "target.invalid_budget": "유효하지 않은 예산 금액",
+  "target.fill_fields": "모든 필드를 작성해주세요",
+  "target.set_new_target": "새 목표 설정",
+  "target.passive": "비활성",
+  "target.active": "활성",
+  "target.all": "전체"
 };

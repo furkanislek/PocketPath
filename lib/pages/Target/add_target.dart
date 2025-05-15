@@ -25,7 +25,7 @@ class AddTarget extends StatelessWidget {
             bottomNavigationController.currentIndex(1);
           },
         ),
-        title: const Text('Set New Target'),
+        title: Text('target.set_new_target'.tr),
         centerTitle: true,
       ),
       backgroundColor: const Color(0xFFF2F2F2),
@@ -43,7 +43,7 @@ class AddTarget extends StatelessWidget {
                 final budget = double.tryParse(budgetString);
                 if (budget != null) {
                   controller.saveTarget();
-                  Get.snackbar('Recorded', 'Target successfully recorded !',
+                  Get.snackbar('target.recorded'.tr, 'target.success'.tr,
                       icon: const Icon(Icons.add_alert_sharp));
                   Future.delayed(const Duration(seconds: 1), () {
                     Get.off(() => Menu());
@@ -51,10 +51,10 @@ class AddTarget extends StatelessWidget {
                         .currentIndex(0); // Ana ekrana yönlendir (0 = Home)
                   });
                 } else {
-                  Get.snackbar('Error', 'Invalid budget amount');
+                  Get.snackbar('target.error'.tr, 'target.invalid_budget'.tr);
                 }
               } else {
-                Get.snackbar('Error', 'Please fill all fields');
+                Get.snackbar('target.error'.tr, 'target.fill_fields'.tr);
               }
             },
             style: ElevatedButton.styleFrom(
@@ -65,8 +65,8 @@ class AddTarget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: const Text(
-              'Save',
+            child: Text(
+              'target.save'.tr,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
@@ -84,10 +84,10 @@ class AddTarget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      "Target Type",
+                      "target.target_type".tr,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
@@ -121,7 +121,7 @@ class AddTarget extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           maxLength: 15,
                           decoration: InputDecoration(
-                            hintText: "Type Name",
+                            hintText: "target.type_name".tr,
                             suffixIcon: Icon(Icons.info_outline),
                             hintStyle: TextStyle(
                                 color: controller.selectedTypeName.value.isEmpty
@@ -139,10 +139,10 @@ class AddTarget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      "Date Picker",
+                      "target.date_picker".tr,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
@@ -198,7 +198,7 @@ class AddTarget extends StatelessWidget {
                                   }
                                 },
                               ),
-                              hintText: "Select Date",
+                              hintText: "target.select_date".tr,
                               hintStyle: TextStyle(
                                   color: controller
                                           .selectedTypeName.value.isEmpty
@@ -217,10 +217,10 @@ class AddTarget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      "Budget Amount",
+                      "target.budget_amount".tr,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),

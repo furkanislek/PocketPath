@@ -177,5 +177,24 @@ const Map<String, String> bnBD = {
   "menu.analysis": "বিশ্লেষণ",
   "menu.targets": "লক্ষ্যগুলি",
   "menu.add_target": "লক্ষ্য যোগ করুন",
-  "menu.profile": "প্রোফাইল"
+  "menu.profile": "প্রোফাইল",
+
+  // Target Pages
+  "target.title": "লক্ষ্য",
+  "target.balance": "ব্যালেন্স",
+  "target.target_type": "লক্ষ্যের ধরন",
+  "target.type_name": "ধরনের নাম",
+  "target.date_picker": "তারিখ নির্বাচক",
+  "target.select_date": "তারিখ নির্বাচন করুন",
+  "target.budget_amount": "বাজেট পরিমাণ",
+  "target.save": "সংরক্ষণ করুন",
+  "target.recorded": "রেকর্ড করা হয়েছে",
+  "target.success": "লক্ষ্য সফলভাবে রেকর্ড করা হয়েছে!",
+  "target.error": "ত্রুটি",
+  "target.invalid_budget": "অবৈধ বাজেট পরিমাণ",
+  "target.fill_fields": "অনুগ্রহ করে সব ক্ষেত্র পূরণ করুন",
+  "target.set_new_target": "নতুন লক্ষ্য নির্ধারণ করুন",
+  "target.passive": "নিষ্ক্রিয়",
+  "target.active": "সক্রিয়",
+  "target.all": "সব"
 };

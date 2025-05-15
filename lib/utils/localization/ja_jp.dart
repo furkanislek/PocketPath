@@ -168,5 +168,24 @@ const Map<String, String> jaJP = {
   "menu.analysis": "分析",
   "menu.targets": "目標",
   "menu.add_target": "目標を追加",
-  "menu.profile": "プロフィール"
+  "menu.profile": "プロフィール",
+
+  // Target Pages
+  "target.title": "目標",
+  "target.balance": "残高",
+  "target.target_type": "目標タイプ",
+  "target.type_name": "タイプ名",
+  "target.date_picker": "日付選択",
+  "target.select_date": "日付を選択",
+  "target.budget_amount": "予算額",
+  "target.save": "保存",
+  "target.recorded": "記録済み",
+  "target.success": "目標が正常に記録されました！",
+  "target.error": "エラー",
+  "target.invalid_budget": "無効な予算額",
+  "target.fill_fields": "すべてのフィールドに入力してください",
+  "target.set_new_target": "新しい目標を設定",
+  "target.passive": "非アクティブ",
+  "target.active": "アクティブ",
+  "target.all": "すべて"
 };

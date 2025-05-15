@@ -180,5 +180,24 @@ const Map<String, String> enUS = {
   "menu.analysis": "Analysis",
   "menu.targets": "Targets",
   "menu.add_target": "Add Target",
-  "menu.profile": "Profile"
+  "menu.profile": "Profile",
+
+  // Target Pages
+  "target.title": "Target",
+  "target.balance": "Balance",
+  "target.target_type": "Target Type",
+  "target.type_name": "Type Name",
+  "target.date_picker": "Date Picker",
+  "target.select_date": "Select Date",
+  "target.budget_amount": "Budget Amount",
+  "target.save": "Save",
+  "target.recorded": "Recorded",
+  "target.success": "Target successfully recorded!",
+  "target.error": "Error",
+  "target.invalid_budget": "Invalid budget amount",
+  "target.fill_fields": "Please fill all fields",
+  "target.set_new_target": "Set New Target",
+  "target.passive": "Passive",
+  "target.active": "Active",
+  "target.all": "All"
 };

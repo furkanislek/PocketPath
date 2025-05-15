@@ -178,5 +178,24 @@ const Map<String, String> idID = {
   "menu.analysis": "Analisis",
   "menu.targets": "Target",
   "menu.add_target": "Tambah Target",
-  "menu.profile": "Profil"
+  "menu.profile": "Profil",
+
+  // Target Pages
+  "target.title": "Target",
+  "target.balance": "Saldo",
+  "target.target_type": "Jenis Target",
+  "target.type_name": "Nama Jenis",
+  "target.date_picker": "Pemilih Tanggal",
+  "target.select_date": "Pilih Tanggal",
+  "target.budget_amount": "Jumlah Anggaran",
+  "target.save": "Simpan",
+  "target.recorded": "Tercatat",
+  "target.success": "Target berhasil dicatat!",
+  "target.error": "Kesalahan",
+  "target.invalid_budget": "Jumlah anggaran tidak valid",
+  "target.fill_fields": "Silakan isi semua kolom",
+  "target.set_new_target": "Tetapkan Target Baru",
+  "target.passive": "Pasif",
+  "target.active": "Aktif",
+  "target.all": "Semua"
 };

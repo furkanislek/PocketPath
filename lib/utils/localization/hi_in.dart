@@ -178,5 +178,24 @@ const Map<String, String> hiIN = {
   "menu.analysis": "विश्लेषण",
   "menu.targets": "लक्ष्य",
   "menu.add_target": "लक्ष्य जोड़ें",
-  "menu.profile": "प्रोफ़ाइल"
+  "menu.profile": "प्रोफ़ाइल",
+
+  // Target Pages
+  "target.title": "लक्ष्य",
+  "target.balance": "बैलेंस",
+  "target.target_type": "लक्ष्य प्रकार",
+  "target.type_name": "प्रकार का नाम",
+  "target.date_picker": "तिथि चयनकर्ता",
+  "target.select_date": "तिथि चुनें",
+  "target.budget_amount": "बजट राशि",
+  "target.save": "सहेजें",
+  "target.recorded": "रिकॉर्ड किया गया",
+  "target.success": "लक्ष्य सफलतापूर्वक रिकॉर्ड किया गया!",
+  "target.error": "त्रुटि",
+  "target.invalid_budget": "अमान्य बजट राशि",
+  "target.fill_fields": "कृपया सभी फ़ील्ड भरें",
+  "target.set_new_target": "नया लक्ष्य निर्धारित करें",
+  "target.passive": "निष्क्रिय",
+  "target.active": "सक्रिय",
+  "target.all": "सभी"
 };

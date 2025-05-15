@@ -10,19 +10,19 @@ const Map<String, String> msMY = {
   // Profile Page
   'personal_info': 'Maklumat Peribadi',
   'preferences': 'Keutamaan',
-  'about_app': 'Tentang Aplikasi',
+  'about_app': 'Mengenai Aplikasi',
   'app_version': 'Versi Aplikasi',
   'privacy_policy': 'Dasar Privasi',
   'developer': 'Pembangun: Furkan Akif ISLEK',
-  'noEmail': 'Tiada e-mel dijumpai',
+  'noEmail': 'Tiada e-mel ditemui',
   'version.number': '1.0.0',
-  'profile.deleteAccountImportant': 'Padam Akaun',
+  'profile.deleteAccountImportant': 'Padamkan Akaun',
   'profile.deleteAccountImportantText':
-      'Adakah anda pasti mahu memadam akaun anda? Tindakan ini tidak dapat dibatalkan.',
+      'Adakah anda pasti mahu memadamkan akaun anda? Tindakan ini tidak boleh dibatalkan.',
   'profile.cancel': 'Batal',
   'profile.delete': 'Padam',
-  'profile.errorDeletingAccount': 'Ralat memadam akaun',
-  'profile.deleteAccountButton': 'Padam Akaun',
+  'profile.errorDeletingAccount': 'Ralat memadamkan akaun',
+  'profile.deleteAccountButton': 'Padamkan Akaun',
 
   // Profile Page
   'logout': 'Log Keluar',
@@ -37,7 +37,7 @@ const Map<String, String> msMY = {
   "login.passwordLabel": "Taip kata laluan anda",
   "login.loginButton": "Log Masuk",
   "login.forgotPassword": "Lupa Kata Laluan?",
-  "login.resetPasswordSent": "E-mel tetapan semula kata laluan dihantar!",
+  "login.resetPasswordSent": "E-mel set semula kata laluan telah dihantar!",
   "login.pleaseEnterEmail": "Sila masukkan alamat e-mel anda.",
 
   // Login Error Messages
@@ -113,8 +113,8 @@ const Map<String, String> msMY = {
   "intro.page3.author": "- Seneca",
 
   // Home Page Components
-  "home.title.hello": "Halo",
-  "home.title.welcomeBack": "Selamat kembali!",
+  "home.title.hello": "Helo",
+  "home.title.welcomeBack": "Selamat Kembali!",
   "home.budget.balance": "Baki",
   "home.budget.noTarget": "Anda Belum Memasukkan Sasaran",
   "home.budget.createNewTask": "Cipta Tugas Baru",
@@ -130,7 +130,7 @@ const Map<String, String> msMY = {
   "home.cost.expense": "Perbelanjaan",
   "home.cost.income": "Pendapatan",
   "home.cost.delete.title": "Padam Kos",
-  "home.cost.delete.message": "Adakah anda pasti mahu memadam kos ini?",
+  "home.cost.delete.message": "Adakah anda pasti mahu memadamkan kos ini?",
   "home.cost.delete.cancel": "Batal",
   "home.cost.delete.confirm": "Padam",
 
@@ -150,11 +150,11 @@ const Map<String, String> msMY = {
   "addcost.success": "Kos berjaya direkodkan!",
   "addcost.error": "Ralat",
   "addcost.invalid_budget": "Jumlah bajet tidak sah",
-  "addcost.fill_fields": "Sila isi semua ruangan",
+  "addcost.fill_fields": "Sila isi semua bidang",
   "addcost.select_target": "Pilih Sasaran",
   "addcost.select_target_hint": "Pilih sasaran aktif seperti \"Dompet Saham\"",
   "addcost.cost_type": "Jenis Kos",
-  "addcost.type_name_hint": "Taip Nama Seperti \"ETF NASDAQ\"",
+  "addcost.type_name_hint": "Taip nama seperti \"ETF NASDAQ\"",
   "addcost.budget_amount": "Jumlah Bajet",
   "addcost.category": "Kategori",
   "addcost.expense": "Perbelanjaan",
@@ -174,9 +174,28 @@ const Map<String, String> msMY = {
   "analysis.target": "Sasaran",
 
   // Menu Page
-  "menu.home": "Laman Utama",
+  "menu.home": "Utama",
   "menu.analysis": "Analisis",
   "menu.targets": "Sasaran",
   "menu.add_target": "Tambah Sasaran",
-  "menu.profile": "Profil"
+  "menu.profile": "Profil",
+
+  // Target Pages
+  "target.title": "Sasaran",
+  "target.balance": "Baki",
+  "target.target_type": "Jenis Sasaran",
+  "target.type_name": "Nama Jenis",
+  "target.date_picker": "Pemilih Tarikh",
+  "target.select_date": "Pilih Tarikh",
+  "target.budget_amount": "Jumlah Bajet",
+  "target.save": "Simpan",
+  "target.recorded": "Direkodkan",
+  "target.success": "Sasaran berjaya direkodkan!",
+  "target.error": "Ralat",
+  "target.invalid_budget": "Jumlah bajet tidak sah",
+  "target.fill_fields": "Sila isi semua bidang",
+  "target.set_new_target": "Tetapkan Sasaran Baru",
+  "target.passive": "Pasif",
+  "target.active": "Aktif",
+  "target.all": "Semua"
 };

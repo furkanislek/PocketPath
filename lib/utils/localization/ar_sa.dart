@@ -176,5 +176,24 @@ const Map<String, String> arSA = {
   "menu.analysis": "تحليل",
   "menu.targets": "الأهداف",
   "menu.add_target": "إضافة هدف",
-  "menu.profile": "الملف الشخصي"
+  "menu.profile": "الملف الشخصي",
+
+  // Target Pages
+  "target.title": "الهدف",
+  "target.balance": "الرصيد",
+  "target.target_type": "نوع الهدف",
+  "target.type_name": "اسم النوع",
+  "target.date_picker": "منتقي التاريخ",
+  "target.select_date": "اختر التاريخ",
+  "target.budget_amount": "مبلغ الميزانية",
+  "target.save": "حفظ",
+  "target.recorded": "تم التسجيل",
+  "target.success": "تم تسجيل الهدف بنجاح!",
+  "target.error": "خطأ",
+  "target.invalid_budget": "مبلغ الميزانية غير صالح",
+  "target.fill_fields": "يرجى ملء جميع الحقول",
+  "target.set_new_target": "تعيين هدف جديد",
+  "target.passive": "سلبي",
+  "target.active": "نشط",
+  "target.all": "الكل"
 };

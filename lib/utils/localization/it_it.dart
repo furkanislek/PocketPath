@@ -180,5 +180,24 @@ const Map<String, String> itIT = {
   "menu.analysis": "Analisi",
   "menu.targets": "Obiettivi",
   "menu.add_target": "Aggiungi Obiettivo",
-  "menu.profile": "Profilo"
+  "menu.profile": "Profilo",
+
+  // Target Pages
+  "target.title": "Obiettivo",
+  "target.balance": "Saldo",
+  "target.target_type": "Tipo di obiettivo",
+  "target.type_name": "Nome del tipo",
+  "target.date_picker": "Selettore data",
+  "target.select_date": "Seleziona data",
+  "target.budget_amount": "Importo del budget",
+  "target.save": "Salva",
+  "target.recorded": "Registrato",
+  "target.success": "Obiettivo registrato con successo!",
+  "target.error": "Errore",
+  "target.invalid_budget": "Importo del budget non valido",
+  "target.fill_fields": "Per favore compila tutti i campi",
+  "target.set_new_target": "Imposta nuovo obiettivo",
+  "target.passive": "Passivo",
+  "target.active": "Attivo",
+  "target.all": "Tutti"
 };

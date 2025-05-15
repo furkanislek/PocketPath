@@ -167,5 +167,24 @@ const Map<String, String> zhCN = {
   "menu.analysis": "分析",
   "menu.targets": "目标",
   "menu.add_target": "添加目标",
-  "menu.profile": "个人资料"
+  "menu.profile": "个人资料",
+
+  // Target Pages
+  "target.title": "目标",
+  "target.balance": "余额",
+  "target.target_type": "目标类型",
+  "target.type_name": "类型名称",
+  "target.date_picker": "日期选择器",
+  "target.select_date": "选择日期",
+  "target.budget_amount": "预算金额",
+  "target.save": "保存",
+  "target.recorded": "已记录",
+  "target.success": "目标成功记录！",
+  "target.error": "错误",
+  "target.invalid_budget": "预算金额无效",
+  "target.fill_fields": "请填写所有字段",
+  "target.set_new_target": "设置新目标",
+  "target.passive": "被动",
+  "target.active": "活跃",
+  "target.all": "全部"
 };

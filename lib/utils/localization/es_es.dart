@@ -186,5 +186,24 @@ const Map<String, String> esES = {
   "menu.analysis": "Análisis",
   "menu.targets": "Objetivos",
   "menu.add_target": "Añadir Objetivo",
-  "menu.profile": "Perfil"
+  "menu.profile": "Perfil",
+
+  // Target Pages
+  "target.title": "Objetivo",
+  "target.balance": "Balance",
+  "target.target_type": "Tipo de Objetivo",
+  "target.type_name": "Nombre del Tipo",
+  "target.date_picker": "Selector de Fecha",
+  "target.select_date": "Seleccionar Fecha",
+  "target.budget_amount": "Cantidad del Presupuesto",
+  "target.save": "Guardar",
+  "target.recorded": "Registrado",
+  "target.success": "¡Objetivo registrado con éxito!",
+  "target.error": "Error",
+  "target.invalid_budget": "Cantidad de presupuesto inválida",
+  "target.fill_fields": "Por favor completa todos los campos",
+  "target.set_new_target": "Establecer Nuevo Objetivo",
+  "target.passive": "Pasivo",
+  "target.active": "Activo",
+  "target.all": "Todos"
 };

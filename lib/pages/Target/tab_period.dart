@@ -27,9 +27,9 @@ class TargetPeriodSelector extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildTab("Passive", 0, width / 12),
-                _buildTab("Active", 1, width / 12),
-                _buildTab("All", 2, width / 12),
+                _buildTab("target.passive".tr, 0, width / 12),
+                _buildTab("target.active".tr, 1, width / 12),
+                _buildTab("target.all".tr, 2, width / 12),
               ],
             ),
           ),

@@ -179,5 +179,24 @@ const Map<String, String> ruRU = {
   "menu.analysis": "Анализ",
   "menu.targets": "Цели",
   "menu.add_target": "Добавить цель",
-  "menu.profile": "Профиль"
+  "menu.profile": "Профиль",
+
+  // Target Pages
+  "target.title": "Цель",
+  "target.balance": "Баланс",
+  "target.target_type": "Тип цели",
+  "target.type_name": "Название типа",
+  "target.date_picker": "Выбор даты",
+  "target.select_date": "Выберите дату",
+  "target.budget_amount": "Сумма бюджета",
+  "target.save": "Сохранить",
+  "target.recorded": "Записано",
+  "target.success": "Цель успешно записана!",
+  "target.error": "Ошибка",
+  "target.invalid_budget": "Недопустимая сумма бюджета",
+  "target.fill_fields": "Пожалуйста, заполните все поля",
+  "target.set_new_target": "Установить новую цель",
+  "target.passive": "Пассивный",
+  "target.active": "Активный",
+  "target.all": "Все"
 };

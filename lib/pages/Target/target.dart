@@ -13,7 +13,7 @@ class Targets extends StatelessWidget {
     try {
       await controller.fetchTargets();
     } catch (e) {
-      Get.snackbar('Error', 'Failed to fetch targets: $e',
+      Get.snackbar('target.error'.tr, 'Failed to fetch targets: $e',
           snackPosition: SnackPosition.BOTTOM);
     }
   }
@@ -38,7 +38,7 @@ class Targets extends StatelessWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Target"),
+            title: Text("target.title".tr),
             backgroundColor: const Color(0xFFF2F2F2),
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
@@ -175,10 +175,7 @@ class Targets extends StatelessWidget {
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            '\$ ${ Formatter()
-                                                                .numberFormatter
-                                                                .format(target[
-                                                                    'remainingBudget'])}'
+                                                            '\$ ${Formatter().numberFormatter.format(target['remainingBudget'])}'
                                                                 .toString(),
                                                             style: TextStyle(
                                                                 color: target[
@@ -191,11 +188,7 @@ class Targets extends StatelessWidget {
                                                                 fontSize: 15),
                                                           ),
                                                           Text(
-                                                           '\$ ${ Formatter()
-                                                                .numberFormatter
-                                                                .format(target[
-                                                                        'target']
-                                                                    ['budget'])}'
+                                                            '\$ ${Formatter().numberFormatter.format(target['target']['budget'])}'
                                                                 .toString(),
                                                             style: TextStyle(
                                                               color: target[
@@ -211,7 +204,7 @@ class Targets extends StatelessWidget {
                                                             ),
                                                           ),
                                                           Text(
-                                                            "Balance",
+                                                            "target.balance".tr,
                                                             style: TextStyle(
                                                                 fontWeight:
                                                                     FontWeight

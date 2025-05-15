@@ -181,5 +181,24 @@ const Map<String, String> frFR = {
   "menu.analysis": "Analyse",
   "menu.targets": "Objectifs",
   "menu.add_target": "Ajouter Objectif",
-  "menu.profile": "Profil"
+  "menu.profile": "Profil",
+
+  // Target Pages
+  "target.title": "Objectif",
+  "target.balance": "Solde",
+  "target.target_type": "Type d'Objectif",
+  "target.type_name": "Nom du Type",
+  "target.date_picker": "Sélecteur de Date",
+  "target.select_date": "Sélectionner une Date",
+  "target.budget_amount": "Montant du Budget",
+  "target.save": "Enregistrer",
+  "target.recorded": "Enregistré",
+  "target.success": "Objectif enregistré avec succès !",
+  "target.error": "Erreur",
+  "target.invalid_budget": "Montant du budget invalide",
+  "target.fill_fields": "Veuillez remplir tous les champs",
+  "target.set_new_target": "Définir un Nouvel Objectif",
+  "target.passive": "Passif",
+  "target.active": "Actif",
+  "target.all": "Tous"
 };

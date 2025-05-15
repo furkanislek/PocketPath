@@ -178,5 +178,24 @@ const Map<String, String> ptBR = {
   "menu.analysis": "Análise",
   "menu.targets": "Metas",
   "menu.add_target": "Adicionar Meta",
-  "menu.profile": "Perfil"
+  "menu.profile": "Perfil",
+
+  // Target Pages
+  "target.title": "Meta",
+  "target.balance": "Saldo",
+  "target.target_type": "Tipo de Meta",
+  "target.type_name": "Nome do Tipo",
+  "target.date_picker": "Seletor de Data",
+  "target.select_date": "Selecionar Data",
+  "target.budget_amount": "Valor do Orçamento",
+  "target.save": "Salvar",
+  "target.recorded": "Registrado",
+  "target.success": "Meta registrada com sucesso!",
+  "target.error": "Erro",
+  "target.invalid_budget": "Valor de orçamento inválido",
+  "target.fill_fields": "Por favor, preencha todos os campos",
+  "target.set_new_target": "Definir Nova Meta",
+  "target.passive": "Passivo",
+  "target.active": "Ativo",
+  "target.all": "Todos"
 };
