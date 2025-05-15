@@ -13,6 +13,53 @@ const Map<String, String> esES = {
   'about_app': 'Acerca de la Aplicación',
   'app_version': 'Versión de la Aplicación',
   'privacy_policy': 'Política de Privacidad',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>Política de Privacidad</title>
+</head>
+<body>
+<h1>Política de Privacidad de PocketPath</h1>
+<p>Última actualización: 15/05/2025</p>
+
+<h2>Introducción</h2>
+<p>Valoramos su privacidad mientras utiliza la aplicación PocketPath. Esta Política de Privacidad explica cómo PocketPath recopila, utiliza y protege su información personal.</p>
+
+<h2>Información que Recopilamos</h2>
+<ul>
+  <li><strong>Información de la Cuenta:</strong> Su dirección de correo electrónico, nombre y apellido.</li>
+  <li><strong>Datos Financieros:</strong> Información que ingresa sobre sus objetivos, gastos e ingresos.</li>
+  <li><strong>Datos de Uso:</strong> Datos sobre cómo utiliza la aplicación.</li>
+</ul>
+
+<h2>Uso de los Datos</h2>
+<p>Utilizamos la información que recopilamos para los siguientes propósitos:</p>
+<ul>
+  <li>Proporcionar y mejorar nuestro servicio</li>
+  <li>Gestionar su cuenta</li>
+  <li>Ofrecer una experiencia personalizada</li>
+  <li>Mejorar la funcionalidad de la aplicación</li>
+</ul>
+
+<h2>Seguridad de los Datos</h2>
+<p>Implementamos medidas de seguridad estándar de la industria para proteger sus datos personales. Su información se almacena de forma segura en la infraestructura de Firebase.</p>
+
+<h2>Compartir Datos</h2>
+<p>No compartimos su información personal con terceros sin su consentimiento explícito. Solo podemos compartir información cuando sea necesario para cumplir con nuestras obligaciones legales.</p>
+
+<h2>Sus Derechos</h2>
+<p>Tiene los siguientes derechos con respecto a sus datos personales:</p>
+<ul>
+  <li>Acceso a sus datos</li>
+  <li>Corrección de sus datos</li>
+  <li>Solicitud de eliminación de sus datos</li>
+  <li>Restricción del uso de sus datos</li>
+</ul>
+
+<h2>Contacto</h2>
+<p>Si tiene alguna pregunta o inquietud sobre nuestra política de privacidad, póngase en contacto con nosotros.</p>
+</body>
+</html>""",
   'developer': 'Desarrollador: Furkan Akif ISLEK',
   'noEmail': 'No se encontró correo electrónico',
   'version.number': '1.0.0',

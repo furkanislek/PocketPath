@@ -13,7 +13,54 @@ const Map<String, String> koKR = {
   'about_app': '앱 정보',
   'app_version': '앱 버전',
   'privacy_policy': '개인정보 처리방침',
-  'developer': '개발자: 푸르칸 아키프 이슬렉',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>개인정보 처리방침</title>
+</head>
+<body>
+<h1>PocketPath 개인정보 처리방침</h1>
+<p>최종 업데이트: 15/05/2025</p>
+
+<h2>소개</h2>
+<p>저희는 PocketPath 애플리케이션을 사용하는 동안 귀하의 개인정보를 중요하게 생각합니다. 이 개인정보 처리방침은 PocketPath가 개인정보를 어떻게 수집, 사용 및 보호하는지 설명합니다.</p>
+
+<h2>수집하는 정보</h2>
+<ul>
+  <li><strong>계정 정보:</strong> 이메일 주소, 이름 및 성.</li>
+  <li><strong>재무 데이터:</strong> 목표, 지출 및 수입에 관해 입력한 정보.</li>
+  <li><strong>사용 데이터:</strong> 애플리케이션 사용 방법에 관한 데이터.</li>
+</ul>
+
+<h2>데이터 사용</h2>
+<p>저희는 다음과 같은 목적으로 수집한 정보를 사용합니다:</p>
+<ul>
+  <li>서비스 제공 및 개선</li>
+  <li>계정 관리</li>
+  <li>개인화된 경험 제공</li>
+  <li>애플리케이션 기능 향상</li>
+</ul>
+
+<h2>데이터 보안</h2>
+<p>개인 데이터를 보호하기 위해 업계 표준 보안 조치를 구현하고 있습니다. 귀하의 정보는 Firebase 인프라에 안전하게 저장됩니다.</p>
+
+<h2>데이터 공유</h2>
+<p>귀하의 명시적인 동의 없이 제3자와 개인정보를 공유하지 않습니다. 법적 의무를 이행하기 위해 필요한 경우에만 정보를 공유할 수 있습니다.</p>
+
+<h2>귀하의 권리</h2>
+<p>개인 데이터와 관련하여 다음과 같은 권리가 있습니다:</p>
+<ul>
+  <li>데이터 접근</li>
+  <li>데이터 수정</li>
+  <li>데이터 삭제 요청</li>
+  <li>데이터 사용 제한</li>
+</ul>
+
+<h2>연락처</h2>
+<p>개인정보 처리방침에 관한 질문이나 우려 사항이 있으시면 저희에게 연락해 주십시오.</p>
+</body>
+</html>""",
+  'developer': '개발자: Furkan Akif ISLEK',
   'noEmail': '이메일이 없습니다',
   'version.number': '1.0.0',
   'profile.deleteAccountImportant': '계정 삭제',

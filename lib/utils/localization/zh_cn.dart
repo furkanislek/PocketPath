@@ -13,7 +13,54 @@ const Map<String, String> zhCN = {
   'about_app': '关于应用',
   'app_version': '应用版本',
   'privacy_policy': '隐私政策',
-  'developer': '开发者：福坎·阿基夫·伊斯莱克',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>隐私政策</title>
+</head>
+<body>
+<h1>PocketPath 隐私政策</h1>
+<p>最后更新: 15/05/2025</p>
+
+<h2>介绍</h2>
+<p>我们非常重视您在使用 PocketPath 应用程序时的隐私。本隐私政策解释了 PocketPath 如何收集、使用和保护您的个人信息。</p>
+
+<h2>我们收集的信息</h2>
+<ul>
+  <li><strong>账户信息：</strong> 您的电子邮件地址、名字和姓氏。</li>
+  <li><strong>财务数据：</strong> 您输入的关于目标、支出和收入的信息。</li>
+  <li><strong>使用数据：</strong> 关于您如何使用应用程序的数据。</li>
+</ul>
+
+<h2>数据使用</h2>
+<p>我们将收集的信息用于以下目的：</p>
+<ul>
+  <li>提供和改进我们的服务</li>
+  <li>管理您的账户</li>
+  <li>提供个性化体验</li>
+  <li>增强应用程序功能</li>
+</ul>
+
+<h2>数据安全</h2>
+<p>我们实施行业标准安全措施来保护您的个人数据。您的信息安全地存储在 Firebase 基础架构中。</p>
+
+<h2>数据共享</h2>
+<p>未经您的明确同意，我们不会与第三方共享您的个人信息。我们只在履行法律义务所需时才会共享信息。</p>
+
+<h2>您的权利</h2>
+<p>您对您的个人数据拥有以下权利：</p>
+<ul>
+  <li>访问您的数据</li>
+  <li>更正您的数据</li>
+  <li>请求删除您的数据</li>
+  <li>限制您数据的使用</li>
+</ul>
+
+<h2>联系</h2>
+<p>如果您对我们的隐私政策有任何问题或疑虑，请联系我们。</p>
+</body>
+</html>""",
+  'developer': '开发者: Furkan Akif ISLEK',
   'noEmail': '未找到电子邮箱',
   'version.number': '1.0.0',
   'profile.deleteAccountImportant': '删除账户',

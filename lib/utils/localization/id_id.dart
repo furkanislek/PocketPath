@@ -13,6 +13,53 @@ const Map<String, String> idID = {
   'about_app': 'Tentang Aplikasi',
   'app_version': 'Versi Aplikasi',
   'privacy_policy': 'Kebijakan Privasi',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>Kebijakan Privasi</title>
+</head>
+<body>
+<h1>Kebijakan Privasi PocketPath</h1>
+<p>Terakhir diperbarui: 15/05/2025</p>
+
+<h2>Pendahuluan</h2>
+<p>Kami menghormati privasi Anda saat menggunakan aplikasi PocketPath. Kebijakan privasi ini menjelaskan bagaimana PocketPath mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.</p>
+
+<h2>Informasi yang Kami Kumpulkan</h2>
+<ul>
+  <li><strong>Informasi Akun:</strong> Alamat email, nama depan, dan nama belakang Anda.</li>
+  <li><strong>Data Keuangan:</strong> Informasi yang Anda masukkan tentang target, pengeluaran, dan pendapatan Anda.</li>
+  <li><strong>Data Penggunaan:</strong> Data tentang bagaimana Anda menggunakan aplikasi.</li>
+</ul>
+
+<h2>Penggunaan Data</h2>
+<p>Kami menggunakan informasi yang dikumpulkan untuk tujuan berikut:</p>
+<ul>
+  <li>Menyediakan dan meningkatkan layanan kami</li>
+  <li>Mengelola akun Anda</li>
+  <li>Memberikan pengalaman yang dipersonalisasi</li>
+  <li>Meningkatkan fungsionalitas aplikasi</li>
+</ul>
+
+<h2>Keamanan Data</h2>
+<p>Kami menerapkan langkah-langkah keamanan standar industri untuk melindungi data pribadi Anda. Informasi Anda disimpan dengan aman di infrastruktur Firebase.</p>
+
+<h2>Berbagi Data</h2>
+<p>Kami tidak membagikan informasi pribadi Anda dengan pihak ketiga tanpa persetujuan tegas dari Anda. Kami hanya dapat membagikan informasi ketika diperlukan untuk memenuhi kewajiban hukum kami.</p>
+
+<h2>Hak Anda</h2>
+<p>Terkait data pribadi Anda, Anda memiliki hak-hak berikut:</p>
+<ul>
+  <li>Akses ke data Anda</li>
+  <li>Koreksi data Anda</li>
+  <li>Permintaan penghapusan data Anda</li>
+  <li>Pembatasan penggunaan data Anda</li>
+</ul>
+
+<h2>Kontak</h2>
+<p>Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan privasi kami, silakan hubungi kami.</p>
+</body>
+</html>""",
   'developer': 'Pengembang: Furkan Akif ISLEK',
   'noEmail': 'Email tidak ditemukan',
   'version.number': '1.0.0',

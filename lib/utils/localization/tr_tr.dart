@@ -15,6 +15,53 @@ const Map<String, String> trTR = {
   "about_app": "Uygulama Hakkında",
   "app_version": "Uygulama Versiyonu",
   "privacy_policy": "Gizlilik Politikası",
+  "privacy_policy_content": """<html>
+<head>
+<meta charset="UTF-8">
+<title>Gizlilik Politikası</title>
+</head>
+<body>
+<h1>PocketPath Gizlilik Politikası</h1>
+<p>Son güncelleme: 15.05.2025</p>
+
+<h2>Giriş</h2>
+<p>PocketPath uygulamasını kullanırken gizliliğinize büyük önem veriyoruz. Bu Gizlilik Politikası, PocketPath'in kişisel bilgilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklamaktadır.</p>
+
+<h2>Topladığımız Bilgiler</h2>
+<ul>
+  <li><strong>Hesap Bilgileri:</strong> E-posta adresiniz, adınız ve soyadınız.</li>
+  <li><strong>Finansal Veriler:</strong> Hedefleriniz, harcamalarınız ve gelirleriniz hakkında girdiğiniz bilgiler.</li>
+  <li><strong>Kullanım Verileri:</strong> Uygulamayı nasıl kullandığınıza dair veriler.</li>
+</ul>
+
+<h2>Verilerin Kullanımı</h2>
+<p>Topladığımız bilgileri aşağıdaki amaçlar için kullanıyoruz:</p>
+<ul>
+  <li>Size hizmet sağlamak ve iyileştirmek</li>
+  <li>Hesabınızı yönetmek</li>
+  <li>Kişiselleştirilmiş deneyim sunmak</li>
+  <li>Uygulama işlevselliğini geliştirmek</li>
+</ul>
+
+<h2>Veri Güvenliği</h2>
+<p>Kişisel verilerinizi korumak için endüstri standardı güvenlik önlemleri uyguluyoruz. Verileriniz Firebase altyapısında güvenle saklanmaktadır.</p>
+
+<h2>Veri Paylaşımı</h2>
+<p>Kişisel verilerinizi, açık izniniz olmadan üçüncü taraflarla paylaşmıyoruz. Yalnızca yasal yükümlülüklerimizi yerine getirmek için gerektiğinde paylaşım yapabiliriz.</p>
+
+<h2>Haklarınız</h2>
+<p>Kişisel verilerinizle ilgili aşağıdaki haklara sahipsiniz:</p>
+<ul>
+  <li>Verilerinize erişim</li>
+  <li>Verilerinizi düzeltme</li>
+  <li>Verilerinizin silinmesini talep etme</li>
+  <li>Verilerinizin kullanımını kısıtlama</li>
+</ul>
+
+<h2>İletişim</h2>
+<p>Gizlilik politikamızla ilgili sorularınız veya endişeleriniz varsa, lütfen bizimle iletişime geçin.</p>
+</body>
+</html>""",
   "developer": "Geliştirici: Furkan Akif İŞLEK",
   "noEmail": "E-posta bulunamadı",
   "version.number": "1.0.0",

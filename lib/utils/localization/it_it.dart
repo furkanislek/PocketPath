@@ -11,8 +11,55 @@ const Map<String, String> itIT = {
   'personal_info': 'Informazioni personali',
   'preferences': 'Preferenze',
   'about_app': 'Info applicazione',
-  'app_version': 'Versione app',
-  'privacy_policy': 'Informativa privacy',
+  'app_version': 'Versione dell\'App',
+  'privacy_policy': 'Informativa sulla Privacy',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>Informativa sulla Privacy</title>
+</head>
+<body>
+<h1>Informativa sulla Privacy di PocketPath</h1>
+<p>Ultimo aggiornamento: 15/05/2025</p>
+
+<h2>Introduzione</h2>
+<p>Diamo grande importanza alla tua privacy durante l'utilizzo dell'applicazione PocketPath. Questa Informativa sulla Privacy spiega come PocketPath raccoglie, utilizza e protegge le tue informazioni personali.</p>
+
+<h2>Informazioni che Raccogliamo</h2>
+<ul>
+  <li><strong>Informazioni sull'Account:</strong> Il tuo indirizzo email, nome e cognome.</li>
+  <li><strong>Dati Finanziari:</strong> Informazioni che inserisci riguardo i tuoi obiettivi, spese e entrate.</li>
+  <li><strong>Dati di Utilizzo:</strong> Dati su come utilizzi l'applicazione.</li>
+</ul>
+
+<h2>Utilizzo dei Dati</h2>
+<p>Utilizziamo le informazioni che raccogliamo per i seguenti scopi:</p>
+<ul>
+  <li>Fornire e migliorare il nostro servizio</li>
+  <li>Gestire il tuo account</li>
+  <li>Offrire un'esperienza personalizzata</li>
+  <li>Migliorare le funzionalità dell'applicazione</li>
+</ul>
+
+<h2>Sicurezza dei Dati</h2>
+<p>Implementiamo misure di sicurezza standard del settore per proteggere i tuoi dati personali. Le tue informazioni sono archiviate in modo sicuro nell'infrastruttura Firebase.</p>
+
+<h2>Condivisione dei Dati</h2>
+<p>Non condividiamo le tue informazioni personali con terze parti senza il tuo esplicito consenso. Possiamo condividere informazioni solo quando necessario per adempiere ai nostri obblighi legali.</p>
+
+<h2>I Tuoi Diritti</h2>
+<p>Hai i seguenti diritti riguardo ai tuoi dati personali:</p>
+<ul>
+  <li>Accesso ai tuoi dati</li>
+  <li>Correzione dei tuoi dati</li>
+  <li>Richiesta di cancellazione dei tuoi dati</li>
+  <li>Limitazione dell'uso dei tuoi dati</li>
+</ul>
+
+<h2>Contatto</h2>
+<p>Se hai domande o dubbi sulla nostra informativa sulla privacy, contattaci.</p>
+</body>
+</html>""",
   'developer': 'Sviluppatore: Furkan Akif ISLEK',
   'noEmail': 'Nessuna email trovata',
   'version.number': '1.0.0',

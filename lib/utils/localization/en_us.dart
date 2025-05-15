@@ -15,6 +15,53 @@ const Map<String, String> enUS = {
   "about_app": "About App",
   "app_version": "App Version",
   "privacy_policy": "Privacy Policy",
+  "privacy_policy_content": """<html>
+<head>
+<meta charset="UTF-8">
+<title>Privacy Policy</title>
+</head>
+<body>
+<h1>PocketPath Privacy Policy</h1>
+<p>Last updated: 15/05/2025</p>
+
+<h2>Introduction</h2>
+<p>We value your privacy while using the PocketPath application. This Privacy Policy explains how PocketPath collects, uses, and protects your personal information.</p>
+
+<h2>Information We Collect</h2>
+<ul>
+  <li><strong>Account Information:</strong> Your email address, first name, and surname.</li>
+  <li><strong>Financial Data:</strong> Information you enter about your targets, expenses, and income.</li>
+  <li><strong>Usage Data:</strong> Data about how you use the application.</li>
+</ul>
+
+<h2>Use of Data</h2>
+<p>We use the information we collect for the following purposes:</p>
+<ul>
+  <li>To provide and improve our service</li>
+  <li>To manage your account</li>
+  <li>To provide personalized experience</li>
+  <li>To enhance application functionality</li>
+</ul>
+
+<h2>Data Security</h2>
+<p>We implement industry-standard security measures to protect your personal data. Your information is securely stored in Firebase infrastructure.</p>
+
+<h2>Data Sharing</h2>
+<p>We do not share your personal information with third parties without your explicit consent. We may only share information when required to fulfill our legal obligations.</p>
+
+<h2>Your Rights</h2>
+<p>You have the following rights regarding your personal data:</p>
+<ul>
+  <li>Access to your data</li>
+  <li>Correction of your data</li>
+  <li>Request deletion of your data</li>
+  <li>Restriction of the use of your data</li>
+</ul>
+
+<h2>Contact</h2>
+<p>If you have any questions or concerns about our privacy policy, please contact us.</p>
+</body>
+</html>""",
   "developer": "Developer: Furkan Akif ISLEK",
   "noEmail": "No email found",
   "version.number": "1.0.0",

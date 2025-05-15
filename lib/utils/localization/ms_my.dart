@@ -13,6 +13,53 @@ const Map<String, String> msMY = {
   'about_app': 'Mengenai Aplikasi',
   'app_version': 'Versi Aplikasi',
   'privacy_policy': 'Dasar Privasi',
+  'privacy_policy_content': """<html>
+<head>
+<meta charset="UTF-8">
+<title>Dasar Privasi</title>
+</head>
+<body>
+<h1>Dasar Privasi PocketPath</h1>
+<p>Terakhir dikemas kini: 15/05/2025</p>
+
+<h2>Pengenalan</h2>
+<p>Kami menghormati privasi anda semasa menggunakan aplikasi PocketPath. Dasar privasi ini menerangkan bagaimana PocketPath mengumpul, menggunakan, dan melindungi maklumat peribadi anda.</p>
+
+<h2>Maklumat yang Kami Kumpul</h2>
+<ul>
+  <li><strong>Maklumat Akaun:</strong> Alamat e-mel, nama pertama, dan nama keluarga anda.</li>
+  <li><strong>Data Kewangan:</strong> Maklumat yang anda masukkan tentang sasaran, perbelanjaan, dan pendapatan anda.</li>
+  <li><strong>Data Penggunaan:</strong> Data tentang bagaimana anda menggunakan aplikasi.</li>
+</ul>
+
+<h2>Penggunaan Data</h2>
+<p>Kami menggunakan maklumat yang dikumpulkan untuk tujuan berikut:</p>
+<ul>
+  <li>Menyediakan dan meningkatkan perkhidmatan kami</li>
+  <li>Menguruskan akaun anda</li>
+  <li>Memberikan pengalaman yang diperibadikan</li>
+  <li>Meningkatkan fungsi aplikasi</li>
+</ul>
+
+<h2>Keselamatan Data</h2>
+<p>Kami melaksanakan langkah-langkah keselamatan standard industri untuk melindungi data peribadi anda. Maklumat anda disimpan dengan selamat dalam infrastruktur Firebase.</p>
+
+<h2>Perkongsian Data</h2>
+<p>Kami tidak berkongsi maklumat peribadi anda dengan pihak ketiga tanpa persetujuan jelas daripada anda. Kami hanya boleh berkongsi maklumat apabila diperlukan untuk memenuhi kewajipan undang-undang kami.</p>
+
+<h2>Hak Anda</h2>
+<p>Berkaitan dengan data peribadi anda, anda mempunyai hak-hak berikut:</p>
+<ul>
+  <li>Akses kepada data anda</li>
+  <li>Pembetulan data anda</li>
+  <li>Permintaan pemadaman data anda</li>
+  <li>Pengehadan penggunaan data anda</li>
+</ul>
+
+<h2>Hubungi Kami</h2>
+<p>Jika anda mempunyai sebarang pertanyaan atau kebimbangan mengenai dasar privasi kami, sila hubungi kami.</p>
+</body>
+</html>""",
   'developer': 'Pembangun: Furkan Akif ISLEK',
   'noEmail': 'Tiada e-mel ditemui',
   'version.number': '1.0.0',

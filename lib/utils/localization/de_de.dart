@@ -13,6 +13,53 @@ const Map<String, String> deDE = {
   "about_app": "Über die App",
   "app_version": "App-Version",
   "privacy_policy": "Datenschutzrichtlinie",
+  "privacy_policy_content": """<html>
+<head>
+<meta charset="UTF-8">
+<title>Datenschutzrichtlinie</title>
+</head>
+<body>
+<h1>PocketPath Datenschutzrichtlinie</h1>
+<p>Zuletzt aktualisiert: 15.05.2025</p>
+
+<h2>Einleitung</h2>
+<p>Wir legen großen Wert auf Ihre Privatsphäre bei der Nutzung der PocketPath-Anwendung. Diese Datenschutzrichtlinie erklärt, wie PocketPath Ihre persönlichen Daten sammelt, verwendet und schützt.</p>
+
+<h2>Informationen, die wir sammeln</h2>
+<ul>
+  <li><strong>Kontoinformationen:</strong> Ihre E-Mail-Adresse, Vorname und Nachname.</li>
+  <li><strong>Finanzdaten:</strong> Informationen, die Sie über Ihre Ziele, Ausgaben und Einnahmen eingeben.</li>
+  <li><strong>Nutzungsdaten:</strong> Daten darüber, wie Sie die Anwendung nutzen.</li>
+</ul>
+
+<h2>Verwendung der Daten</h2>
+<p>Wir verwenden die gesammelten Informationen für folgende Zwecke:</p>
+<ul>
+  <li>Um unseren Service bereitzustellen und zu verbessern</li>
+  <li>Um Ihr Konto zu verwalten</li>
+  <li>Um personalisierte Erfahrungen zu bieten</li>
+  <li>Um die Funktionalität der Anwendung zu verbessern</li>
+</ul>
+
+<h2>Datensicherheit</h2>
+<p>Wir implementieren branchenübliche Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Daten. Ihre Informationen werden sicher in der Firebase-Infrastruktur gespeichert.</p>
+
+<h2>Datenweitergabe</h2>
+<p>Wir teilen Ihre persönlichen Daten nicht ohne Ihre ausdrückliche Zustimmung mit Dritten. Wir geben Informationen nur weiter, wenn dies zur Erfüllung unserer gesetzlichen Verpflichtungen erforderlich ist.</p>
+
+<h2>Ihre Rechte</h2>
+<p>Sie haben folgende Rechte bezüglich Ihrer persönlichen Daten:</p>
+<ul>
+  <li>Zugriff auf Ihre Daten</li>
+  <li>Korrektur Ihrer Daten</li>
+  <li>Anfrage zur Löschung Ihrer Daten</li>
+  <li>Einschränkung der Nutzung Ihrer Daten</li>
+</ul>
+
+<h2>Kontakt</h2>
+<p>Wenn Sie Fragen oder Bedenken zu unserer Datenschutzrichtlinie haben, kontaktieren Sie uns bitte.</p>
+</body>
+</html>""",
   "developer": "Entwickler: Furkan Akif ISLEK",
   "noEmail": "Keine E-Mail gefunden",
   "version.number": "1.0.0",

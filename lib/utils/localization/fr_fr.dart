@@ -13,6 +13,53 @@ const Map<String, String> frFR = {
   "about_app": "À Propos de l'Application",
   "app_version": "Version de l'Application",
   "privacy_policy": "Politique de Confidentialité",
+  "privacy_policy_content": """<html>
+<head>
+<meta charset="UTF-8">
+<title>Politique de Confidentialité</title>
+</head>
+<body>
+<h1>Politique de Confidentialité de PocketPath</h1>
+<p>Dernière mise à jour: 15/05/2025</p>
+
+<h2>Introduction</h2>
+<p>Nous accordons une grande importance à votre vie privée lors de l'utilisation de l'application PocketPath. Cette politique de confidentialité explique comment PocketPath collecte, utilise et protège vos informations personnelles.</p>
+
+<h2>Informations que Nous Collectons</h2>
+<ul>
+  <li><strong>Informations de Compte:</strong> Votre adresse e-mail, prénom et nom.</li>
+  <li><strong>Données Financières:</strong> Informations que vous entrez concernant vos objectifs, dépenses et revenus.</li>
+  <li><strong>Données d'Utilisation:</strong> Données sur la façon dont vous utilisez l'application.</li>
+</ul>
+
+<h2>Utilisation des Données</h2>
+<p>Nous utilisons les informations que nous collectons aux fins suivantes:</p>
+<ul>
+  <li>Fournir et améliorer notre service</li>
+  <li>Gérer votre compte</li>
+  <li>Offrir une expérience personnalisée</li>
+  <li>Améliorer les fonctionnalités de l'application</li>
+</ul>
+
+<h2>Sécurité des Données</h2>
+<p>Nous mettons en œuvre des mesures de sécurité standard de l'industrie pour protéger vos données personnelles. Vos informations sont stockées en toute sécurité dans l'infrastructure Firebase.</p>
+
+<h2>Partage des Données</h2>
+<p>Nous ne partageons pas vos informations personnelles avec des tiers sans votre consentement explicite. Nous ne pouvons partager des informations que lorsque cela est nécessaire pour remplir nos obligations légales.</p>
+
+<h2>Vos Droits</h2>
+<p>Vous disposez des droits suivants concernant vos données personnelles:</p>
+<ul>
+  <li>Accès à vos données</li>
+  <li>Correction de vos données</li>
+  <li>Demande de suppression de vos données</li>
+  <li>Restriction de l'utilisation de vos données</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité, veuillez nous contacter.</p>
+</body>
+</html>""",
   "developer": "Développeur: Furkan Akif ISLEK",
   "noEmail": "Aucun e-mail trouvé",
   "version.number": "1.0.0",
