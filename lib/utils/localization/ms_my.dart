@@ -85,5 +85,30 @@ const Map<String, String> msMY = {
       "Masukkan alamat e-mel anda dan kami akan menghantar arahan selanjutnya tentang cara menetapkan semula kata laluan.",
   "reset_password.emailLabel": "E-mel anda",
   "reset_password.button": "Tetapkan Semula",
-  "reset_password.error.enterEmail": "Sila masukkan alamat e-mel anda."
+  "reset_password.error.enterEmail": "Sila masukkan alamat e-mel anda.",
+
+  // Introduction Pages
+  "intro.skip": "Langkau",
+  "intro.next": "Seterusnya",
+  "intro.done": "Selesai",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Adakah anda menghadapi kesukaran untuk mengawal perbelanjaan dan simpanan anda? Dengan PocketPath, masalah ini mudah diselesaikan.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Langkah Pertama",
+  "intro.page2.text":
+      "Anda perlu menetapkan sasaran untuk kawalan perbelanjaan. Setelah anda mempunyai sasaran, anda boleh merekodkan perbelanjaan anda.",
+  "intro.page2.quote":
+      "Jika anda menetapkan matlamat dan meneruskannya dengan segala ketabahan yang anda dapat kumpulkan, bakat anda akan membawa anda ke tempat-tempat yang akan mengagumkan anda.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Langkah Kedua",
+  "intro.page3.text":
+      "Anda boleh melihat matlamat dan menetapkan perbelanjaan dan pendapatan sewajarnya. Anda boleh menjejaki perbelanjaan berkala anda, dan sasaran yang telah selesai.",
+  "intro.page3.quote":
+      "Tiada angin yang baik untuk pelaut yang tidak tahu ke mana hendak pergi.",
+  "intro.page3.author": "- Seneca"
 };

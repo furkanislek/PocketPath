@@ -79,5 +79,26 @@ const Map<String, String> jaJP = {
   "reset_password.message": "メールアドレスを入力すると、パスワードのリセット方法についての詳細な手順をお送りします。",
   "reset_password.emailLabel": "メールアドレス",
   "reset_password.button": "リセット",
-  "reset_password.error.enterEmail": "メールアドレスを入力してください。"
+  "reset_password.error.enterEmail": "メールアドレスを入力してください。",
+
+  // Introduction Pages
+  "intro.skip": "スキップ",
+  "intro.next": "次へ",
+  "intro.done": "完了",
+
+  // Introduction Page 1
+  "intro.page1.text": "支出と貯蓄を管理するのが難しいと感じますか？PocketPathを使えば、この問題は簡単に解決できます。",
+
+  // Introduction Page 2
+  "intro.page2.title": "最初のステップ",
+  "intro.page2.text": "支出管理のために目標を設定する必要があります。目標ができたら、支出を記録できます。",
+  "intro.page2.quote":
+      "目標を設定し、あなたが集められるすべての決意をもってそれを追求すれば、あなたの才能はあなたを驚かせる場所へと導くでしょう。",
+  "intro.page2.author": "- レス・ブラウン",
+
+  // Introduction Page 3
+  "intro.page3.title": "次のステップ",
+  "intro.page3.text": "目標を確認し、それに応じて支出と収入を設定できます。定期的な支出や達成した目標を追跡できます。",
+  "intro.page3.quote": "行き先を知らない船乗りには、順風は吹かない。",
+  "intro.page3.author": "- セネカ"
 };

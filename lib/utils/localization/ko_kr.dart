@@ -80,5 +80,28 @@ const Map<String, String> koKR = {
   "reset_password.message": "이메일 주소를 입력하시면 비밀번호 재설정 방법에 대한 추가 안내를 보내드립니다.",
   "reset_password.emailLabel": "이메일",
   "reset_password.button": "재설정",
-  "reset_password.error.enterEmail": "이메일 주소를 입력해주세요."
+  "reset_password.error.enterEmail": "이메일 주소를 입력해주세요.",
+
+  // Introduction Pages
+  "intro.skip": "건너뛰기",
+  "intro.next": "다음",
+  "intro.done": "완료",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "지출과 저축을 관리하기 어렵다고 느끼시나요? PocketPath를 사용하면 이 문제를 쉽게 해결할 수 있습니다.",
+
+  // Introduction Page 2
+  "intro.page2.title": "첫 번째 단계",
+  "intro.page2.text": "지출 관리를 위한 목표를 설정해야 합니다. 목표가 있으면 지출을 기록할 수 있습니다.",
+  "intro.page2.quote":
+      "목표를 설정하고 모든 결심을 다해 그것을 추구한다면, 당신의 재능은 당신을 놀라운 곳으로 인도할 것입니다.",
+  "intro.page2.author": "- 레스 브라운",
+
+  // Introduction Page 3
+  "intro.page3.title": "두 번째 단계",
+  "intro.page3.text":
+      "목표를 확인하고 그에 따라 지출과 수입을 설정할 수 있습니다. 정기적인 지출과 완료된 목표를 추적할 수 있습니다.",
+  "intro.page3.quote": "어디로 가야 할지 모르는 선원에게는 순풍이 없다.",
+  "intro.page3.author": "- 세네카"
 };

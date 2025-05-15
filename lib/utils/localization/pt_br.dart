@@ -83,5 +83,31 @@ const Map<String, String> ptBR = {
       "Digite seu endereço de e-mail e enviaremos instruções adicionais sobre como redefinir a senha.",
   "reset_password.emailLabel": "Seu e-mail",
   "reset_password.button": "Redefinir",
-  "reset_password.error.enterEmail": "Por favor, digite seu endereço de e-mail."
+  "reset_password.error.enterEmail":
+      "Por favor, digite seu endereço de e-mail.",
+
+  // Introduction Pages
+  "intro.skip": "Pular",
+  "intro.next": "Próximo",
+  "intro.done": "Concluir",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Você acha difícil controlar seus gastos e economias? Com o PocketPath, esse problema é fácil de resolver.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Primeiro Passo",
+  "intro.page2.text":
+      "Você precisa definir uma meta para controle de gastos. Depois de ter uma meta, você pode registrar seus gastos.",
+  "intro.page2.quote":
+      "Se você estabelecer metas e persegui-las com toda a determinação que puder reunir, seus talentos o levarão a lugares que o surpreenderão.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Segundo Passo",
+  "intro.page3.text":
+      "Você pode ver as metas e definir gastos e receitas de acordo. Você pode acompanhar seus gastos periódicos e suas metas concluídas.",
+  "intro.page3.quote":
+      "Não há vento favorável para o marinheiro que não sabe para onde ir.",
+  "intro.page3.author": "- Sêneca"
 };

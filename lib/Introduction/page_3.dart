@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
@@ -24,35 +25,44 @@ class Page3 extends StatelessWidget {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  child: Text(
-                      textAlign: TextAlign.justify,
+                  child: RichText(
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
                       style: TextStyle(
                           fontSize: height / 50,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic),
-                      "Second step\n You can see the goals and set spending and income accordingly. You can keep track of your periodic expenditures, and your finished targets. "),
+                          fontStyle: FontStyle.italic,
+                          color: Colors.black),
+                      children: [
+                        TextSpan(text: "${("intro.page3.title".tr)}\n "),
+                        TextSpan(text: "intro.page3.text".tr),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(height: height / 15),
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          fontSize: height / 80,
-                          fontFamily: 'Poppins',
-                          fontStyle: FontStyle.italic),
-                      "There is no favorable wind for the sailor who doesn’t know where to go."),
+                    "intro.page3.quote".tr,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontSize: height / 80,
+                        fontFamily: 'Poppins',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          fontSize: height / 80,
-                          fontFamily: 'Poppins',
-                          fontStyle: FontStyle.italic),
-                      "- Seneca"),
+                    "intro.page3.author".tr,
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                        fontSize: height / 80,
+                        fontFamily: 'Poppins',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 SizedBox(height: height / 5),
               ]),

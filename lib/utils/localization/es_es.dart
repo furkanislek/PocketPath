@@ -91,5 +91,30 @@ const Map<String, String> esES = {
   "reset_password.emailLabel": "Tu correo electrónico",
   "reset_password.button": "Restablecer",
   "reset_password.error.enterEmail":
-      "Por favor ingresa tu dirección de correo electrónico."
+      "Por favor ingresa tu dirección de correo electrónico.",
+
+  // Introduction Pages
+  "intro.skip": "Omitir",
+  "intro.next": "Siguiente",
+  "intro.done": "Listo",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "¿Te resulta difícil controlar tus gastos y ahorros? Con PocketPath, este problema es fácil de resolver.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Primer Paso",
+  "intro.page2.text":
+      "Necesitas establecer un objetivo para el control de gastos. Una vez que tengas un objetivo, puedes registrar tus gastos.",
+  "intro.page2.quote":
+      "Si estableces metas y vas tras ellas con toda la determinación que puedas reunir, tus dones te llevarán a lugares que te asombrarán.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Segundo Paso",
+  "intro.page3.text":
+      "Puedes ver los objetivos y establecer gastos e ingresos en consecuencia. Puedes realizar un seguimiento de tus gastos periódicos y tus objetivos terminados.",
+  "intro.page3.quote":
+      "No hay viento favorable para el marinero que no sabe adónde va.",
+  "intro.page3.author": "- Séneca"
 };

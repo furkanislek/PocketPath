@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class Page1 extends StatelessWidget {
   Page1({super.key});
@@ -26,13 +27,14 @@ class Page1 extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: height / 50,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic),
-                      "Do you find it difficult to control your spending and savings? With Pocketpath, this problem is easy to solve."),
+                    "intro.page1.text".tr,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: height / 50,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 SizedBox(height: height / 5),
               ]),

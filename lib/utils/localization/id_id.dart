@@ -85,5 +85,30 @@ const Map<String, String> idID = {
       "Masukkan alamat email Anda dan kami akan mengirimkan instruksi lebih lanjut tentang cara mereset kata sandi.",
   "reset_password.emailLabel": "Email Anda",
   "reset_password.button": "Reset",
-  "reset_password.error.enterEmail": "Silakan masukkan alamat email Anda."
+  "reset_password.error.enterEmail": "Silakan masukkan alamat email Anda.",
+
+  // Introduction Pages
+  "intro.skip": "Lewati",
+  "intro.next": "Selanjutnya",
+  "intro.done": "Selesai",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Apakah Anda merasa sulit mengendalikan pengeluaran dan tabungan Anda? Dengan PocketPath, masalah ini mudah diselesaikan.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Langkah Pertama",
+  "intro.page2.text":
+      "Anda perlu menetapkan target untuk kontrol pengeluaran. Setelah Anda memiliki target, Anda dapat mencatat pengeluaran Anda.",
+  "intro.page2.quote":
+      "Jika Anda menetapkan tujuan dan mengejarnya dengan segala tekad yang bisa Anda kumpulkan, bakat Anda akan membawa Anda ke tempat-tempat yang akan membuat Anda takjub.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Langkah Kedua",
+  "intro.page3.text":
+      "Anda dapat melihat tujuan dan menetapkan pengeluaran dan pendapatan sesuai dengan itu. Anda dapat melacak pengeluaran berkala Anda, dan target-target yang telah selesai.",
+  "intro.page3.quote":
+      "Tidak ada angin yang menguntungkan bagi pelaut yang tidak tahu ke mana harus pergi.",
+  "intro.page3.author": "- Seneca"
 };

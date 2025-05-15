@@ -87,5 +87,30 @@ const Map<String, String> enUS = {
       "Enter your e-mail address and we will send you further instructions on how to reset the password.",
   "reset_password.emailLabel": "Your e-mail",
   "reset_password.button": "Reset",
-  "reset_password.error.enterEmail": "Please enter your e-mail address."
+  "reset_password.error.enterEmail": "Please enter your e-mail address.",
+
+  // Introduction Pages
+  "intro.skip": "Skip",
+  "intro.next": "Next",
+  "intro.done": "Done",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Do you find it difficult to control your spending and savings? With Pocketpath, this problem is easy to solve.",
+
+  // Introduction Page 2
+  "intro.page2.title": "First Step",
+  "intro.page2.text":
+      "You need to set a target for spending control. Once you have a target, you can record your spending.",
+  "intro.page2.quote":
+      "If you set goals and go after them with all the determination you can muster, your gifts will take you places that will amaze you.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Second step",
+  "intro.page3.text":
+      "You can see the goals and set spending and income accordingly. You can keep track of your periodic expenditures, and your finished targets.",
+  "intro.page3.quote":
+      "There is no favorable wind for the sailor who doesn't know where to go.",
+  "intro.page3.author": "- Seneca"
 };

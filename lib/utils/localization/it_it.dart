@@ -86,5 +86,30 @@ const Map<String, String> itIT = {
   "reset_password.emailLabel": "La tua email",
   "reset_password.button": "Reimposta",
   "reset_password.error.enterEmail":
-      "Per favore inserisci il tuo indirizzo email."
+      "Per favore inserisci il tuo indirizzo email.",
+
+  // Introduction Pages
+  "intro.skip": "Salta",
+  "intro.next": "Avanti",
+  "intro.done": "Fatto",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Trovi difficile controllare le tue spese e i tuoi risparmi? Con PocketPath, questo problema è facile da risolvere.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Primo passo",
+  "intro.page2.text":
+      "Devi impostare un obiettivo per il controllo delle spese. Una volta che hai un obiettivo, puoi registrare le tue spese.",
+  "intro.page2.quote":
+      "Se ti poni degli obiettivi e li persegui con tutta la determinazione possibile, i tuoi talenti ti porteranno in luoghi che ti stupiranno.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Secondo passo",
+  "intro.page3.text":
+      "Puoi vedere gli obiettivi e impostare spese e entrate di conseguenza. Puoi tenere traccia delle tue spese periodiche e dei tuoi obiettivi completati.",
+  "intro.page3.quote":
+      "Non c'è vento favorevole per il marinaio che non sa dove andare.",
+  "intro.page3.author": "- Seneca"
 };

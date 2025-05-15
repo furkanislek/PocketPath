@@ -87,5 +87,30 @@ const Map<String, String> frFR = {
       "Entrez votre adresse e-mail et nous vous enverrons des instructions supplémentaires sur la façon de réinitialiser le mot de passe.",
   "reset_password.emailLabel": "Votre e-mail",
   "reset_password.button": "Réinitialiser",
-  "reset_password.error.enterEmail": "Veuillez entrer votre adresse e-mail."
+  "reset_password.error.enterEmail": "Veuillez entrer votre adresse e-mail.",
+
+  // Introduction Pages
+  "intro.skip": "Passer",
+  "intro.next": "Suivant",
+  "intro.done": "Terminé",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Trouvez-vous difficile de contrôler vos dépenses et vos économies? Avec PocketPath, ce problème est facile à résoudre.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Première Étape",
+  "intro.page2.text":
+      "Vous devez définir un objectif pour le contrôle des dépenses. Une fois que vous avez un objectif, vous pouvez enregistrer vos dépenses.",
+  "intro.page2.quote":
+      "Si vous vous fixez des objectifs et les poursuivez avec toute la détermination possible, vos talents vous mèneront dans des endroits qui vous étonneront.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Deuxième Étape",
+  "intro.page3.text":
+      "Vous pouvez voir les objectifs et définir les dépenses et les revenus en conséquence. Vous pouvez suivre vos dépenses périodiques et vos objectifs atteints.",
+  "intro.page3.quote":
+      "Il n'y a pas de vent favorable pour le marin qui ne sait pas où aller.",
+  "intro.page3.author": "- Sénèque"
 };

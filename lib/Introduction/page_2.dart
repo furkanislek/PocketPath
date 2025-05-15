@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class Page2 extends StatelessWidget {
   Page2({super.key});
@@ -25,35 +26,44 @@ class Page2 extends StatelessWidget {
                 SizedBox(height: height / 50),
                 SizedBox(
                   width: double.infinity,
-                  child: Text(
-                      textAlign: TextAlign.justify,
+                  child: RichText(
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
                       style: TextStyle(
                           fontSize: height / 50,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic),
-                      "First Step\n You need to set a target for spending control. Once you have a target, you can record your spending. "),
+                          fontStyle: FontStyle.italic,
+                          color: Colors.black),
+                      children: [
+                        TextSpan(text: "${("intro.page2.title".tr)}\n "),
+                        TextSpan(text: "intro.page2.text".tr),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(height: height / 15),
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          fontSize: height / 80,
-                          fontFamily: 'Poppins',
-                          fontStyle: FontStyle.italic),
-                      "If you set goals and go after them with all the determination you can muster, your gifts will take you places that will amaze you."),
+                    "intro.page2.quote".tr,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontSize: height / 80,
+                        fontFamily: 'Poppins',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          fontSize: height / 80,
-                          fontFamily: 'Poppins',
-                          fontStyle: FontStyle.italic),
-                      "- Les Brown"),
+                    "intro.page2.author".tr,
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                        fontSize: height / 80,
+                        fontFamily: 'Poppins',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 SizedBox(height: height / 5),
               ]),

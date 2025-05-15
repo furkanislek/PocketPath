@@ -85,5 +85,30 @@ const Map<String, String> trTR = {
       "E-posta adresinizi girin, şifrenizi nasıl sıfırlayacağınıza dair talimatları göndereceğiz.",
   "reset_password.emailLabel": "E-posta adresiniz",
   "reset_password.button": "Sıfırla",
-  "reset_password.error.enterEmail": "Lütfen e-posta adresinizi girin."
+  "reset_password.error.enterEmail": "Lütfen e-posta adresinizi girin.",
+
+  // Tanıtım Sayfaları
+  "intro.skip": "Atla",
+  "intro.next": "İleri",
+  "intro.done": "Tamam",
+
+  // Tanıtım Sayfası 1
+  "intro.page1.text":
+      "Harcamalarınızı ve tasarruflarınızı kontrol etmekte zorlanıyor musunuz? PocketPath ile bu problem kolayca çözülür.",
+
+  // Tanıtım Sayfası 2
+  "intro.page2.title": "Birinci Adım",
+  "intro.page2.text":
+      "Harcama kontrolü için bir hedef belirlemeniz gerekiyor. Hedefinizi belirledikten sonra harcamalarınızı kaydedebilirsiniz.",
+  "intro.page2.quote":
+      "Hedeflerinizi belirlerseniz ve onların peşinden tüm kararlılığınızla giderseniz, yetenekleriniz sizi şaşırtacak yerlere götürecektir.",
+  "intro.page2.author": "- Les Brown",
+
+  // Tanıtım Sayfası 3
+  "intro.page3.title": "İkinci Adım",
+  "intro.page3.text":
+      "Hedeflerinizi görebilir ve buna göre harcama ve gelir belirleyebilirsiniz. Periyodik harcamalarınızı ve tamamlanmış hedeflerinizi takip edebilirsiniz.",
+  "intro.page3.quote":
+      "Nereye gideceğini bilmeyen denizciye uygun rüzgar yoktur.",
+  "intro.page3.author": "- Seneca"
 };

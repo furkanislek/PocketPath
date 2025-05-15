@@ -79,5 +79,25 @@ const Map<String, String> zhCN = {
   "reset_password.message": "输入您的电子邮件地址，我们将向您发送有关如何重置密码的进一步说明。",
   "reset_password.emailLabel": "您的电子邮件",
   "reset_password.button": "重置",
-  "reset_password.error.enterEmail": "请输入您的电子邮件地址。"
+  "reset_password.error.enterEmail": "请输入您的电子邮件地址。",
+
+  // Introduction Pages
+  "intro.skip": "跳过",
+  "intro.next": "下一步",
+  "intro.done": "完成",
+
+  // Introduction Page 1
+  "intro.page1.text": "您是否发现控制支出和储蓄很困难？使用PocketPath，这个问题很容易解决。",
+
+  // Introduction Page 2
+  "intro.page2.title": "第一步",
+  "intro.page2.text": "您需要为支出控制设定一个目标。一旦您设定了目标，就可以记录您的支出。",
+  "intro.page2.quote": "如果您设定目标并以全部的决心追求它们，您的天赋将带您到令您惊讶的地方。",
+  "intro.page2.author": "- 莱斯·布朗",
+
+  // Introduction Page 3
+  "intro.page3.title": "第二步",
+  "intro.page3.text": "您可以看到目标并相应地设定支出和收入。您可以跟踪您的定期支出和完成的目标。",
+  "intro.page3.quote": "对于不知道去向何方的水手来说，没有顺风。",
+  "intro.page3.author": "- 塞内卡"
 };

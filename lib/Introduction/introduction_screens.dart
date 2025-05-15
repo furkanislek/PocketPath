@@ -37,7 +37,7 @@ class _IntroductionScreensState extends State<IntroductionScreens> {
                   onPressed: () {
                     Get.off(() => Menu());
                   },
-                  child: const Text("Skip")),
+                  child: Text("intro.skip".tr)),
               SmoothPageIndicator(
                 effect: ExpandingDotsEffect(dotWidth: 15),
                 controller: _controller,
@@ -48,14 +48,14 @@ class _IntroductionScreensState extends State<IntroductionScreens> {
                       onPressed: () {
                         Get.off(() => Menu());
                       },
-                      child: const Text("Done"))
+                      child: Text("intro.done".tr))
                   : TextButton(
                       onPressed: () {
                         _controller.nextPage(
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.easeIn);
                       },
-                      child: const Text("Next")),
+                      child: Text("intro.next".tr)),
             ],
           ),
         )

@@ -87,5 +87,30 @@ const Map<String, String> deDE = {
       "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen weitere Anweisungen zum Zurücksetzen des Passworts.",
   "reset_password.emailLabel": "Ihre E-Mail",
   "reset_password.button": "Zurücksetzen",
-  "reset_password.error.enterEmail": "Bitte geben Sie Ihre E-Mail-Adresse ein."
+  "reset_password.error.enterEmail": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+
+  // Introduction Pages
+  "intro.skip": "Überspringen",
+  "intro.next": "Weiter",
+  "intro.done": "Fertig",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "Finden Sie es schwierig, Ihre Ausgaben und Ersparnisse zu kontrollieren? Mit PocketPath ist dieses Problem leicht zu lösen.",
+
+  // Introduction Page 2
+  "intro.page2.title": "Erster Schritt",
+  "intro.page2.text":
+      "Sie müssen ein Ziel für die Ausgabenkontrolle festlegen. Sobald Sie ein Ziel haben, können Sie Ihre Ausgaben aufzeichnen.",
+  "intro.page2.quote":
+      "Wenn Sie sich Ziele setzen und diese mit aller Entschlossenheit verfolgen, werden Ihre Talente Sie an Orte führen, die Sie erstaunen werden.",
+  "intro.page2.author": "- Les Brown",
+
+  // Introduction Page 3
+  "intro.page3.title": "Zweiter Schritt",
+  "intro.page3.text":
+      "Sie können die Ziele sehen und entsprechend Ausgaben und Einnahmen festlegen. Sie können Ihre regelmäßigen Ausgaben und Ihre erreichten Ziele verfolgen.",
+  "intro.page3.quote":
+      "Es gibt keinen günstigen Wind für den Seemann, der nicht weiß, wohin er segeln will.",
+  "intro.page3.author": "- Seneca"
 };

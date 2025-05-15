@@ -84,5 +84,29 @@ const Map<String, String> arSA = {
       "أدخل عنوان بريدك الإلكتروني وسنرسل لك المزيد من التعليمات حول كيفية إعادة تعيين كلمة المرور.",
   "reset_password.emailLabel": "بريدك الإلكتروني",
   "reset_password.button": "إعادة تعيين",
-  "reset_password.error.enterEmail": "الرجاء إدخال عنوان بريدك الإلكتروني."
+  "reset_password.error.enterEmail": "الرجاء إدخال عنوان بريدك الإلكتروني.",
+
+  // Introduction Pages
+  "intro.skip": "تخطى",
+  "intro.next": "التالي",
+  "intro.done": "تم",
+
+  // Introduction Page 1
+  "intro.page1.text":
+      "هل تجد صعوبة في التحكم في نفقاتك ومدخراتك؟ مع تطبيق PocketPath، هذه المشكلة سهلة الحل.",
+
+  // Introduction Page 2
+  "intro.page2.title": "الخطوة الأولى",
+  "intro.page2.text":
+      "تحتاج إلى تحديد هدف للتحكم في الإنفاق. بمجرد أن يكون لديك هدف، يمكنك تسجيل نفقاتك.",
+  "intro.page2.quote":
+      "إذا وضعت أهدافًا وسعيت وراءها بكل ما لديك من إصرار، فستأخذك مواهبك إلى أماكن ستذهلك.",
+  "intro.page2.author": "- ليس براون",
+
+  // Introduction Page 3
+  "intro.page3.title": "الخطوة الثانية",
+  "intro.page3.text":
+      "يمكنك رؤية الأهداف وتحديد الإنفاق والدخل وفقًا لذلك. يمكنك تتبع نفقاتك الدورية وأهدافك المنجزة.",
+  "intro.page3.quote": "لا توجد رياح مواتية للبحار الذي لا يعرف إلى أين يتجه.",
+  "intro.page3.author": "- سينيكا"
 };
