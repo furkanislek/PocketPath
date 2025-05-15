@@ -6,6 +6,26 @@ const Map<String, String> zhCN = {
   'settings.language': '语言',
   'settings.selectLanguage': '选择语言',
   'settings.profile': '个人资料',
+  'settings.currency': '货币',
+  'settings.selectCurrency': '选择货币',
+
+  // Currency Names
+  'currency.try': '土耳其里拉 (₺)',
+  'currency.usd': '美元 (\$)',
+  'currency.eur': '欧元 (€)',
+  'currency.gbp': '英镑 (£)',
+  'currency.jpy': '日元 (¥)',
+  'currency.rub': '俄罗斯卢布 (₽)',
+  'currency.inr': '印度卢比 (₹)',
+  'currency.cny': '人民币 (¥)',
+  'currency.krw': '韩元 (₩)',
+  'currency.myr': '马来西亚林吉特 (RM)',
+  'currency.brl': '巴西雷亚尔 (R\$)',
+  'currency.zar': '南非兰特 (R)',
+  'currency.sek': '瑞典克朗 (kr)',
+  'currency.chf': '瑞士法郎 (CHF)',
+  'currency.aud': '澳大利亚元 (A\$)',
+  'currency.cad': '加拿大元 (C\$)',
 
   // Profile Page
   'personal_info': '个人信息',

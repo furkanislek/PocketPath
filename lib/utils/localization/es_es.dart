@@ -6,6 +6,26 @@ const Map<String, String> esES = {
   'settings.language': 'Idioma',
   'settings.selectLanguage': 'Seleccionar Idioma',
   'settings.profile': 'Perfil',
+  'settings.currency': 'Moneda',
+  'settings.selectCurrency': 'Seleccionar Moneda',
+
+  // Currency Names
+  'currency.try': 'Lira Turca (₺)',
+  'currency.usd': 'Dólar Estadounidense (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'Libra Esterlina (£)',
+  'currency.jpy': 'Yen Japonés (¥)',
+  'currency.rub': 'Rublo Ruso (₽)',
+  'currency.inr': 'Rupia India (₹)',
+  'currency.cny': 'Yuan Chino (¥)',
+  'currency.krw': 'Won Surcoreano (₩)',
+  'currency.myr': 'Ringgit Malayo (RM)',
+  'currency.brl': 'Real Brasileño (R\$)',
+  'currency.zar': 'Rand Sudafricano (R)',
+  'currency.sek': 'Corona Sueca (kr)',
+  'currency.chf': 'Franco Suizo (CHF)',
+  'currency.aud': 'Dólar Australiano (A\$)',
+  'currency.cad': 'Dólar Canadiense (C\$)',
 
   // Profile Page
   'personal_info': 'Información Personal',

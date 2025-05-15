@@ -6,6 +6,26 @@ const Map<String, String> jaJP = {
   'settings.language': '言語',
   'settings.selectLanguage': '言語を選択',
   'settings.profile': 'プロフィール',
+  'settings.currency': '通貨',
+  'settings.selectCurrency': '通貨を選択',
+
+  // Currency Names
+  'currency.try': 'トルコリラ (₺)',
+  'currency.usd': 'アメリカドル (\$)',
+  'currency.eur': 'ユーロ (€)',
+  'currency.gbp': 'イギリスポンド (£)',
+  'currency.jpy': '日本円 (¥)',
+  'currency.rub': 'ロシアルーブル (₽)',
+  'currency.inr': 'インドルピー (₹)',
+  'currency.cny': '中国元 (¥)',
+  'currency.krw': '韓国ウォン (₩)',
+  'currency.myr': 'マレーシアリンギット (RM)',
+  'currency.brl': 'ブラジルレアル (R\$)',
+  'currency.zar': '南アフリカランド (R)',
+  'currency.sek': 'スウェーデンクローナ (kr)',
+  'currency.chf': 'スイスフラン (CHF)',
+  'currency.aud': 'オーストラリアドル (A\$)',
+  'currency.cad': 'カナダドル (C\$)',
 
   // Profile Page
   'personal_info': '個人情報',

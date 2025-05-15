@@ -6,6 +6,26 @@ const Map<String, String> deDE = {
   "settings.language": "Sprache",
   "settings.selectLanguage": "Sprache auswählen",
   "settings.profile": "Profil",
+  "settings.currency": "Währung",
+  "settings.selectCurrency": "Währung auswählen",
+
+  // Currency Names
+  "currency.try": "Türkische Lira (₺)",
+  "currency.usd": "US-Dollar (\$)",
+  "currency.eur": "Euro (€)",
+  "currency.gbp": "Britisches Pfund (£)",
+  "currency.jpy": "Japanischer Yen (¥)",
+  "currency.rub": "Russischer Rubel (₽)",
+  "currency.inr": "Indische Rupie (₹)",
+  "currency.cny": "Chinesischer Yuan (¥)",
+  "currency.krw": "Südkoreanischer Won (₩)",
+  "currency.myr": "Malaysischer Ringgit (RM)",
+  "currency.brl": "Brasilianischer Real (R\$)",
+  "currency.zar": "Südafrikanischer Rand (R)",
+  "currency.sek": "Schwedische Krone (kr)",
+  "currency.chf": "Schweizer Franken (CHF)",
+  "currency.aud": "Australischer Dollar (A\$)",
+  "currency.cad": "Kanadischer Dollar (C\$)",
 
   // Profile Page
   "personal_info": "Persönliche Informationen",

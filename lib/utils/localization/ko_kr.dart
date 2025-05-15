@@ -6,6 +6,26 @@ const Map<String, String> koKR = {
   'settings.language': '언어',
   'settings.selectLanguage': '언어 선택',
   'settings.profile': '프로필',
+  'settings.currency': '통화',
+  'settings.selectCurrency': '통화 선택',
+
+  // Currency Names
+  'currency.try': '터키 리라 (₺)',
+  'currency.usd': '미국 달러 (\$)',
+  'currency.eur': '유로 (€)',
+  'currency.gbp': '영국 파운드 (£)',
+  'currency.jpy': '일본 엔 (¥)',
+  'currency.rub': '러시아 루블 (₽)',
+  'currency.inr': '인도 루피 (₹)',
+  'currency.cny': '중국 위안 (¥)',
+  'currency.krw': '한국 원 (₩)',
+  'currency.myr': '말레이시아 링깃 (RM)',
+  'currency.brl': '브라질 헤알 (R\$)',
+  'currency.zar': '남아프리카 랜드 (R)',
+  'currency.sek': '스웨덴 크로나 (kr)',
+  'currency.chf': '스위스 프랑 (CHF)',
+  'currency.aud': '호주 달러 (A\$)',
+  'currency.cad': '캐나다 달러 (C\$)',
 
   // Profile Page
   'personal_info': '개인 정보',

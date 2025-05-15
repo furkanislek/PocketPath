@@ -6,6 +6,26 @@ const Map<String, String> arSA = {
   'settings.language': 'اللغة',
   'settings.selectLanguage': 'اختر اللغة',
   'settings.profile': 'الملف الشخصي',
+  'settings.currency': 'العملة',
+  'settings.selectCurrency': 'اختر العملة',
+
+  // Currency Names
+  'currency.try': 'الليرة التركية (₺)',
+  'currency.usd': 'الدولار الأمريكي (\$)',
+  'currency.eur': 'اليورو (€)',
+  'currency.gbp': 'الجنيه الإسترليني (£)',
+  'currency.jpy': 'الين الياباني (¥)',
+  'currency.rub': 'الروبل الروسي (₽)',
+  'currency.inr': 'الروبية الهندية (₹)',
+  'currency.cny': 'اليوان الصيني (¥)',
+  'currency.krw': 'الوون الكوري (₩)',
+  'currency.myr': 'الرينغيت الماليزي (RM)',
+  'currency.brl': 'الريال البرازيلي (R\$)',
+  'currency.zar': 'الراند الجنوب أفريقي (R)',
+  'currency.sek': 'الكرونة السويدية (kr)',
+  'currency.chf': 'الفرنك السويسري (CHF)',
+  'currency.aud': 'الدولار الأسترالي (A\$)',
+  'currency.cad': 'الدولار الكندي (C\$)',
 
   // Profile Page
   'personal_info': 'المعلومات الشخصية',

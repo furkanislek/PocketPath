@@ -6,6 +6,26 @@ const Map<String, String> hiIN = {
   'settings.language': 'भाषा',
   'settings.selectLanguage': 'भाषा चुनें',
   'settings.profile': 'प्रोफ़ाइल',
+  'settings.currency': 'मुद्रा',
+  'settings.selectCurrency': 'मुद्रा चुनें',
+
+  // Currency Names
+  'currency.try': 'तुर्की लीरा (₺)',
+  'currency.usd': 'अमेरिकी डॉलर (\$)',
+  'currency.eur': 'यूरो (€)',
+  'currency.gbp': 'ब्रिटिश पाउंड (£)',
+  'currency.jpy': 'जापानी येन (¥)',
+  'currency.rub': 'रूसी रूबल (₽)',
+  'currency.inr': 'भारतीय रुपया (₹)',
+  'currency.cny': 'चीनी युआन (¥)',
+  'currency.krw': 'कोरियाई वॉन (₩)',
+  'currency.myr': 'मलेशियाई रिंगित (RM)',
+  'currency.brl': 'ब्राज़ीलियाई रियल (R\$)',
+  'currency.zar': 'दक्षिण अफ्रीकी रैंड (R)',
+  'currency.sek': 'स्वीडिश क्रोना (kr)',
+  'currency.chf': 'स्विस फ्रैंक (CHF)',
+  'currency.aud': 'ऑस्ट्रेलियाई डॉलर (A\$)',
+  'currency.cad': 'कनाडाई डॉलर (C\$)',
 
   // Profile Page
   'personal_info': 'व्यक्तिगत जानकारी',

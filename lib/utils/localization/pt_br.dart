@@ -4,6 +4,26 @@ const Map<String, String> ptBR = {
   'settings.language': 'Idioma',
   'settings.selectLanguage': 'Selecionar Idioma',
   'settings.profile': 'Perfil',
+  'settings.currency': 'Moeda',
+  'settings.selectCurrency': 'Selecionar Moeda',
+
+  // Currency Names
+  'currency.try': 'Lira Turca (₺)',
+  'currency.usd': 'Dólar Americano (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'Libra Esterlina (£)',
+  'currency.jpy': 'Iene Japonês (¥)',
+  'currency.rub': 'Rublo Russo (₽)',
+  'currency.inr': 'Rupia Indiana (₹)',
+  'currency.cny': 'Yuan Chinês (¥)',
+  'currency.krw': 'Won Sul-coreano (₩)',
+  'currency.myr': 'Ringgit Malaio (RM)',
+  'currency.brl': 'Real Brasileiro (R\$)',
+  'currency.zar': 'Rand Sul-africano (R)',
+  'currency.sek': 'Coroa Sueca (kr)',
+  'currency.chf': 'Franco Suíço (CHF)',
+  'currency.aud': 'Dólar Australiano (A\$)',
+  'currency.cad': 'Dólar Canadense (C\$)',
 
   // Profile Page
   'personal_info': 'Informações Pessoais',

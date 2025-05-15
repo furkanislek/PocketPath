@@ -6,6 +6,26 @@ const Map<String, String> frFR = {
   "settings.language": "Langue",
   "settings.selectLanguage": "Sélectionner la Langue",
   "settings.profile": "Profil",
+  "settings.currency": "Devise",
+  "settings.selectCurrency": "Sélectionner la Devise",
+
+  // Currency Names
+  "currency.try": "Lire Turque (₺)",
+  "currency.usd": "Dollar Américain (\$)",
+  "currency.eur": "Euro (€)",
+  "currency.gbp": "Livre Sterling (£)",
+  "currency.jpy": "Yen Japonais (¥)",
+  "currency.rub": "Rouble Russe (₽)",
+  "currency.inr": "Roupie Indienne (₹)",
+  "currency.cny": "Yuan Chinois (¥)",
+  "currency.krw": "Won Sud-coréen (₩)",
+  "currency.myr": "Ringgit Malaisien (RM)",
+  "currency.brl": "Réal Brésilien (R\$)",
+  "currency.zar": "Rand Sud-africain (R)",
+  "currency.sek": "Couronne Suédoise (kr)",
+  "currency.chf": "Franc Suisse (CHF)",
+  "currency.aud": "Dollar Australien (A\$)",
+  "currency.cad": "Dollar Canadien (C\$)",
 
   // Profile Page
   "personal_info": "Informations Personnelles",

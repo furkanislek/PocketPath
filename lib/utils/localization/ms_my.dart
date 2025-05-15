@@ -6,6 +6,26 @@ const Map<String, String> msMY = {
   'settings.language': 'Bahasa',
   'settings.selectLanguage': 'Pilih Bahasa',
   'settings.profile': 'Profil',
+  'settings.currency': 'Mata Wang',
+  'settings.selectCurrency': 'Pilih Mata Wang',
+
+  // Currency Names
+  'currency.try': 'Lira Turki (₺)',
+  'currency.usd': 'Dolar Amerika (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'Pound British (£)',
+  'currency.jpy': 'Yen Jepun (¥)',
+  'currency.rub': 'Rubel Rusia (₽)',
+  'currency.inr': 'Rupee India (₹)',
+  'currency.cny': 'Yuan China (¥)',
+  'currency.krw': 'Won Korea (₩)',
+  'currency.myr': 'Ringgit Malaysia (RM)',
+  'currency.brl': 'Real Brazil (R\$)',
+  'currency.zar': 'Rand Afrika Selatan (R)',
+  'currency.sek': 'Krona Sweden (kr)',
+  'currency.chf': 'Franc Switzerland (CHF)',
+  'currency.aud': 'Dolar Australia (A\$)',
+  'currency.cad': 'Dolar Kanada (C\$)',
 
   // Profile Page
   'personal_info': 'Maklumat Peribadi',

@@ -6,6 +6,26 @@ const Map<String, String> itIT = {
   'settings.language': 'Lingua',
   'settings.selectLanguage': 'Seleziona lingua',
   'settings.profile': 'Profilo',
+  'settings.currency': 'Valuta',
+  'settings.selectCurrency': 'Seleziona valuta',
+
+  // Currency Names
+  'currency.try': 'Lira Turca (₺)',
+  'currency.usd': 'Dollaro Americano (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'Sterlina Britannica (£)',
+  'currency.jpy': 'Yen Giapponese (¥)',
+  'currency.rub': 'Rublo Russo (₽)',
+  'currency.inr': 'Rupia Indiana (₹)',
+  'currency.cny': 'Yuan Cinese (¥)',
+  'currency.krw': 'Won Sudcoreano (₩)',
+  'currency.myr': 'Ringgit Malese (RM)',
+  'currency.brl': 'Real Brasiliano (R\$)',
+  'currency.zar': 'Rand Sudafricano (R)',
+  'currency.sek': 'Corona Svedese (kr)',
+  'currency.chf': 'Franco Svizzero (CHF)',
+  'currency.aud': 'Dollaro Australiano (A\$)',
+  'currency.cad': 'Dollaro Canadese (C\$)',
 
   // Profile Page
   'personal_info': 'Informazioni personali',

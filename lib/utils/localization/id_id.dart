@@ -6,6 +6,26 @@ const Map<String, String> idID = {
   'settings.language': 'Bahasa',
   'settings.selectLanguage': 'Pilih Bahasa',
   'settings.profile': 'Profil',
+  'settings.currency': 'Mata Uang',
+  'settings.selectCurrency': 'Pilih Mata Uang',
+
+  // Currency Names
+  'currency.try': 'Lira Turki (₺)',
+  'currency.usd': 'Dolar Amerika (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'Pound Inggris (£)',
+  'currency.jpy': 'Yen Jepang (¥)',
+  'currency.rub': 'Rubel Rusia (₽)',
+  'currency.inr': 'Rupee India (₹)',
+  'currency.cny': 'Yuan Tiongkok (¥)',
+  'currency.krw': 'Won Korea (₩)',
+  'currency.myr': 'Ringgit Malaysia (RM)',
+  'currency.brl': 'Real Brasil (R\$)',
+  'currency.zar': 'Rand Afrika Selatan (R)',
+  'currency.sek': 'Krona Swedia (kr)',
+  'currency.chf': 'Franc Swiss (CHF)',
+  'currency.aud': 'Dolar Australia (A\$)',
+  'currency.cad': 'Dolar Kanada (C\$)',
 
   // Profile Page
   'personal_info': 'Informasi Pribadi',

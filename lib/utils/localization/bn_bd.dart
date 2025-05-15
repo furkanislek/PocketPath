@@ -4,6 +4,26 @@ const Map<String, String> bnBD = {
   'settings.language': 'ভাষা',
   'settings.selectLanguage': 'ভাষা নির্বাচন করুন',
   'settings.profile': 'প্রোফাইল',
+  'settings.currency': 'মুদ্রা',
+  'settings.selectCurrency': 'মুদ্রা নির্বাচন করুন',
+
+  // Currency Names
+  'currency.try': 'তুর্কি লিরা (₺)',
+  'currency.usd': 'মার্কিন ডলার (\$)',
+  'currency.eur': 'ইউরো (€)',
+  'currency.gbp': 'ব্রিটিশ পাউন্ড (£)',
+  'currency.jpy': 'জাপানি ইয়েন (¥)',
+  'currency.rub': 'রাশিয়ান রুবেল (₽)',
+  'currency.inr': 'ভারতীয় রুপি (₹)',
+  'currency.cny': 'চীনা ইউয়ান (¥)',
+  'currency.krw': 'কোরিয়ান ওয়ন (₩)',
+  'currency.myr': 'মালয়েশিয়ান রিঙ্গিত (RM)',
+  'currency.brl': 'ব্রাজিলিয়ান রিয়াল (R\$)',
+  'currency.zar': 'দক্ষিণ আফ্রিকান র‍্যান্ড (R)',
+  'currency.sek': 'সুইডিশ ক্রোনা (kr)',
+  'currency.chf': 'সুইস ফ্রাঙ্ক (CHF)',
+  'currency.aud': 'অস্ট্রেলিয়ান ডলার (A\$)',
+  'currency.cad': 'কানাডিয়ান ডলার (C\$)',
 
   // Profile Page
   'personal_info': 'ব্যক্তিগত তথ্য',

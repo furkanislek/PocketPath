@@ -6,6 +6,26 @@ const Map<String, String> ruRU = {
   'settings.language': 'Язык',
   'settings.selectLanguage': 'Выбрать язык',
   'settings.profile': 'Профиль',
+  'settings.currency': 'Валюта',
+  'settings.selectCurrency': 'Выбрать валюту',
+
+  // Currency Names
+  'currency.try': 'Турецкая лира (₺)',
+  'currency.usd': 'Доллар США (\$)',
+  'currency.eur': 'Евро (€)',
+  'currency.gbp': 'Британский фунт (£)',
+  'currency.jpy': 'Японская иена (¥)',
+  'currency.rub': 'Российский рубль (₽)',
+  'currency.inr': 'Индийская рупия (₹)',
+  'currency.cny': 'Китайский юань (¥)',
+  'currency.krw': 'Южнокорейская вона (₩)',
+  'currency.myr': 'Малайзийский ринггит (RM)',
+  'currency.brl': 'Бразильский реал (R\$)',
+  'currency.zar': 'Южноафриканский рэнд (R)',
+  'currency.sek': 'Шведская крона (kr)',
+  'currency.chf': 'Швейцарский франк (CHF)',
+  'currency.aud': 'Австралийский доллар (A\$)',
+  'currency.cad': 'Канадский доллар (C\$)',
 
   // Profile Page
   'personal_info': 'Личная информация',

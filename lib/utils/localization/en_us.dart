@@ -2,12 +2,30 @@
 
 const Map<String, String> enUS = {
   // Settings Page
-  "settings.title": "Settings",
-  "settings.language": "Language",
-  "settings.selectLanguage": "Select Language",
-  "settings.profile": "Profile",
-  "settings.currency": "Currency",
-  "settings.selectCurrency": "Select Currency",
+  'settings.title': 'Settings',
+  'settings.language': 'Language',
+  'settings.selectLanguage': 'Select Language',
+  'settings.profile': 'Profile',
+  'settings.currency': 'Currency',
+  'settings.selectCurrency': 'Select Currency',
+
+  // Currency Names
+  'currency.try': 'Turkish Lira (₺)',
+  'currency.usd': 'US Dollar (\$)',
+  'currency.eur': 'Euro (€)',
+  'currency.gbp': 'British Pound (£)',
+  'currency.jpy': 'Japanese Yen (¥)',
+  'currency.rub': 'Russian Ruble (₽)',
+  'currency.inr': 'Indian Rupee (₹)',
+  'currency.cny': 'Chinese Yuan (¥)',
+  'currency.krw': 'Korean Won (₩)',
+  'currency.myr': 'Malaysian Ringgit (RM)',
+  'currency.brl': 'Brazilian Real (R\$)',
+  'currency.zar': 'South African Rand (R)',
+  'currency.sek': 'Swedish Krona (kr)',
+  'currency.chf': 'Swiss Franc (CHF)',
+  'currency.aud': 'Australian Dollar (A\$)',
+  'currency.cad': 'Canadian Dollar (C\$)',
 
   // Profile Page
   "personal_info": "Personal Information",
