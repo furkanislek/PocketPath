@@ -224,7 +224,7 @@ class AddCost extends StatelessWidget {
                           keyboardType: TextInputType.number,
                           textInputAction: TextInputAction.done,
                           decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.attach_money),
+                            suffixIcon: Icon(Icons.currency_exchange_outlined),
                             hintText: "0",
                             hintStyle: TextStyle(
                                 color: controller.selectedTypeName.value.isEmpty

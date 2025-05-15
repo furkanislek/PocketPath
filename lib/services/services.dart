@@ -246,6 +246,7 @@ class Auth {
       if (user == null) throw Exception("User Not Found!");
 
       DateTime now = DateTime.now();
+      print("Aktif hedefler getiriliyor: kullanıcı ${user.uid}");
 
       QuerySnapshot querySnapshot = await _firestore
           .collection('users')
@@ -254,14 +255,18 @@ class Auth {
           .where('endDate', isGreaterThan: now)
           .get();
 
+      print(
+          "Aktif hedefler sorgusu tamamlandı: ${querySnapshot.docs.length} hedef bulundu");
       var result = querySnapshot.docs
           .map((doc) => doc.data() as Map<String, dynamic>)
           .toList();
 
       result.sort((a, b) => b['date'].compareTo(a['date']));
+      print("Aktif hedefler sıralandı ve döndürülüyor: ${result.length} hedef");
 
       return result;
     } catch (e) {
+      print("Aktif hedefleri getirirken hata: $e");
       return [];
     }
   }

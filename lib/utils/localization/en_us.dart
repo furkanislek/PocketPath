@@ -6,6 +6,8 @@ const Map<String, String> enUS = {
   "settings.language": "Language",
   "settings.selectLanguage": "Select Language",
   "settings.profile": "Profile",
+  "settings.currency": "Currency",
+  "settings.selectCurrency": "Select Currency",
 
   // Profile Page
   "personal_info": "Personal Information",

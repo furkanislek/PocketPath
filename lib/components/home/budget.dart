@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:pocketPath/controller/cost/add_cost_controller.dart';
 
 class Budget extends StatelessWidget {
   Budget({super.key});
 
   final TargetController controller = Get.put(TargetController());
   final BudgetController maincontroller = Get.put(BudgetController());
+  final AddCostController addCostController = Get.put(AddCostController());
 
   @override
   Widget build(BuildContext context) {
@@ -102,14 +104,14 @@ class Budget extends StatelessWidget {
                                   if (controller.listById.isNotEmpty) {
                                     var target = controller.listById.first;
                                     return Text(
-                                      '\$ ${target['remainingBudget'].toStringAsFixed(2)}',
+                                      '${addCostController.moneyType.value} ${target['remainingBudget'].toStringAsFixed(2)}',
                                       style: const TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
                                     );
                                   } else {
-                                    return const Text(
-                                      "\$ 0.00",
+                                    return Text(
+                                      "${addCostController.moneyType.value} 0.00",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold),
@@ -274,7 +276,7 @@ class Budget extends StatelessWidget {
                                 children: [
                                   Text(target['name']),
                                   Text(
-                                      "${"home.budget.budget".tr} \$${target['budget']}")
+                                      "${"home.budget.budget".tr} ${addCostController.moneyType.value} ${target['budget']}")
                                 ]),
                           ),
                         ),

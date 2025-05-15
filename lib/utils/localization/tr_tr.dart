@@ -6,6 +6,8 @@ const Map<String, String> trTR = {
   "settings.language": "Dil",
   "settings.selectLanguage": "Dil Seçin",
   "settings.profile": "Profil",
+  "settings.currency": "Para Birimi",
+  "settings.selectCurrency": "Para Birimi Seçin",
 
   // Profil Sayfası
   "personal_info": "Kişisel Bilgiler",

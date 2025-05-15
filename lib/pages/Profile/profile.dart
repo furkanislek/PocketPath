@@ -6,6 +6,7 @@ import '../../services/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pocketPath/controller/cost/add_cost_controller.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -16,6 +17,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final HomeController controller = Get.put(HomeController());
+  final AddCostController addCostController = Get.put(AddCostController());
 
   final LocaleService localeService = LocaleService();
 
@@ -23,6 +25,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String firstName = '';
   String surname = '';
   String selectedLanguage = 'tr_TR';
+  String selectedCurrency = '\$';
 
   List<Map<String, String>> languages = [
     {'code': 'tr_TR', 'name': 'Türkçe'},
@@ -43,10 +46,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
     {'code': 'it_IT', 'name': 'Italiano'},
   ];
 
+  List<Map<String, String>> currencies = [
+    {'symbol': '₺', 'name': 'Türk Lirası (₺)'},
+    {'symbol': '\$', 'name': 'Dolar (\$)'},
+    {'symbol': '€', 'name': 'Euro (€)'},
+    {'symbol': '£', 'name': 'Pound (£)'},
+    {'symbol': '¥', 'name': 'Japon Yeni (¥)'},
+    {'symbol': '₽', 'name': 'Rus Rublesi (₽)'},
+    {'symbol': '₹', 'name': 'Hint Rupisi (₹)'},
+    {'symbol': '¥', 'name': 'Çin Yuanı (¥)'},
+    {'symbol': '₩', 'name': 'Kore Wonu (₩)'},
+    {'symbol': 'RM', 'name': 'Malezya Ringgiti (RM)'},
+    {'symbol': 'R\$', 'name': 'Brezilya Reali (R\$)'},
+    {'symbol': 'R', 'name': 'Güney Afrika Randı (R)'},
+    {'symbol': 'kr', 'name': 'İsveç Kronu (kr)'},
+    {'symbol': 'CHF', 'name': 'İsviçre Frangı (CHF)'},
+    {'symbol': 'A\$', 'name': 'Avustralya Doları (A\$)'},
+    {'symbol': 'C\$', 'name': 'Kanada Doları (C\$)'},
+  ];
+
   @override
   void initState() {
     super.initState();
     selectedLanguage = Get.locale?.toString() ?? 'tr_TR';
+    selectedCurrency = addCostController.moneyType.value.isEmpty
+        ? '₺'
+        : addCostController.moneyType.value;
   }
 
   void _changeLanguage(String languageCode) async {
@@ -118,6 +143,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     setState(() {
       selectedLanguage = languageCode;
+    });
+  }
+
+  void _changeCurrency(String currencySymbol) {
+    addCostController.setMoneyType(currencySymbol);
+    setState(() {
+      selectedCurrency = currencySymbol;
     });
   }
 
@@ -196,6 +228,92 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 onPressed: () {
                   _changeLanguage(tempLanguage);
+                  Get.back();
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+      isScrollControlled: true,
+    );
+  }
+
+  void _showCurrencyPicker(BuildContext context) {
+    String tempCurrency = selectedCurrency;
+    int initialIndex = currencies.indexWhere(
+      (currency) => currency['symbol'] == selectedCurrency,
+    );
+    if (initialIndex < 0) initialIndex = 0;
+
+    Get.bottomSheet(
+      Container(
+        height: 300.h,
+        color: Colors.white,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+              child: Text(
+                'settings.selectCurrency'.tr,
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Expanded(
+              child: ListWheelScrollView.useDelegate(
+                itemExtent: 50.h,
+                perspective: 0.005,
+                diameterRatio: 1.2,
+                physics: const FixedExtentScrollPhysics(),
+                onSelectedItemChanged: (index) =>
+                    tempCurrency = currencies[index]['symbol']!,
+                childDelegate: ListWheelChildLoopingListDelegate(
+                  children: currencies
+                      .map(
+                        (currency) => Center(
+                          child: Text(
+                            currency['name']!,
+                            style: TextStyle(fontSize: 18.sp),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+                controller: FixedExtentScrollController(
+                  initialItem: initialIndex,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.r),
+                  ),
+                ),
+                child: SizedBox(
+                  width: 200.w,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Text(
+                      'general.done'.tr,
+                      style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Colors.blue,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                onPressed: () {
+                  _changeCurrency(tempCurrency);
                   Get.back();
                 },
               ),
@@ -319,6 +437,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   languages.firstWhere(
                                     (lang) => lang['code'] == selectedLanguage,
                                     orElse: () => languages.first,
+                                  )['name']!,
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 14.sp,
+                                  ),
+                                ),
+                                SizedBox(width: 4.w),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 16.sp,
+                                  color: Colors.grey,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        _buildSettingItem(
+                          'settings.currency'.tr,
+                          Icon(
+                            Icons.currency_exchange,
+                            color: Colors.blue,
+                            size: 20.sp,
+                          ),
+                          trailing: GestureDetector(
+                            onTap: () => _showCurrencyPicker(context),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  currencies.firstWhere(
+                                    (currency) =>
+                                        currency['symbol'] == selectedCurrency,
+                                    orElse: () => currencies.first,
                                   )['name']!,
                                   style: TextStyle(
                                     color: Colors.grey,

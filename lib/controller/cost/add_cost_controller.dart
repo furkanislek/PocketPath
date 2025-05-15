@@ -3,12 +3,14 @@ import 'package:pocketPath/controller/target/target_controller.dart';
 import 'package:pocketPath/services/ad_service.dart';
 import 'package:pocketPath/services/services.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AddCostController extends GetxController {
   var isExpenseSelected = true.obs;
   var selectedCategory = ''.obs;
   var selectedTypeName = ''.obs;
   var selectedBudget = ''.obs;
+  var moneyType = '\$'.obs;
 
   var activeTargets = <Map<String, dynamic>>[].obs;
   var selectedTargetId = ''.obs;
@@ -23,7 +25,16 @@ class AddCostController extends GetxController {
   void onInit() {
     super.onInit();
     loadActiveTargets();
+    loadMoneyType();
     adService.initialize();
+  }
+
+  Future<void> loadMoneyType() async {
+    final prefs = await SharedPreferences.getInstance();
+    final savedMoneyType = prefs.getString('moneyType');
+    if (savedMoneyType != null && savedMoneyType.isNotEmpty) {
+      moneyType.value = savedMoneyType;
+    }
   }
 
   Future<void> loadActiveTargets() async {
@@ -65,5 +76,11 @@ class AddCostController extends GetxController {
     await costController.fetchsCosts();
     costController.activeCoast.refresh();
     adService.onCostAdded();
+  }
+
+  void setMoneyType(String moneyType) async {
+    this.moneyType.value = moneyType;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('moneyType', moneyType);
   }
 }

@@ -14,7 +14,10 @@ class TargetController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    fetchTargets();
+    // Build sırasındaki çakışmayı önlemek için gecikmeli çağrı yapılıyor
+    Future.delayed(Duration(milliseconds: 100), () {
+      fetchTargets();
+    });
     adService.initialize();
   }
 
@@ -56,9 +59,17 @@ class TargetController extends GetxController {
 
         list.sort(
             (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
+        print("------------------------------------------------------------");
+        print("Liste yenileniyor, eleman sayısı: ${list.length}");
+        print(list);
+        list.assignAll(List.from(list)); // Geçici liste oluştur ve tekrar ata
         list.refresh();
+      } else {
+        print("Hedefler boş, liste uzunluğu: ${list.length}");
       }
-    } catch (e) {}
+    } catch (e) {
+      print("Hedefleri getirirken hata: $e");
+    }
   }
 
   Future<void> fetchTargetsById() async {
