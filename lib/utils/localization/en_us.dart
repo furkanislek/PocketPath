@@ -144,4 +144,22 @@ const Map<String, String> enUS = {
   "category.holiday": "Holiday",
   "category.electronic": "Electronic",
   "category.other": "Other",
+
+  // Add Cost Page
+  "addcost.title": "Add Cost",
+  "addcost.save": "Save",
+  "addcost.recorded": "Recorded",
+  "addcost.success": "Cost successfully recorded!",
+  "addcost.error": "Error",
+  "addcost.invalid_budget": "Invalid budget amount",
+  "addcost.fill_fields": "Please fill all fields",
+  "addcost.select_target": "Select Target",
+  "addcost.select_target_hint": "Select an active target like \"Stock Wallet\"",
+  "addcost.cost_type": "Cost Type",
+  "addcost.type_name_hint": "Type Name Like \"NASDAQ ETF\"",
+  "addcost.budget_amount": "Budget Amount",
+  "addcost.category": "Category",
+  "addcost.expense": "Expense",
+  "addcost.income": "Income",
+  "addcost.select_a_target": "Select a Target"
 };

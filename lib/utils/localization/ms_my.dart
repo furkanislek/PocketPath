@@ -141,5 +141,23 @@ const Map<String, String> msMY = {
   "category.school": "Sekolah",
   "category.holiday": "Percutian",
   "category.electronic": "Elektronik",
-  "category.other": "Lain-lain"
+  "category.other": "Lain-lain",
+
+  // Add Cost Page
+  "addcost.title": "Tambah Kos",
+  "addcost.save": "Simpan",
+  "addcost.recorded": "Direkodkan",
+  "addcost.success": "Kos berjaya direkodkan!",
+  "addcost.error": "Ralat",
+  "addcost.invalid_budget": "Jumlah bajet tidak sah",
+  "addcost.fill_fields": "Sila isi semua ruangan",
+  "addcost.select_target": "Pilih Sasaran",
+  "addcost.select_target_hint": "Pilih sasaran aktif seperti \"Dompet Saham\"",
+  "addcost.cost_type": "Jenis Kos",
+  "addcost.type_name_hint": "Taip Nama Seperti \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Jumlah Bajet",
+  "addcost.category": "Kategori",
+  "addcost.expense": "Perbelanjaan",
+  "addcost.income": "Pendapatan",
+  "addcost.select_a_target": "Pilih Sasaran"
 };

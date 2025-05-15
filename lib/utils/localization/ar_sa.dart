@@ -140,4 +140,22 @@ const Map<String, String> arSA = {
   "category.holiday": "عطلة",
   "category.electronic": "إلكترونيات",
   "category.other": "أخرى",
+
+  // Add Cost Page
+  "addcost.title": "إضافة تكلفة",
+  "addcost.save": "حفظ",
+  "addcost.recorded": "تم التسجيل",
+  "addcost.success": "تم تسجيل التكلفة بنجاح!",
+  "addcost.error": "خطأ",
+  "addcost.invalid_budget": "مبلغ الميزانية غير صالح",
+  "addcost.fill_fields": "يرجى ملء جميع الحقول",
+  "addcost.select_target": "اختيار الهدف",
+  "addcost.select_target_hint": "اختر هدفًا نشطًا مثل \"محفظة الأسهم\"",
+  "addcost.cost_type": "نوع التكلفة",
+  "addcost.type_name_hint": "اكتب اسمًا مثل \"ETF ناسداك\"",
+  "addcost.budget_amount": "مبلغ الميزانية",
+  "addcost.category": "فئة",
+  "addcost.expense": "مصروف",
+  "addcost.income": "دخل",
+  "addcost.select_a_target": "اختر هدفًا"
 };

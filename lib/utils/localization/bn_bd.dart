@@ -140,4 +140,23 @@ const Map<String, String> bnBD = {
   "category.holiday": "ছুটি",
   "category.electronic": "ইলেকট্রনিক",
   "category.other": "অন্যান্য",
+
+  // Add Cost Page
+  "addcost.title": "খরচ যোগ করুন",
+  "addcost.save": "সংরক্ষণ করুন",
+  "addcost.recorded": "রেকর্ড করা হয়েছে",
+  "addcost.success": "খরচ সফলভাবে রেকর্ড করা হয়েছে!",
+  "addcost.error": "ত্রুটি",
+  "addcost.invalid_budget": "অবৈধ বাজেট পরিমাণ",
+  "addcost.fill_fields": "অনুগ্রহ করে সমস্ত ক্ষেত্র পূরণ করুন",
+  "addcost.select_target": "লক্ষ্য নির্বাচন করুন",
+  "addcost.select_target_hint":
+      "\"স্টক ওয়ালেট\" এর মতো একটি সক্রিয় লক্ষ্য নির্বাচন করুন",
+  "addcost.cost_type": "খরচের ধরন",
+  "addcost.type_name_hint": "\"NASDAQ ETF\" এর মতো নাম টাইপ করুন",
+  "addcost.budget_amount": "বাজেট পরিমাণ",
+  "addcost.category": "বিভাগ",
+  "addcost.expense": "ব্যয়",
+  "addcost.income": "আয়",
+  "addcost.select_a_target": "একটি লক্ষ্য নির্বাচন করুন"
 };

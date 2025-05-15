@@ -132,4 +132,22 @@ const Map<String, String> jaJP = {
   "category.holiday": "休日",
   "category.electronic": "電子機器",
   "category.other": "その他",
+
+  // Add Cost Page
+  "addcost.title": "コストを追加",
+  "addcost.save": "保存",
+  "addcost.recorded": "記録されました",
+  "addcost.success": "コストが正常に記録されました！",
+  "addcost.error": "エラー",
+  "addcost.invalid_budget": "無効な予算額",
+  "addcost.fill_fields": "すべてのフィールドに入力してください",
+  "addcost.select_target": "ターゲットを選択",
+  "addcost.select_target_hint": "「株式ウォレット」などのアクティブなターゲットを選択",
+  "addcost.cost_type": "コストタイプ",
+  "addcost.type_name_hint": "「NASDAQ ETF」のような名前を入力",
+  "addcost.budget_amount": "予算額",
+  "addcost.category": "カテゴリー",
+  "addcost.expense": "支出",
+  "addcost.income": "収入",
+  "addcost.select_a_target": "ターゲットを選択"
 };

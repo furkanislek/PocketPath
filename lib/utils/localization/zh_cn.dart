@@ -131,4 +131,22 @@ const Map<String, String> zhCN = {
   "category.holiday": "假期",
   "category.electronic": "电子产品",
   "category.other": "其他",
+
+  // Add Cost Page
+  "addcost.title": "添加费用",
+  "addcost.save": "保存",
+  "addcost.recorded": "已记录",
+  "addcost.success": "费用成功记录！",
+  "addcost.error": "错误",
+  "addcost.invalid_budget": "无效的预算金额",
+  "addcost.fill_fields": "请填写所有字段",
+  "addcost.select_target": "选择目标",
+  "addcost.select_target_hint": "选择一个活动目标，如\"股票钱包\"",
+  "addcost.cost_type": "费用类型",
+  "addcost.type_name_hint": "输入名称，如\"纳斯达克ETF\"",
+  "addcost.budget_amount": "预算金额",
+  "addcost.category": "类别",
+  "addcost.expense": "支出",
+  "addcost.income": "收入",
+  "addcost.select_a_target": "选择一个目标"
 };

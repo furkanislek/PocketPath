@@ -141,5 +141,23 @@ const Map<String, String> trTR = {
   "category.school": "Okul",
   "category.holiday": "Tatil",
   "category.electronic": "Elektronik",
-  "category.other": "Diğer"
+  "category.other": "Diğer",
+
+  // Add Cost Page
+  "addcost.title": "Maliyet Ekle",
+  "addcost.save": "Kaydet",
+  "addcost.recorded": "Kaydedildi",
+  "addcost.success": "Maliyet başarıyla kaydedildi!",
+  "addcost.error": "Hata",
+  "addcost.invalid_budget": "Geçersiz bütçe miktarı",
+  "addcost.fill_fields": "Lütfen tüm alanları doldurun",
+  "addcost.select_target": "Hedef Seçin",
+  "addcost.select_target_hint": "\"Borsa Cüzdanı\" gibi aktif bir hedef seçin",
+  "addcost.cost_type": "Maliyet Türü",
+  "addcost.type_name_hint": "\"NASDAQ ETF\" gibi bir tür adı yazın",
+  "addcost.budget_amount": "Bütçe Miktarı",
+  "addcost.category": "Kategori",
+  "addcost.expense": "Gider",
+  "addcost.income": "Gelir",
+  "addcost.select_a_target": "Bir Hedef Seçin"
 };

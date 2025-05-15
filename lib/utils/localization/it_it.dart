@@ -143,4 +143,23 @@ const Map<String, String> itIT = {
   "category.holiday": "Vacanza",
   "category.electronic": "Elettronica",
   "category.other": "Altro",
+
+  // Add Cost Page
+  "addcost.title": "Aggiungi Costo",
+  "addcost.save": "Salva",
+  "addcost.recorded": "Registrato",
+  "addcost.success": "Costo registrato con successo!",
+  "addcost.error": "Errore",
+  "addcost.invalid_budget": "Importo del budget non valido",
+  "addcost.fill_fields": "Compila tutti i campi",
+  "addcost.select_target": "Seleziona Obiettivo",
+  "addcost.select_target_hint":
+      "Seleziona un obiettivo attivo come \"Portafoglio Azioni\"",
+  "addcost.cost_type": "Tipo di Costo",
+  "addcost.type_name_hint": "Digita un nome come \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Importo del Budget",
+  "addcost.category": "Categoria",
+  "addcost.expense": "Spesa",
+  "addcost.income": "Entrata",
+  "addcost.select_a_target": "Seleziona un Obiettivo"
 };

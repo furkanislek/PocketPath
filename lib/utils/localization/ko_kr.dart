@@ -135,4 +135,22 @@ const Map<String, String> koKR = {
   "category.holiday": "휴일",
   "category.electronic": "전자제품",
   "category.other": "기타",
+
+  // Add Cost Page
+  "addcost.title": "비용 추가",
+  "addcost.save": "저장",
+  "addcost.recorded": "기록됨",
+  "addcost.success": "비용이 성공적으로 기록되었습니다!",
+  "addcost.error": "오류",
+  "addcost.invalid_budget": "유효하지 않은 예산 금액",
+  "addcost.fill_fields": "모든 필드를 작성해주세요",
+  "addcost.select_target": "목표 선택",
+  "addcost.select_target_hint": "\"주식 지갑\"과 같은 활성 목표 선택",
+  "addcost.cost_type": "비용 유형",
+  "addcost.type_name_hint": "\"NASDAQ ETF\"와 같은 이름 입력",
+  "addcost.budget_amount": "예산 금액",
+  "addcost.category": "카테고리",
+  "addcost.expense": "지출",
+  "addcost.income": "수입",
+  "addcost.select_a_target": "목표 선택"
 };

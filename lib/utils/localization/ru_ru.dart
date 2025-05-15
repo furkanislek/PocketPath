@@ -142,4 +142,23 @@ const Map<String, String> ruRU = {
   "category.holiday": "Праздник",
   "category.electronic": "Электроника",
   "category.other": "Другое",
+
+  // Add Cost Page
+  "addcost.title": "Добавить расход",
+  "addcost.save": "Сохранить",
+  "addcost.recorded": "Записано",
+  "addcost.success": "Расход успешно записан!",
+  "addcost.error": "Ошибка",
+  "addcost.invalid_budget": "Недопустимая сумма бюджета",
+  "addcost.fill_fields": "Пожалуйста, заполните все поля",
+  "addcost.select_target": "Выбрать цель",
+  "addcost.select_target_hint":
+      "Выберите активную цель, например \"Фондовый кошелек\"",
+  "addcost.cost_type": "Тип расхода",
+  "addcost.type_name_hint": "Введите название, например \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Сумма бюджета",
+  "addcost.category": "Категория",
+  "addcost.expense": "Расход",
+  "addcost.income": "Доход",
+  "addcost.select_a_target": "Выберите цель"
 };

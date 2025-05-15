@@ -141,5 +141,23 @@ const Map<String, String> hiIN = {
   "category.school": "स्कूल",
   "category.holiday": "छुट्टी",
   "category.electronic": "इलेक्ट्रॉनिक",
-  "category.other": "अन्य"
+  "category.other": "अन्य",
+
+  // Add Cost Page
+  "addcost.title": "लागत जोड़ें",
+  "addcost.save": "सहेजें",
+  "addcost.recorded": "रिकॉर्ड किया गया",
+  "addcost.success": "लागत सफलतापूर्वक रिकॉर्ड की गई!",
+  "addcost.error": "त्रुटि",
+  "addcost.invalid_budget": "अमान्य बजट राशि",
+  "addcost.fill_fields": "कृपया सभी फ़ील्ड भरें",
+  "addcost.select_target": "लक्ष्य चुनें",
+  "addcost.select_target_hint": "\"स्टॉक वॉलेट\" जैसे सक्रिय लक्ष्य चुनें",
+  "addcost.cost_type": "लागत प्रकार",
+  "addcost.type_name_hint": "\"NASDAQ ETF\" जैसा नाम टाइप करें",
+  "addcost.budget_amount": "बजट राशि",
+  "addcost.category": "श्रेणी",
+  "addcost.expense": "व्यय",
+  "addcost.income": "आय",
+  "addcost.select_a_target": "एक लक्ष्य चुनें"
 };

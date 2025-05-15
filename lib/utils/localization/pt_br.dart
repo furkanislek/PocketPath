@@ -140,5 +140,24 @@ const Map<String, String> ptBR = {
   "category.school": "Escola",
   "category.holiday": "Férias",
   "category.electronic": "Eletrônicos",
-  "category.other": "Outros"
+  "category.other": "Outros",
+
+  // Add Cost Page
+  "addcost.title": "Adicionar Custo",
+  "addcost.save": "Salvar",
+  "addcost.recorded": "Registrado",
+  "addcost.success": "Custo registrado com sucesso!",
+  "addcost.error": "Erro",
+  "addcost.invalid_budget": "Valor de orçamento inválido",
+  "addcost.fill_fields": "Por favor, preencha todos os campos",
+  "addcost.select_target": "Selecionar Meta",
+  "addcost.select_target_hint":
+      "Selecione uma meta ativa como \"Carteira de Ações\"",
+  "addcost.cost_type": "Tipo de Custo",
+  "addcost.type_name_hint": "Digite um nome como \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Valor do Orçamento",
+  "addcost.category": "Categoria",
+  "addcost.expense": "Despesa",
+  "addcost.income": "Receita",
+  "addcost.select_a_target": "Selecione uma Meta"
 };

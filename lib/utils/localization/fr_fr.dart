@@ -144,4 +144,23 @@ const Map<String, String> frFR = {
   "category.holiday": "Vacances",
   "category.electronic": "Électronique",
   "category.other": "Autre",
+
+  // Add Cost Page
+  "addcost.title": "Ajouter un Coût",
+  "addcost.save": "Enregistrer",
+  "addcost.recorded": "Enregistré",
+  "addcost.success": "Coût enregistré avec succès !",
+  "addcost.error": "Erreur",
+  "addcost.invalid_budget": "Montant du budget invalide",
+  "addcost.fill_fields": "Veuillez remplir tous les champs",
+  "addcost.select_target": "Sélectionner un Objectif",
+  "addcost.select_target_hint":
+      "Sélectionnez un objectif actif comme \"Portefeuille Boursier\"",
+  "addcost.cost_type": "Type de Coût",
+  "addcost.type_name_hint": "Saisissez un nom comme \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Montant du Budget",
+  "addcost.category": "Catégorie",
+  "addcost.expense": "Dépense",
+  "addcost.income": "Revenu",
+  "addcost.select_a_target": "Sélectionner un Objectif"
 };

@@ -36,7 +36,7 @@ class AddCost extends StatelessWidget {
             Get.back();
           },
         ),
-        title: const Text('Add Cost'),
+        title: Text('addcost.title'.tr),
         centerTitle: true,
       ),
       bottomNavigationBar: Padding(
@@ -53,18 +53,18 @@ class AddCost extends StatelessWidget {
               final budget = double.tryParse(budgetString);
               if (budget != null) {
                 controller.saveExpense();
-                Get.snackbar('Recorded', 'Cost successfully recorded !',
+                Get.snackbar('addcost.recorded'.tr, 'addcost.success'.tr,
                     icon: Icon(Icons.add_alert_sharp));
                 controllerMenu.changeTabIndex(0);
-                 Navigator.pushReplacement(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => Menu()),
                 );
               } else {
-                Get.snackbar('Error', 'Invalid budget amount');
+                Get.snackbar('addcost.error'.tr, 'addcost.invalid_budget'.tr);
               }
             } else {
-              Get.snackbar('Error', 'Please fill all fields');
+              Get.snackbar('addcost.error'.tr, 'addcost.fill_fields'.tr);
             }
           },
           style: ElevatedButton.styleFrom(
@@ -75,8 +75,8 @@ class AddCost extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
           ),
-          child: const Text(
-            'Save',
+          child: Text(
+            'addcost.save'.tr,
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -91,8 +91,8 @@ class AddCost extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Select Target',
+              Text(
+                'addcost.select_target'.tr,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 8),
@@ -118,7 +118,7 @@ class AddCost extends StatelessWidget {
                   child: Obx(() {
                     return Text(
                       controller.selectedTargetId.value.isEmpty
-                          ? "Select an active target like \"Stock Wallet\""
+                          ? 'addcost.select_target_hint'.tr
                           : controller.activeTargets.firstWhere((target) =>
                               target["id"] ==
                               controller.selectedTargetId.value)["name"],
@@ -135,10 +135,10 @@ class AddCost extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      "Cost Type",
+                      'addcost.cost_type'.tr,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
@@ -172,7 +172,7 @@ class AddCost extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           maxLength: 15,
                           decoration: InputDecoration(
-                            hintText: "Type Name Like \"NASDAQ ETF\"",
+                            hintText: 'addcost.type_name_hint'.tr,
                             hintStyle: TextStyle(
                                 color: controller.selectedTypeName.value.isEmpty
                                     ? const Color.fromARGB(220, 219, 219, 219)
@@ -188,10 +188,10 @@ class AddCost extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      "Budget Amount",
+                      'addcost.budget_amount'.tr,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
@@ -238,8 +238,8 @@ class AddCost extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 25),
-              const Text(
-                'Category',
+              Text(
+                'addcost.category'.tr,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -312,7 +312,7 @@ class AddCost extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: Text('Expense',
+                          child: Text('addcost.expense'.tr,
                               style: TextStyle(
                                   color: !controller.isExpenseSelected.value
                                       ? Colors.red
@@ -340,7 +340,7 @@ class AddCost extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: Text('Income',
+                          child: Text('addcost.income'.tr,
                               style: TextStyle(
                                   color: controller.isExpenseSelected.value
                                       ? Colors.green
@@ -373,8 +373,8 @@ class AddCost extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'Select a Target',
+              Text(
+                'addcost.select_a_target'.tr,
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 16),

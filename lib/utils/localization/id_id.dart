@@ -142,4 +142,22 @@ const Map<String, String> idID = {
   "category.holiday": "Liburan",
   "category.electronic": "Elektronik",
   "category.other": "Lainnya",
+
+  // Add Cost Page
+  "addcost.title": "Tambah Biaya",
+  "addcost.save": "Simpan",
+  "addcost.recorded": "Dicatat",
+  "addcost.success": "Biaya berhasil dicatat!",
+  "addcost.error": "Kesalahan",
+  "addcost.invalid_budget": "Jumlah anggaran tidak valid",
+  "addcost.fill_fields": "Silakan isi semua bidang",
+  "addcost.select_target": "Pilih Target",
+  "addcost.select_target_hint": "Pilih target aktif seperti \"Dompet Saham\"",
+  "addcost.cost_type": "Jenis Biaya",
+  "addcost.type_name_hint": "Ketik Nama Seperti \"ETF NASDAQ\"",
+  "addcost.budget_amount": "Jumlah Anggaran",
+  "addcost.category": "Kategori",
+  "addcost.expense": "Pengeluaran",
+  "addcost.income": "Pendapatan",
+  "addcost.select_a_target": "Pilih Target"
 };

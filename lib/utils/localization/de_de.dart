@@ -145,4 +145,23 @@ const Map<String, String> deDE = {
   "category.holiday": "Urlaub",
   "category.electronic": "Elektronik",
   "category.other": "Sonstiges",
+
+  // Add Cost Page
+  "addcost.title": "Kosten hinzufügen",
+  "addcost.save": "Speichern",
+  "addcost.recorded": "Aufgezeichnet",
+  "addcost.success": "Kosten erfolgreich aufgezeichnet!",
+  "addcost.error": "Fehler",
+  "addcost.invalid_budget": "Ungültiger Budgetbetrag",
+  "addcost.fill_fields": "Bitte füllen Sie alle Felder aus",
+  "addcost.select_target": "Ziel auswählen",
+  "addcost.select_target_hint":
+      "Wählen Sie ein aktives Ziel wie \"Aktienportfolio\"",
+  "addcost.cost_type": "Kostenart",
+  "addcost.type_name_hint": "Geben Sie einen Namen ein wie \"NASDAQ ETF\"",
+  "addcost.budget_amount": "Budgetbetrag",
+  "addcost.category": "Kategorie",
+  "addcost.expense": "Ausgabe",
+  "addcost.income": "Einnahme",
+  "addcost.select_a_target": "Wählen Sie ein Ziel"
 };
