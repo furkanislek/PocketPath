@@ -359,4 +359,18 @@ class Auth {
         targetId: selectedTargetId,
         startDate: startOfYear.millisecondsSinceEpoch);
   }
+
+  Future<void> deleteUser() async {
+    final currentUserID = Auth().currentUser!.uid;
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(currentUserID)
+          .delete();
+      await FirebaseAuth.instance.currentUser?.delete();
+    } catch (e) {
+      print('Kullanıcı silinirken hata: $e');
+      rethrow;
+    }
+  }
 }

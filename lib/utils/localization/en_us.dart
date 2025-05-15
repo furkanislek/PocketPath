@@ -1,0 +1,91 @@
+// lib/utils/localization/en_us.dart
+
+const Map<String, String> enUS = {
+  // Settings Page
+  "settings.title": "Settings",
+  "settings.language": "Language",
+  "settings.selectLanguage": "Select Language",
+  "settings.profile": "Profile",
+
+  // Profile Page
+  "personal_info": "Personal Information",
+  "preferences": "Preferences",
+  "about_app": "About App",
+  "app_version": "App Version",
+  "privacy_policy": "Privacy Policy",
+  "developer": "Developer: Furkan Akif ISLEK",
+  "noEmail": "No email found",
+  "version.number": "1.0.0",
+  "profile.deleteAccountImportant": "Delete Account",
+  "profile.deleteAccountImportantText":
+      "Are you sure you want to delete your account? This action cannot be undone.",
+  "profile.cancel": "Cancel",
+  "profile.delete": "Delete",
+  "profile.errorDeletingAccount": "Error deleting account",
+  "profile.deleteAccountButton": "Delete Account",
+
+  // Profile Page
+  "logout": "Logout",
+  "account": "Account",
+  "general.done": "Done",
+  "addMedicine.durationPickerTitle": "Select Duration",
+  "addMedicine.durationPickerItemText": "{count} days",
+
+  // Login Page
+  "login.title": "Login into your account",
+  "login.noAccount": "Don't have an account?",
+  "login.signUp": "Sign Up",
+  "login.emailLabel": "Your e-mail",
+  "login.passwordLabel": "Type your password",
+  "login.loginButton": "Login",
+  "login.forgotPassword": "Forgot Password?",
+  "login.resetPasswordSent": "Password reset email sent!",
+  "login.pleaseEnterEmail": "Please enter your email address.",
+
+  // Login Error Messages
+  "login.error.invalidEmail": "You entered an invalid e-mail address.",
+  "login.error.userDisabled": "The user has been deactivated.",
+  "login.error.wrongCredentials":
+      "The information entered is incorrect. Please try again.",
+  "login.error.emailInUse": "This email address is already in use.",
+  "login.error.notAllowed": "This process was not allowed.",
+  "login.error.verifyEmail":
+      "Please verify your email address before logging in.",
+  "login.error.generic": "An error has occurred. Please try again later.",
+
+  // Register Page
+  "register.title": "Register to PocketPath app",
+  "register.haveAccount": "Already have an account?",
+  "register.signIn": "Sign In",
+  "register.fullName": "Full name",
+  "register.surname": "Surname",
+  "register.email": "Your e-mail",
+  "register.password": "Type your password",
+  "register.confirmPassword": "Re-type your password",
+  "register.registerButton": "Register",
+
+  // Register Error Messages
+  "register.error.passwordMismatch": "Passwords do not match.",
+  "register.error.fillAllFields": "Fill all fields.",
+  "register.error.generic": "An error occurred",
+
+  // Register Confirm Page
+  "register_confirm.title": "Check your e-mail",
+  "register_confirm.message":
+      "Registration successful. Please confirm your account with the link sent to your e-mail address.",
+  "register_confirm.button": "Confirm",
+
+  // Password Confirm Page
+  "password_confirm.title": "Check your e-mail",
+  "password_confirm.message":
+      "We have sent you information to reset your password",
+  "password_confirm.button": "Confirm",
+
+  // Reset Password Page
+  "reset_password.title": "Reset password",
+  "reset_password.message":
+      "Enter your e-mail address and we will send you further instructions on how to reset the password.",
+  "reset_password.emailLabel": "Your e-mail",
+  "reset_password.button": "Reset",
+  "reset_password.error.enterEmail": "Please enter your e-mail address."
+};

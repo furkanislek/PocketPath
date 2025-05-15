@@ -20,13 +20,13 @@ class RegisterController extends GetxController {
 
   Future<void> registerUser() async {
     if (passwordController.text != confirmPasswordController.text) {
-      errorMessage.value = "Passwords do not match.";
+      errorMessage.value = "register.error.passwordMismatch".tr;
       return;
     } else if (emailController.text.isEmpty ||
         passwordController.text.isEmpty ||
         nameController.text.isEmpty ||
         surnameController.text.isEmpty) {
-      errorMessage.value = "Fill all fields.";
+      errorMessage.value = "register.error.fillAllFields".tr;
     }
     try {
       await Auth().registerUser(
@@ -38,7 +38,7 @@ class RegisterController extends GetxController {
       errorMessage.value = '';
       Get.off(() => RegisterConfirm());
     } on FirebaseAuthException catch (e) {
-      errorMessage.value = e.message ?? 'An error occurred';
+      errorMessage.value = e.message ?? "register.error.generic".tr;
     }
   }
 
@@ -75,7 +75,8 @@ class Register extends StatelessWidget {
                 width: double.infinity,
               ),
               Text(
-                "Register to PocketPath app",
+                "register.title".tr,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: height / 40,
                     fontWeight: FontWeight.bold,
@@ -86,14 +87,14 @@ class Register extends StatelessWidget {
                 onTap: () => Get.to(() => const Login()),
                 child: RichText(
                   text: TextSpan(
-                    text: "Already have an account? ",
+                    text: "${("register.haveAccount".tr)} ",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: height / 60,
                     ),
                     children: [
                       TextSpan(
-                        text: "Sign In",
+                        text: "register.signIn".tr,
                         style: TextStyle(color: const Color(0xFF8256DF)),
                       ),
                     ],
@@ -101,25 +102,25 @@ class Register extends StatelessWidget {
                 ),
               ),
               SizedBox(height: height / 30),
-              _buildTextField(controller.nameController, "Full name",
+              _buildTextField(controller.nameController, "register.fullName".tr,
                   Icons.person, width, height),
               SizedBox(height: height / 60),
-              _buildTextField(controller.surnameController, "Surname",
-                  Icons.person, width, height),
+              _buildTextField(controller.surnameController,
+                  "register.surname".tr, Icons.person, width, height),
               SizedBox(height: height / 60),
-              _buildTextField(controller.emailController, "Your e-mail",
+              _buildTextField(controller.emailController, "register.email".tr,
                   Icons.email, width, height),
               SizedBox(height: height / 60),
               _buildPasswordField(
                   controller.passwordController,
-                  "Type your password",
+                  "register.password".tr,
                   controller.isPasswordVisible,
                   controller.togglePasswordVisibility,
                   height),
               SizedBox(height: height / 60),
               _buildPasswordField(
                   controller.confirmPasswordController,
-                  "Re-type your password",
+                  "register.confirmPassword".tr,
                   controller.isConfirmPasswordVisible,
                   controller.toggleConfirmPasswordVisibility,
                   height),
@@ -146,7 +147,7 @@ class Register extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    "Register",
+                    "register.registerButton".tr,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: height / 50,

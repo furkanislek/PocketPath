@@ -30,7 +30,7 @@ class RegisterConfirm extends StatelessWidget {
                 ),
                 SizedBox(height: height / 30),
                 Text(
-                  "Check your e-mail",
+                  "register_confirm.title".tr,
                   style: TextStyle(
                       fontSize: height / 25,
                       fontWeight: FontWeight.bold,
@@ -38,7 +38,7 @@ class RegisterConfirm extends StatelessWidget {
                 ),
                 SizedBox(height: height / 30),
                 Text(
-                  "Registration successful. Please confirm your account\n with the link sent to your e-mail address.",
+                  "register_confirm.message".tr,
                   textAlign: TextAlign.center,
                   style:
                       TextStyle(fontSize: height / 70, color: Colors.black87),
@@ -60,7 +60,7 @@ class RegisterConfirm extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Confirm",
+                      "register_confirm.button".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: height / 50,

@@ -1,6 +1,7 @@
 import 'package:pocketPath/controller/menu/bottom_navigator.dart';
 import 'package:pocketPath/pages/AddCost/add_cost.dart';
 import 'package:pocketPath/pages/Analysis/analysis.dart';
+import 'package:pocketPath/pages/Profile/profile.dart';
 import 'package:pocketPath/pages/Target/add_target.dart';
 import 'package:pocketPath/pages/Target/target.dart';
 import 'package:pocketPath/pages/home/home.dart';
@@ -14,7 +15,13 @@ class Menu extends StatelessWidget {
   final BottomNavigationController controller =
       Get.put(BottomNavigationController());
 
-  final List<Widget> pages = [Home(), Analysis(), Targets(), AddTarget()];
+  final List<Widget> pages = [
+    Home(),
+    Analysis(),
+    Targets(),
+    AddTarget(),
+    ProfileScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +73,10 @@ class Menu extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Icon(Icons.add_circle_outline),
                 label: 'Add Target',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Profile',
               ),
             ],
           ),

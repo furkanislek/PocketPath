@@ -36,26 +36,27 @@ class _LoginState extends State<Login> {
       String? errorText;
       switch (e.code) {
         case 'invalid-email':
-          errorText = "You entered an invalid e-mail address.";
+          errorText = "login.error.invalidEmail".tr;
           break;
         case 'user-disabled':
-          errorText = "The user has been deactivated.";
+          errorText = "login.error.userDisabled".tr;
           break;
         case 'user-not-found':
         case 'invalid-credential':
         case 'wrong-password':
-          errorText = "The information entered is incorrect. Please try again.";
+          errorText = "login.error.wrongCredentials".tr;
           break;
         case 'email-already-in-use':
-          errorText = "This email address is already in use.";
+          errorText = "login.error.emailInUse".tr;
           break;
         case 'operation-not-allowed':
-          errorText = "This process was not allowed.";
+          errorText = "login.error.notAllowed".tr;
           break;
         case 'email-not-verified':
-          errorText = 'Please verify your email address before logging in.';
+          errorText = "login.error.verifyEmail".tr;
+          break;
         default:
-          errorText = "An error has occurred. Please try again later.";
+          errorText = "login.error.generic".tr;
       }
       setState(() {
         errorMessage = errorText;
@@ -67,7 +68,7 @@ class _LoginState extends State<Login> {
     String email = emailController.text;
     if (email.isEmpty) {
       setState(() {
-        errorMessage = "Lütfen e-posta adresinizi girin.";
+        errorMessage = "login.pleaseEnterEmail".tr;
       });
       return;
     }
@@ -75,8 +76,7 @@ class _LoginState extends State<Login> {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text("Şifre sıfırlama e-postası gönderildi!")),
+          SnackBar(content: Text("login.resetPasswordSent".tr)),
         );
       }
     } on FirebaseAuthException catch (e) {
@@ -108,7 +108,7 @@ class _LoginState extends State<Login> {
               ),
               SizedBox(height: height / 50),
               Text(
-                "Login into your account",
+                "login.title".tr,
                 style: TextStyle(
                     fontSize: height / 30,
                     fontWeight: FontWeight.bold,
@@ -117,11 +117,11 @@ class _LoginState extends State<Login> {
               SizedBox(height: height / 80),
               RichText(
                 text: TextSpan(
-                  text: "Don't have an account? ",
+                  text: "${("login.noAccount".tr)} ",
                   style: TextStyle(color: Colors.grey[700]),
                   children: [
                     TextSpan(
-                      text: "Sign Up",
+                      text: "login.signUp".tr,
                       style: TextStyle(
                           color: const Color(0xFF8256DF),
                           fontWeight: FontWeight.bold),
@@ -139,7 +139,7 @@ class _LoginState extends State<Login> {
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  labelText: "Your e-mail",
+                  labelText: "login.emailLabel".tr,
                   prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -152,7 +152,7 @@ class _LoginState extends State<Login> {
                 obscureText: !isPasswordVisible,
                 textInputAction: TextInputAction.done,
                 decoration: InputDecoration(
-                  labelText: "Type your password",
+                  labelText: "login.passwordLabel".tr,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
                       onPressed: () {
@@ -188,7 +188,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   child: Text(
-                    "Login",
+                    "login.loginButton".tr,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: height / 50,
@@ -207,7 +207,7 @@ class _LoginState extends State<Login> {
                   );
                 },
                 child: Text(
-                  "Forgot Password?",
+                  "login.forgotPassword".tr,
                   style: TextStyle(
                     color: const Color(0xFF8256DF),
                     fontWeight: FontWeight.bold,

@@ -20,7 +20,7 @@ class _ResetPasswordState extends State<ResetPassword> {
     String email = emailController.text;
     if (email.isEmpty) {
       setState(() {
-        errorMessage = "Please enter your e-mail address.";
+        errorMessage = "reset_password.error.enterEmail".tr;
       });
       return;
     }
@@ -68,7 +68,7 @@ class _ResetPasswordState extends State<ResetPassword> {
               ),
               SizedBox(height: height / 20),
               Text(
-                "Reset password",
+                "reset_password.title".tr,
                 style: TextStyle(
                     fontSize: height / 30,
                     fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class _ResetPasswordState extends State<ResetPassword> {
               ),
               SizedBox(height: height / 80),
               Text(
-                "Enter your e-mail address and we will send you further instructions on how to reset the password.",
+                "reset_password.message".tr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.grey[700],
@@ -89,7 +89,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 textInputAction: TextInputAction.done,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  labelText: "Your e-mail",
+                  labelText: "reset_password.emailLabel".tr,
                   prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -116,7 +116,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   ),
                 ),
                 child: Text(
-                  "Register",
+                  "reset_password.button".tr,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: height / 50,

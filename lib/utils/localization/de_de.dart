@@ -1,0 +1,91 @@
+// lib/utils/localization/de_de.dart
+
+const Map<String, String> deDE = {
+  // Settings Page
+  "settings.title": "Einstellungen",
+  "settings.language": "Sprache",
+  "settings.selectLanguage": "Sprache auswählen",
+  "settings.profile": "Profil",
+
+  // Profile Page
+  "personal_info": "Persönliche Informationen",
+  "preferences": "Präferenzen",
+  "about_app": "Über die App",
+  "app_version": "App-Version",
+  "privacy_policy": "Datenschutzrichtlinie",
+  "developer": "Entwickler: Furkan Akif ISLEK",
+  "noEmail": "Keine E-Mail gefunden",
+  "version.number": "1.0.0",
+  "profile.deleteAccountImportant": "Konto löschen",
+  "profile.deleteAccountImportantText":
+      "Sind Sie sicher, dass Sie Ihr Konto löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+  "profile.cancel": "Abbrechen",
+  "profile.delete": "Löschen",
+  "profile.errorDeletingAccount": "Fehler beim Löschen des Kontos",
+  "profile.deleteAccountButton": "Konto löschen",
+
+  // Profile Page
+  "logout": "Abmelden",
+  "account": "Konto",
+  "general.done": "Fertig",
+
+  // Login Page
+  "login.title": "In Ihr Konto einloggen",
+  "login.noAccount": "Haben Sie kein Konto?",
+  "login.signUp": "Registrieren",
+  "login.emailLabel": "Ihre E-Mail",
+  "login.passwordLabel": "Geben Sie Ihr Passwort ein",
+  "login.loginButton": "Einloggen",
+  "login.forgotPassword": "Passwort vergessen?",
+  "login.resetPasswordSent": "E-Mail zum Zurücksetzen des Passworts gesendet!",
+  "login.pleaseEnterEmail": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+
+  // Login Error Messages
+  "login.error.invalidEmail":
+      "Sie haben eine ungültige E-Mail-Adresse eingegeben.",
+  "login.error.userDisabled": "Der Benutzer wurde deaktiviert.",
+  "login.error.wrongCredentials":
+      "Die eingegebenen Informationen sind falsch. Bitte versuchen Sie es erneut.",
+  "login.error.emailInUse": "Diese E-Mail-Adresse wird bereits verwendet.",
+  "login.error.notAllowed": "Dieser Vorgang wurde nicht erlaubt.",
+  "login.error.verifyEmail":
+      "Bitte bestätigen Sie Ihre E-Mail-Adresse, bevor Sie sich anmelden.",
+  "login.error.generic":
+      "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
+
+  // Register Page
+  "register.title": "Registrieren Sie sich für die PocketPath-App",
+  "register.haveAccount": "Haben Sie bereits ein Konto?",
+  "register.signIn": "Einloggen",
+  "register.fullName": "Vollständiger Name",
+  "register.surname": "Nachname",
+  "register.email": "Ihre E-Mail",
+  "register.password": "Geben Sie Ihr Passwort ein",
+  "register.confirmPassword": "Geben Sie Ihr Passwort erneut ein",
+  "register.registerButton": "Registrieren",
+
+  // Register Error Messages
+  "register.error.passwordMismatch": "Passwörter stimmen nicht überein.",
+  "register.error.fillAllFields": "Füllen Sie alle Felder aus.",
+  "register.error.generic": "Ein Fehler ist aufgetreten",
+
+  // Register Confirm Page
+  "register_confirm.title": "Überprüfen Sie Ihre E-Mail",
+  "register_confirm.message":
+      "Registrierung erfolgreich. Bitte bestätigen Sie Ihr Konto mit dem Link, der an Ihre E-Mail-Adresse gesendet wurde.",
+  "register_confirm.button": "Bestätigen",
+
+  // Password Confirm Page
+  "password_confirm.title": "Überprüfen Sie Ihre E-Mail",
+  "password_confirm.message":
+      "Wir haben Ihnen Informationen zum Zurücksetzen Ihres Passworts gesendet",
+  "password_confirm.button": "Bestätigen",
+
+  // Reset Password Page
+  "reset_password.title": "Passwort zurücksetzen",
+  "reset_password.message":
+      "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen weitere Anweisungen zum Zurücksetzen des Passworts.",
+  "reset_password.emailLabel": "Ihre E-Mail",
+  "reset_password.button": "Zurücksetzen",
+  "reset_password.error.enterEmail": "Bitte geben Sie Ihre E-Mail-Adresse ein."
+};
