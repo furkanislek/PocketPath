@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:pocketPath/controller/menu/bottom_navigator.dart';
 import 'package:pocketPath/controller/target/target_controller.dart';
 import 'package:pocketPath/pages/Analysis/analysis_controller.dart';
+import 'package:pocketPath/services/services.dart';
 
 class Analysis extends StatelessWidget {
   Analysis({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class Analysis extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Analysis"),
+        title: Text("analysis.title".tr),
         backgroundColor: const Color(0xFFFaFaFa),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -35,9 +36,9 @@ class Analysis extends StatelessWidget {
           Expanded(
             child: Obx(() {
               if (analysisController.selectedTarget.value.isEmpty) {
-                return const Center(
+                return Center(
                   child: Text(
-                    "Please Select Target",
+                    "analysis.please_select_target".tr,
                     textAlign: TextAlign.center,
                   ),
                 );
@@ -76,7 +77,8 @@ class TargetSelectionButton extends StatelessWidget {
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
-          onPressed: () {
+          onPressed: () async {
+            await Auth().getAllTargets();
             _showTargetSelectionModal(context);
           },
           style: ElevatedButton.styleFrom(
@@ -89,7 +91,7 @@ class TargetSelectionButton extends StatelessWidget {
           ),
           child: Obx(() => Text(
                 controller.selectedTarget.value.isEmpty
-                    ? "Select Target"
+                    ? "analysis.select_target".tr
                     : controller.selectedTargetName.value,
                 style: const TextStyle(fontSize: 16.0),
               )),
@@ -123,8 +125,8 @@ class TargetSelectionModal extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            "Select Target",
+          Text(
+            "analysis.select_target".tr,
             style: TextStyle(
               fontSize: 18.0,
               fontWeight: FontWeight.bold,
@@ -135,7 +137,7 @@ class TargetSelectionModal extends StatelessWidget {
             child: Obx(() {
               // Tüm hedefleri al (aktif ve pasif)
               if (targetController.list.isEmpty) {
-                return Center(child: Text("Target Not Found"));
+                return Center(child: Text("home.budget.noTarget".tr));
               }
 
               return ListView.builder(
@@ -215,7 +217,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                     color: Colors.red,
                   ),
                   const SizedBox(width: 4),
-                  const Text("Expenditures"),
+                  Text("analysis.expenditures".tr),
                 ],
               ),
               const SizedBox(width: 50),
@@ -227,7 +229,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                     color: Colors.green,
                   ),
                   const SizedBox(width: 4),
-                  const Text("Savings"),
+                  Text("analysis.savings".tr),
                 ],
               ),
             ],
@@ -331,8 +333,8 @@ class ExpenseSavingsBarChart extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    const Text(
-                      "Total Expenditures",
+                    Text(
+                      "analysis.total_expenditures".tr,
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.bold,
@@ -350,8 +352,8 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    const Text(
-                      "Total Savings",
+                    Text(
+                      "analysis.total_savings".tr,
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.bold,
@@ -427,8 +429,8 @@ class TargetProgressChart extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Target Progress",
+                  Text(
+                    "analysis.target_progress".tr,
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
@@ -450,11 +452,11 @@ class TargetProgressChart extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Available: ${controller.currentAmount.value.toStringAsFixed(2)} \$",
+                        "${("analysis.available").tr}: ${controller.currentAmount.value.toStringAsFixed(2)} \$",
                         style: const TextStyle(fontSize: 14.0),
                       ),
                       Text(
-                        "Target: ${controller.targetAmount.value.toStringAsFixed(2)} \$",
+                        "${("analysis.target").tr}: ${controller.targetAmount.value.toStringAsFixed(2)} \$",
                         style: const TextStyle(fontSize: 14.0),
                       ),
                     ],

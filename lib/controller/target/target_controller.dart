@@ -9,11 +9,12 @@ class TargetController extends GetxController {
   var list = [].obs;
   var listById = [].obs;
 
-  final AdService adService = AdService(); 
+  final AdService adService = AdService();
 
   @override
   void onInit() {
     super.onInit();
+    fetchTargets();
     adService.initialize();
   }
 
@@ -57,8 +58,7 @@ class TargetController extends GetxController {
             (a, b) => b['target']['endDate'].compareTo(a['target']['endDate']));
         list.refresh();
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   Future<void> fetchTargetsById() async {
@@ -90,7 +90,6 @@ class TargetController extends GetxController {
             (a, b) => a['target']['endDate'].compareTo(b['target']['endDate']));
         listById.refresh();
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 }

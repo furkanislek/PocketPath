@@ -159,5 +159,24 @@ const Map<String, String> ptBR = {
   "addcost.category": "Categoria",
   "addcost.expense": "Despesa",
   "addcost.income": "Receita",
-  "addcost.select_a_target": "Selecione uma Meta"
+  "addcost.select_a_target": "Selecione uma Meta",
+
+  // Analysis Page
+  "analysis.title": "Análise",
+  "analysis.select_target": "Selecionar Meta",
+  "analysis.please_select_target": "Por Favor Selecione uma Meta",
+  "analysis.expenditures": "Despesas",
+  "analysis.savings": "Economias",
+  "analysis.total_expenditures": "Despesas Totais",
+  "analysis.total_savings": "Economias Totais",
+  "analysis.target_progress": "Progresso da Meta",
+  "analysis.available": "Disponível",
+  "analysis.target": "Meta",
+
+  // Menu Page
+  "menu.home": "Início",
+  "menu.analysis": "Análise",
+  "menu.targets": "Metas",
+  "menu.add_target": "Adicionar Meta",
+  "menu.profile": "Perfil"
 };

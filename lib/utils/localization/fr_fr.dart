@@ -162,5 +162,24 @@ const Map<String, String> frFR = {
   "addcost.category": "Catégorie",
   "addcost.expense": "Dépense",
   "addcost.income": "Revenu",
-  "addcost.select_a_target": "Sélectionner un Objectif"
+  "addcost.select_a_target": "Sélectionner un Objectif",
+
+  // Analysis Page
+  "analysis.title": "Analyse",
+  "analysis.select_target": "Sélectionner Objectif",
+  "analysis.please_select_target": "Veuillez Sélectionner un Objectif",
+  "analysis.expenditures": "Dépenses",
+  "analysis.savings": "Économies",
+  "analysis.total_expenditures": "Dépenses Totales",
+  "analysis.total_savings": "Économies Totales",
+  "analysis.target_progress": "Progrès de l'Objectif",
+  "analysis.available": "Disponible",
+  "analysis.target": "Objectif",
+
+  // Menu Page
+  "menu.home": "Accueil",
+  "menu.analysis": "Analyse",
+  "menu.targets": "Objectifs",
+  "menu.add_target": "Ajouter Objectif",
+  "menu.profile": "Profil"
 };

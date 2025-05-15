@@ -157,5 +157,24 @@ const Map<String, String> arSA = {
   "addcost.category": "فئة",
   "addcost.expense": "مصروف",
   "addcost.income": "دخل",
-  "addcost.select_a_target": "اختر هدفًا"
+  "addcost.select_a_target": "اختر هدفًا",
+
+  // Analysis Page
+  "analysis.title": "تحليل",
+  "analysis.select_target": "اختيار الهدف",
+  "analysis.please_select_target": "الرجاء اختيار الهدف",
+  "analysis.expenditures": "النفقات",
+  "analysis.savings": "المدخرات",
+  "analysis.total_expenditures": "إجمالي النفقات",
+  "analysis.total_savings": "إجمالي المدخرات",
+  "analysis.target_progress": "تقدم الهدف",
+  "analysis.available": "متاح",
+  "analysis.target": "الهدف",
+
+  // Menu Page
+  "menu.home": "الرئيسية",
+  "menu.analysis": "تحليل",
+  "menu.targets": "الأهداف",
+  "menu.add_target": "إضافة هدف",
+  "menu.profile": "الملف الشخصي"
 };

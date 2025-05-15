@@ -57,26 +57,26 @@ class Menu extends StatelessWidget {
             unselectedItemColor: Colors.black54,
             selectedItemColor: Colors.black,
             onTap: controller.changeTabIndex,
-            items: const [
+            items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: 'Home',
+                label: 'menu.home'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.analytics_outlined),
-                label: 'Analiz',
+                label: 'menu.analysis'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.pattern_outlined),
-                label: 'Targets',
+                label: 'menu.targets'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.add_circle_outline),
-                label: 'Add Target',
+                label: 'menu.add_target'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
-                label: 'Profile',
+                label: 'menu.profile'.tr,
               ),
             ],
           ),

@@ -163,5 +163,24 @@ const Map<String, String> deDE = {
   "addcost.category": "Kategorie",
   "addcost.expense": "Ausgabe",
   "addcost.income": "Einnahme",
-  "addcost.select_a_target": "Wählen Sie ein Ziel"
+  "addcost.select_a_target": "Wählen Sie ein Ziel",
+
+  // Analysis Page
+  "analysis.title": "Analyse",
+  "analysis.select_target": "Ziel auswählen",
+  "analysis.please_select_target": "Bitte Ziel auswählen",
+  "analysis.expenditures": "Ausgaben",
+  "analysis.savings": "Ersparnisse",
+  "analysis.total_expenditures": "Gesamtausgaben",
+  "analysis.total_savings": "Gesamtersparnisse",
+  "analysis.target_progress": "Zielfortschritt",
+  "analysis.available": "Verfügbar",
+  "analysis.target": "Ziel",
+
+  // Menu Page
+  "menu.home": "Startseite",
+  "menu.analysis": "Analyse",
+  "menu.targets": "Ziele",
+  "menu.add_target": "Ziel hinzufügen",
+  "menu.profile": "Profil"
 };

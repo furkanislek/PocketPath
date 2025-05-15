@@ -159,5 +159,24 @@ const Map<String, String> msMY = {
   "addcost.category": "Kategori",
   "addcost.expense": "Perbelanjaan",
   "addcost.income": "Pendapatan",
-  "addcost.select_a_target": "Pilih Sasaran"
+  "addcost.select_a_target": "Pilih Sasaran",
+
+  // Analysis Page
+  "analysis.title": "Analisis",
+  "analysis.select_target": "Pilih Sasaran",
+  "analysis.please_select_target": "Sila Pilih Sasaran",
+  "analysis.expenditures": "Perbelanjaan",
+  "analysis.savings": "Simpanan",
+  "analysis.total_expenditures": "Jumlah Perbelanjaan",
+  "analysis.total_savings": "Jumlah Simpanan",
+  "analysis.target_progress": "Kemajuan Sasaran",
+  "analysis.available": "Tersedia",
+  "analysis.target": "Sasaran",
+
+  // Menu Page
+  "menu.home": "Laman Utama",
+  "menu.analysis": "Analisis",
+  "menu.targets": "Sasaran",
+  "menu.add_target": "Tambah Sasaran",
+  "menu.profile": "Profil"
 };

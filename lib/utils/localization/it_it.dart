@@ -161,5 +161,24 @@ const Map<String, String> itIT = {
   "addcost.category": "Categoria",
   "addcost.expense": "Spesa",
   "addcost.income": "Entrata",
-  "addcost.select_a_target": "Seleziona un Obiettivo"
+  "addcost.select_a_target": "Seleziona un Obiettivo",
+
+  // Analysis Page
+  "analysis.title": "Analisi",
+  "analysis.select_target": "Seleziona Obiettivo",
+  "analysis.please_select_target": "Per Favore Seleziona un Obiettivo",
+  "analysis.expenditures": "Spese",
+  "analysis.savings": "Risparmi",
+  "analysis.total_expenditures": "Spese Totali",
+  "analysis.total_savings": "Risparmi Totali",
+  "analysis.target_progress": "Progresso dell'Obiettivo",
+  "analysis.available": "Disponibile",
+  "analysis.target": "Obiettivo",
+
+  // Menu Page
+  "menu.home": "Home",
+  "menu.analysis": "Analisi",
+  "menu.targets": "Obiettivi",
+  "menu.add_target": "Aggiungi Obiettivo",
+  "menu.profile": "Profilo"
 };

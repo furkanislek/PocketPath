@@ -148,5 +148,24 @@ const Map<String, String> zhCN = {
   "addcost.category": "类别",
   "addcost.expense": "支出",
   "addcost.income": "收入",
-  "addcost.select_a_target": "选择一个目标"
+  "addcost.select_a_target": "选择一个目标",
+
+  // Analysis Page
+  "analysis.title": "分析",
+  "analysis.select_target": "选择目标",
+  "analysis.please_select_target": "请选择目标",
+  "analysis.expenditures": "支出",
+  "analysis.savings": "储蓄",
+  "analysis.total_expenditures": "总支出",
+  "analysis.total_savings": "总储蓄",
+  "analysis.target_progress": "目标进度",
+  "analysis.available": "可用",
+  "analysis.target": "目标",
+
+  // Menu Page
+  "menu.home": "首页",
+  "menu.analysis": "分析",
+  "menu.targets": "目标",
+  "menu.add_target": "添加目标",
+  "menu.profile": "个人资料"
 };

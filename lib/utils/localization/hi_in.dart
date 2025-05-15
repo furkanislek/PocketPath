@@ -159,5 +159,24 @@ const Map<String, String> hiIN = {
   "addcost.category": "श्रेणी",
   "addcost.expense": "व्यय",
   "addcost.income": "आय",
-  "addcost.select_a_target": "एक लक्ष्य चुनें"
+  "addcost.select_a_target": "एक लक्ष्य चुनें",
+
+  // Analysis Page
+  "analysis.title": "विश्लेषण",
+  "analysis.select_target": "लक्ष्य चुनें",
+  "analysis.please_select_target": "कृपया लक्ष्य चुनें",
+  "analysis.expenditures": "व्यय",
+  "analysis.savings": "बचत",
+  "analysis.total_expenditures": "कुल व्यय",
+  "analysis.total_savings": "कुल बचत",
+  "analysis.target_progress": "लक्ष्य प्रगति",
+  "analysis.available": "उपलब्ध",
+  "analysis.target": "लक्ष्य",
+
+  // Menu Page
+  "menu.home": "होम",
+  "menu.analysis": "विश्लेषण",
+  "menu.targets": "लक्ष्य",
+  "menu.add_target": "लक्ष्य जोड़ें",
+  "menu.profile": "प्रोफ़ाइल"
 };

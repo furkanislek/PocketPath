@@ -159,5 +159,24 @@ const Map<String, String> trTR = {
   "addcost.category": "Kategori",
   "addcost.expense": "Gider",
   "addcost.income": "Gelir",
-  "addcost.select_a_target": "Bir Hedef Seçin"
+  "addcost.select_a_target": "Bir Hedef Seçin",
+
+  // Analysis Page
+  "analysis.title": "Analiz",
+  "analysis.select_target": "Hedef Seçin",
+  "analysis.please_select_target": "Lütfen Hedef Seçin",
+  "analysis.expenditures": "Harcamalar",
+  "analysis.savings": "Tasarruflar",
+  "analysis.total_expenditures": "Toplam Harcamalar",
+  "analysis.total_savings": "Toplam Tasarruflar",
+  "analysis.target_progress": "Hedef İlerleme",
+  "analysis.available": "Mevcut",
+  "analysis.target": "Hedef",
+
+  // Menu Page
+  "menu.home": "Ana Sayfa",
+  "menu.analysis": "Analiz",
+  "menu.targets": "Hedefler",
+  "menu.add_target": "Hedef Ekle",
+  "menu.profile": "Profil"
 };

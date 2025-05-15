@@ -161,5 +161,24 @@ const Map<String, String> enUS = {
   "addcost.category": "Category",
   "addcost.expense": "Expense",
   "addcost.income": "Income",
-  "addcost.select_a_target": "Select a Target"
+  "addcost.select_a_target": "Select a Target",
+
+  // Analysis Page
+  "analysis.title": "Analysis",
+  "analysis.select_target": "Select Target",
+  "analysis.please_select_target": "Please Select Target",
+  "analysis.expenditures": "Expenditures",
+  "analysis.savings": "Savings",
+  "analysis.total_expenditures": "Total Expenditures",
+  "analysis.total_savings": "Total Savings",
+  "analysis.target_progress": "Target Progress",
+  "analysis.available": "Available",
+  "analysis.target": "Target",
+
+  // Menu Page
+  "menu.home": "Home",
+  "menu.analysis": "Analysis",
+  "menu.targets": "Targets",
+  "menu.add_target": "Add Target",
+  "menu.profile": "Profile"
 };

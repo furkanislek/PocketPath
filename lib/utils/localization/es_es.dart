@@ -167,5 +167,24 @@ const Map<String, String> esES = {
   "addcost.category": "Categoría",
   "addcost.expense": "Gasto",
   "addcost.income": "Ingreso",
-  "addcost.select_a_target": "Seleccionar un Objetivo"
+  "addcost.select_a_target": "Seleccionar un Objetivo",
+
+  // Analysis Page
+  "analysis.title": "Análisis",
+  "analysis.select_target": "Seleccionar Objetivo",
+  "analysis.please_select_target": "Por favor Seleccione un Objetivo",
+  "analysis.expenditures": "Gastos",
+  "analysis.savings": "Ahorros",
+  "analysis.total_expenditures": "Gastos Totales",
+  "analysis.total_savings": "Ahorros Totales",
+  "analysis.target_progress": "Progreso del Objetivo",
+  "analysis.available": "Disponible",
+  "analysis.target": "Objetivo",
+
+  // Menu Page
+  "menu.home": "Inicio",
+  "menu.analysis": "Análisis",
+  "menu.targets": "Objetivos",
+  "menu.add_target": "Añadir Objetivo",
+  "menu.profile": "Perfil"
 };

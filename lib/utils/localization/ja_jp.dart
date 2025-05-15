@@ -149,5 +149,24 @@ const Map<String, String> jaJP = {
   "addcost.category": "カテゴリー",
   "addcost.expense": "支出",
   "addcost.income": "収入",
-  "addcost.select_a_target": "ターゲットを選択"
+  "addcost.select_a_target": "ターゲットを選択",
+
+  // Analysis Page
+  "analysis.title": "分析",
+  "analysis.select_target": "ターゲットを選択",
+  "analysis.please_select_target": "ターゲットを選択してください",
+  "analysis.expenditures": "支出",
+  "analysis.savings": "貯蓄",
+  "analysis.total_expenditures": "総支出",
+  "analysis.total_savings": "総貯蓄",
+  "analysis.target_progress": "目標進捗",
+  "analysis.available": "利用可能",
+  "analysis.target": "目標",
+
+  // Menu Page
+  "menu.home": "ホーム",
+  "menu.analysis": "分析",
+  "menu.targets": "目標",
+  "menu.add_target": "目標を追加",
+  "menu.profile": "プロフィール"
 };

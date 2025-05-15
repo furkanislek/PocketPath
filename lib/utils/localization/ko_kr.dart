@@ -152,5 +152,24 @@ const Map<String, String> koKR = {
   "addcost.category": "카테고리",
   "addcost.expense": "지출",
   "addcost.income": "수입",
-  "addcost.select_a_target": "목표 선택"
+  "addcost.select_a_target": "목표 선택",
+
+  // Analysis Page
+  "analysis.title": "분석",
+  "analysis.select_target": "목표 선택",
+  "analysis.please_select_target": "목표를 선택하세요",
+  "analysis.expenditures": "지출",
+  "analysis.savings": "저축",
+  "analysis.total_expenditures": "총 지출",
+  "analysis.total_savings": "총 저축",
+  "analysis.target_progress": "목표 진행 상황",
+  "analysis.available": "사용 가능",
+  "analysis.target": "목표",
+
+  // Menu Page
+  "menu.home": "홈",
+  "menu.analysis": "분석",
+  "menu.targets": "목표",
+  "menu.add_target": "목표 추가",
+  "menu.profile": "프로필"
 };

@@ -159,5 +159,24 @@ const Map<String, String> idID = {
   "addcost.category": "Kategori",
   "addcost.expense": "Pengeluaran",
   "addcost.income": "Pendapatan",
-  "addcost.select_a_target": "Pilih Target"
+  "addcost.select_a_target": "Pilih Target",
+
+  // Analysis Page
+  "analysis.title": "Analisis",
+  "analysis.select_target": "Pilih Target",
+  "analysis.please_select_target": "Silakan Pilih Target",
+  "analysis.expenditures": "Pengeluaran",
+  "analysis.savings": "Tabungan",
+  "analysis.total_expenditures": "Total Pengeluaran",
+  "analysis.total_savings": "Total Tabungan",
+  "analysis.target_progress": "Kemajuan Target",
+  "analysis.available": "Tersedia",
+  "analysis.target": "Target",
+
+  // Menu Page
+  "menu.home": "Beranda",
+  "menu.analysis": "Analisis",
+  "menu.targets": "Target",
+  "menu.add_target": "Tambah Target",
+  "menu.profile": "Profil"
 };

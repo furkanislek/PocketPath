@@ -158,5 +158,24 @@ const Map<String, String> bnBD = {
   "addcost.category": "বিভাগ",
   "addcost.expense": "ব্যয়",
   "addcost.income": "আয়",
-  "addcost.select_a_target": "একটি লক্ষ্য নির্বাচন করুন"
+  "addcost.select_a_target": "একটি লক্ষ্য নির্বাচন করুন",
+
+  // Analysis Page
+  "analysis.title": "বিশ্লেষণ",
+  "analysis.select_target": "লক্ষ্য নির্বাচন করুন",
+  "analysis.please_select_target": "অনুগ্রহ করে লক্ষ্য নির্বাচন করুন",
+  "analysis.expenditures": "ব্যয়",
+  "analysis.savings": "সঞ্চয়",
+  "analysis.total_expenditures": "মোট ব্যয়",
+  "analysis.total_savings": "মোট সঞ্চয়",
+  "analysis.target_progress": "লক্ষ্য অগ্রগতি",
+  "analysis.available": "উপলব্ধ",
+  "analysis.target": "লক্ষ্য",
+
+  // Menu Page
+  "menu.home": "হোম",
+  "menu.analysis": "বিশ্লেষণ",
+  "menu.targets": "লক্ষ্যগুলি",
+  "menu.add_target": "লক্ষ্য যোগ করুন",
+  "menu.profile": "প্রোফাইল"
 };

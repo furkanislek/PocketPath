@@ -160,5 +160,24 @@ const Map<String, String> ruRU = {
   "addcost.category": "Категория",
   "addcost.expense": "Расход",
   "addcost.income": "Доход",
-  "addcost.select_a_target": "Выберите цель"
+  "addcost.select_a_target": "Выберите цель",
+
+  // Analysis Page
+  "analysis.title": "Анализ",
+  "analysis.select_target": "Выбрать цель",
+  "analysis.please_select_target": "Пожалуйста, выберите цель",
+  "analysis.expenditures": "Расходы",
+  "analysis.savings": "Сбережения",
+  "analysis.total_expenditures": "Общие расходы",
+  "analysis.total_savings": "Общие сбережения",
+  "analysis.target_progress": "Прогресс цели",
+  "analysis.available": "Доступно",
+  "analysis.target": "Цель",
+
+  // Menu Page
+  "menu.home": "Главная",
+  "menu.analysis": "Анализ",
+  "menu.targets": "Цели",
+  "menu.add_target": "Добавить цель",
+  "menu.profile": "Профиль"
 };
