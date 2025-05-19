@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:pocketPath/controller/cost/add_cost_controller.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Budget extends StatelessWidget {
   Budget({super.key});
@@ -32,13 +33,13 @@ class Budget extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             color: const Color(0xFFFFFFFF),
-            borderRadius: BorderRadius.circular(15.0),
+            borderRadius: BorderRadius.circular(15.r),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),
-                spreadRadius: 2,
-                blurRadius: 5,
-                offset: const Offset(0, 3),
+                spreadRadius: 2.w,
+                blurRadius: 5.w,
+                offset: Offset(0, 3.h),
               ),
             ],
           ),
@@ -105,15 +106,15 @@ class Budget extends StatelessWidget {
                                     var target = controller.listById.first;
                                     return Text(
                                       '${addCostController.moneyType.value} ${target['remainingBudget'].toStringAsFixed(2)}',
-                                      style: const TextStyle(
-                                          fontSize: 25,
+                                      style: TextStyle(
+                                          fontSize: 25.sp,
                                           fontWeight: FontWeight.bold),
                                     );
                                   } else {
                                     return Text(
                                       "${addCostController.moneyType.value} 0.00",
                                       style: TextStyle(
-                                          fontSize: 25,
+                                          fontSize: 25.sp,
                                           fontWeight: FontWeight.bold),
                                     );
                                   }
@@ -132,15 +133,15 @@ class Budget extends StatelessWidget {
                                     ? controller.listById.first['progress']
                                     : 0;
                                 return CircularPercentIndicator(
-                                  radius: 50.0,
-                                  lineWidth: 8.0,
+                                  radius: 50.w,
+                                  lineWidth: 8.w,
                                   animation: true,
                                   percent: progress.clamp(0.0, 1.0),
                                   center: Text(
                                     "${(progress > 1 ? 100.00 : progress * 100).toStringAsFixed(0)}%",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20.0,
+                                      fontSize: 20.sp,
                                     ),
                                   ),
                                   circularStrokeCap: CircularStrokeCap.round,
@@ -240,8 +241,8 @@ class Budget extends StatelessWidget {
       builder: (context) {
         return Container(
           width: double.infinity,
-          height: 200,
-          padding: EdgeInsets.all(8),
+          height: 200.h,
+          padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -254,22 +255,21 @@ class Budget extends StatelessWidget {
                       return ListTile(
                         subtitle: Container(
                           padding: EdgeInsets.symmetric(
-                              vertical: 12.0, horizontal: 4),
+                              vertical: 12.h, horizontal: 4.w),
                           decoration: BoxDecoration(
                             color: const Color(0xFFFFFFFF),
-                            borderRadius: BorderRadius.circular(15.0),
+                            borderRadius: BorderRadius.circular(15.r),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.1),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: const Offset(0, 3),
+                                spreadRadius: 2.w,
+                                blurRadius: 5.w,
+                                offset: Offset(0, 3.h),
                               ),
                             ],
                           ),
                           child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 15.0),
+                            padding: EdgeInsets.symmetric(horizontal: 15.w),
                             child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,

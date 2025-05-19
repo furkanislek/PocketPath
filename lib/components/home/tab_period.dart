@@ -2,6 +2,7 @@ import 'package:pocketPath/controller/home/tab_controller.dart';
 import 'package:pocketPath/controller/home/cost_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TabSelection extends StatelessWidget {
   final HomeTabController tabController = Get.put(HomeTabController());
@@ -51,7 +52,7 @@ class TabSelection extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 50),
         curve: Curves.fastOutSlowIn,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         decoration: BoxDecoration(
           color: tabController.selectedIndex.value == index
               ? Colors.white

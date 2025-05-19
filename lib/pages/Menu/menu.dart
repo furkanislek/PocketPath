@@ -7,7 +7,7 @@ import 'package:pocketPath/pages/Target/target.dart';
 import 'package:pocketPath/pages/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter/services.dart'; // Import for SystemNavigator
+import 'package:flutter/services.dart'; 
 
 class Menu extends StatelessWidget {
   Menu({super.key});
@@ -25,17 +25,12 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // WillPopScope handles the system back button
     return WillPopScope(
       onWillPop: () async {
-        // Check if the current tab is the first tab (Home)
         if (controller.currentIndex.value != 0) {
-          // If not on the Home tab, switch to the Home tab
           controller.changeTabIndex(0);
-          // Prevent the app from closing
           return false;
         } else {
-          // If on the Home tab, allow the app to close
           return true;
         }
       },

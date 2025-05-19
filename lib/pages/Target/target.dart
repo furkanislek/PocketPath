@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -41,11 +42,9 @@ class Targets extends StatelessWidget {
       backgroundColor: const Color(0xFFF2F2F2),
       body: Column(
         children: [
-          // Add the TargetPeriodSelector here
           TargetPeriodSelector(controller: controller),
           Expanded(
             child: Obx(() {
-              print("List durumu: ${controller.list.length} öğe var");
               return controller.list.isEmpty
                   ? Center(
                       child: Image(
@@ -162,7 +161,7 @@ class Targets extends StatelessWidget {
                                                                         .white
                                                                     : Colors
                                                                         .black,
-                                                            fontSize: 15),
+                                                            fontSize: 15.sp),
                                                       ),
                                                       Text(
                                                         '\$ ${Formatter().numberFormatter.format(target['target']['budget'])}'
@@ -174,7 +173,7 @@ class Targets extends StatelessWidget {
                                                                   ? Colors.white
                                                                   : Colors
                                                                       .black,
-                                                          fontSize: 20,
+                                                          fontSize: 20.sp,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -220,7 +219,7 @@ class Targets extends StatelessWidget {
                                                                       .black,
                                                           fontWeight:
                                                               FontWeight.bold,
-                                                          fontSize: 15.0,
+                                                          fontSize: 15.0.sp,
                                                         ),
                                                       ),
                                                       circularStrokeCap:

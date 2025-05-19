@@ -3,6 +3,7 @@ import 'package:pocketPath/controller/home/cost_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Costs extends StatelessWidget {
   final dynamic costs;
@@ -12,8 +13,7 @@ class Costs extends StatelessWidget {
     required this.costs,
   });
 
-  final CostController costController =
-      Get.find<CostController>(); // Use Get.find to access the same instance
+  final CostController costController = Get.find<CostController>();
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +65,9 @@ class Costs extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 3),
+              spreadRadius: 2.w,
+              blurRadius: 5.w,
+              offset: Offset(0, 3.h),
             ),
           ],
         ),
@@ -92,7 +92,7 @@ class Costs extends StatelessWidget {
                       child: Icon(
                         costIcon,
                         color: colorIcon,
-                        size: 24.0,
+                        size: 24.sp,
                       ),
                     )
                   ],
@@ -135,9 +135,9 @@ class Costs extends StatelessWidget {
                         children: [
                           Text(
                             formattedDate,
-                            style: const TextStyle(
+                            style: TextStyle(
                                 color: Color(0xFF868B88),
-                                fontSize: kDefaultFontSize * 0.8),
+                                fontSize: kDefaultFontSize * 0.8.sp),
                           ),
                           Text(
                             costs['isExpense']

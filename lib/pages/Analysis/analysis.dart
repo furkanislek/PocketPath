@@ -6,6 +6,7 @@ import 'package:pocketPath/controller/menu/bottom_navigator.dart';
 import 'package:pocketPath/controller/target/target_controller.dart';
 import 'package:pocketPath/pages/Analysis/analysis_controller.dart';
 import 'package:pocketPath/services/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Analysis extends StatelessWidget {
   Analysis({Key? key}) : super(key: key);
@@ -50,8 +51,8 @@ class Analysis extends StatelessWidget {
                 );
               }
 
-              return const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+              return Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
                 child: ExpenseSavingsBarChart(),
               );
             }),
@@ -73,7 +74,7 @@ class TargetSelectionButton extends StatelessWidget {
     final AnalysisController controller = Get.find<AnalysisController>();
 
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(16.w),
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
@@ -93,7 +94,7 @@ class TargetSelectionButton extends StatelessWidget {
                 controller.selectedTarget.value.isEmpty
                     ? "analysis.select_target".tr
                     : controller.selectedTargetName.value,
-                style: const TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 16.0.sp),
               )),
         ),
       ),
@@ -121,18 +122,18 @@ class TargetSelectionModal extends StatelessWidget {
         Get.find<AnalysisController>();
 
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(16.w),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             "analysis.select_target".tr,
             style: TextStyle(
-              fontSize: 18.0,
+              fontSize: 18.0.sp,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 16.0),
+          SizedBox(height: 16.h),
           Expanded(
             child: Obx(() {
               // Tüm hedefleri al (aktif ve pasif)
@@ -182,7 +183,7 @@ class SelectedTargetInfo extends StatelessWidget {
       () => controller.selectedTarget.value.isEmpty
           ? SizedBox.shrink()
           : Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
             ),
     );
   }
@@ -205,37 +206,37 @@ class ExpenseSavingsBarChart extends StatelessWidget {
 
       return Column(
         children: [
-          const SizedBox(height: 16.0),
+          SizedBox(height: 16.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: [
                   Container(
-                    width: 16,
-                    height: 16,
+                    width: 16.w,
+                    height: 16.h,
                     color: Colors.red,
                   ),
-                  const SizedBox(width: 4),
+                  SizedBox(width: 4.w),
                   Text("analysis.expenditures".tr),
                 ],
               ),
-              const SizedBox(width: 50),
+              SizedBox(width: 50.w),
               Row(
                 children: [
                   Container(
-                    width: 16,
-                    height: 16,
+                    width: 16.w,
+                    height: 16.h,
                     color: Colors.green,
                   ),
-                  const SizedBox(width: 4),
+                  SizedBox(width: 4.w),
                   Text("analysis.savings".tr),
                 ],
               ),
             ],
           ),
 
-          const SizedBox(height: 24.0),
+          SizedBox(height: 24.h),
 
           // Bar Chart
           Expanded(
@@ -250,7 +251,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                       BarChartRodData(
                         toY: totalExpenses,
                         color: Colors.red,
-                        width: 40,
+                        width: 40.w,
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ],
@@ -261,7 +262,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                       BarChartRodData(
                         toY: totalSavings,
                         color: Colors.green,
-                        width: 40,
+                        width: 40.w,
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ],
@@ -281,14 +282,13 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                             break;
                         }
                         return Padding(
-                          padding:
-                              const EdgeInsets.only(right: 16.0, left: 24.0),
+                          padding: EdgeInsets.only(right: 16.w, left: 24.w),
                           child: Text(
                             text,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Color.fromARGB(255, 139, 46, 46),
                               fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                              fontSize: 14.sp,
                             ),
                           ),
                         );
@@ -301,14 +301,14 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                       getTitlesWidget: (value, meta) {
                         return Text(
                           '${value.toInt()} \$',
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                           ),
                         );
                       },
-                      reservedSize: 40,
+                      reservedSize: 40.w,
                     ),
                   ),
                   topTitles: AxisTitles(
@@ -325,7 +325,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
           ),
 
           // Toplam değerler
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: Row(
@@ -336,14 +336,14 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                     Text(
                       "analysis.total_expenditures".tr,
                       style: TextStyle(
-                        fontSize: 14.0,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       "${totalExpenses.toStringAsFixed(2)} \$",
-                      style: const TextStyle(
-                        fontSize: 16.0,
+                      style: TextStyle(
+                        fontSize: 16.sp,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
                       ),
@@ -355,14 +355,14 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                     Text(
                       "analysis.total_savings".tr,
                       style: TextStyle(
-                        fontSize: 14.0,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       "${totalSavings.toStringAsFixed(2)} \$",
-                      style: const TextStyle(
-                        fontSize: 16.0,
+                      style: TextStyle(
+                        fontSize: 16.sp,
                         color: Colors.green,
                         fontWeight: FontWeight.bold,
                       ),
@@ -376,10 +376,10 @@ class ExpenseSavingsBarChart extends StatelessWidget {
           // Harcama ve birikim listesi
           if (controller.expenses.isNotEmpty)
             Container(
-              height: 200,
+              height: 200.h,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(8.r),
               ),
               child: ListView.builder(
                 itemCount: controller.expenses.length,
@@ -402,6 +402,7 @@ class ExpenseSavingsBarChart extends StatelessWidget {
                       style: TextStyle(
                         color: isExpense ? Colors.red : Colors.green,
                         fontWeight: FontWeight.bold,
+                        fontSize: 16.sp,
                       ),
                     ),
                   );
@@ -432,11 +433,11 @@ class TargetProgressChart extends StatelessWidget {
                   Text(
                     "analysis.target_progress".tr,
                     style: TextStyle(
-                      fontSize: 16.0,
+                      fontSize: 16.0.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 8.0),
+                  SizedBox(height: 8.h),
                   LinearProgressIndicator(
                     value: controller.targetProgress.value,
                     backgroundColor: Colors.grey.shade300,
@@ -445,19 +446,19 @@ class TargetProgressChart extends StatelessWidget {
                           ? Colors.green
                           : const Color(0xFF2CBABB),
                     ),
-                    minHeight: 20.0,
+                    minHeight: 20.h,
                   ),
-                  const SizedBox(height: 8.0),
+                  SizedBox(height: 8.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "${("analysis.available").tr}: ${controller.currentAmount.value.toStringAsFixed(2)} \$",
-                        style: const TextStyle(fontSize: 14.0),
+                        style: TextStyle(fontSize: 14.0.sp),
                       ),
                       Text(
                         "${("analysis.target").tr}: ${controller.targetAmount.value.toStringAsFixed(2)} \$",
-                        style: const TextStyle(fontSize: 14.0),
+                        style: TextStyle(fontSize: 14.0.sp),
                       ),
                     ],
                   ),

@@ -3,6 +3,7 @@ import 'package:pocketPath/controller/menu/bottom_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pocketPath/pages/Menu/menu.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddCost extends StatelessWidget {
   AddCost({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class AddCost extends StatelessWidget {
         centerTitle: true,
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
+        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
         child: ElevatedButton(
           onPressed: () {
             final name = controller.selectedTypeName.value;
@@ -69,8 +70,7 @@ class AddCost extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF0996C7),
-            padding:
-                const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100.0),
+            padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 100.w),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),
@@ -79,7 +79,7 @@ class AddCost extends StatelessWidget {
             'addcost.save'.tr,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 16,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -87,22 +87,22 @@ class AddCost extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'addcost.select_target'.tr,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
               ),
-              const SizedBox(height: 8),
+               SizedBox(height: 8.h),
               GestureDetector(
                 onTap: () => _showTargetSelectionBottomSheet(context),
                 child: Container(
-                  height: 70,
+                  height: 70.h,
                   width: double.infinity,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                      EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8.0),
@@ -123,7 +123,7 @@ class AddCost extends StatelessWidget {
                               target["id"] ==
                               controller.selectedTargetId.value)["name"],
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: controller.selectedTargetId.value.isEmpty
                               ? const Color.fromARGB(220, 168, 163, 161)
                               : const Color(0xFF282625)),
@@ -136,18 +136,18 @@ class AddCost extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: 8.w),
                     child: Text(
                       'addcost.cost_type'.tr,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 5.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.circular(15.0),
@@ -163,7 +163,7 @@ class AddCost extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 10),
+                         SizedBox(height: 10.h),
                         TextField(
                           onChanged: (value) {
                             controller.selectedTypeName(value);
@@ -189,18 +189,18 @@ class AddCost extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: 8.w),
                     child: Text(
                       'addcost.budget_amount'.tr,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 10.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.circular(15.0),
@@ -216,7 +216,7 @@ class AddCost extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 10),
+                         SizedBox(height: 10.h),
                         TextField(
                           onChanged: (value) {
                             controller.selectedBudget(value);
@@ -237,20 +237,20 @@ class AddCost extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 25.h),
               Text(
                 'addcost.category'.tr,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
               ),
               SizedBox(
-                height: 90,
+                height: 90.h,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: _categories.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: const EdgeInsets.only(
-                          left: 0, right: 15.0, top: 20, bottom: 20),
+                      padding: EdgeInsets.only(
+                          left: 0, right: 15.w, top: 20.h, bottom: 20.h),
                       child: Obx(() => Container(
                             decoration: BoxDecoration(
                               color: (controller.selectedCategory.value ==
@@ -269,13 +269,12 @@ class AddCost extends StatelessWidget {
                               ],
                             ),
                             child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
                               child: IconButton(
                                 icon: Icon(
                                   _categories[index][0],
                                   color: Colors.blue,
-                                  size: 25,
+                                  size: 25.sp,
                                 ),
                                 onPressed: () {
                                   controller.setSelectedCategory(
@@ -288,7 +287,7 @@ class AddCost extends StatelessWidget {
                   },
                 ),
               ),
-              const SizedBox(height: 25),
+               SizedBox(height: 25.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -298,7 +297,7 @@ class AddCost extends StatelessWidget {
                             controller.toggleSelection(true);
                           },
                           style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            padding: EdgeInsets.symmetric(vertical: 16.h),
                             backgroundColor: !controller.isExpenseSelected.value
                                 ? Colors.transparent
                                 : Colors.red[100],
@@ -326,7 +325,7 @@ class AddCost extends StatelessWidget {
                             controller.toggleSelection(false);
                           },
                           style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            padding: EdgeInsets.symmetric(vertical: 16.h),
                             backgroundColor: controller.isExpenseSelected.value
                                 ? Colors.transparent
                                 : Colors.green[100],
@@ -349,7 +348,7 @@ class AddCost extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
             ],
           ),
         ),
@@ -369,15 +368,15 @@ class AddCost extends StatelessWidget {
       ),
       builder: (context) {
         return Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.w),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 'addcost.select_a_target'.tr,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               Obx(() {
                 return ListView.builder(
                   shrinkWrap: true,

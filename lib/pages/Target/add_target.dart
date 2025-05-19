@@ -3,6 +3,7 @@ import 'package:pocketPath/controller/target/add_target_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pocketPath/pages/Menu/menu.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddTarget extends StatelessWidget {
   AddTarget({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class AddTarget extends StatelessWidget {
       ),
       backgroundColor: const Color(0xFFF2F2F2),
       bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
+          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
           child: ElevatedButton(
             onPressed: () {
               final budgetString = controller.selectedBudget.value;
@@ -59,8 +60,7 @@ class AddTarget extends StatelessWidget {
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF0996C7),
-              padding:
-                  const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100.0),
+              padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 100.w),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -69,13 +69,13 @@ class AddTarget extends StatelessWidget {
               'target.save'.tr,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
           )),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.w),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,18 +85,18 @@ class AddTarget extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: 8.w),
                     child: Text(
                       "target.target_type".tr,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 5.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.circular(15.0),
@@ -112,7 +112,7 @@ class AddTarget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10.h),
                         TextField(
                           onChanged: (value) {
                             controller.selectedTypeName(value);
@@ -134,28 +134,28 @@ class AddTarget extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: 8.w),
                     child: Text(
                       "target.date_picker".tr,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   Obx(
                     () => Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 10.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 16.w, vertical: 10.h),
                       decoration: BoxDecoration(
                         color: const Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(15.r),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.1),
@@ -168,7 +168,7 @@ class AddTarget extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10.h),
                           TextField(
                             readOnly: true,
                             controller: TextEditingController(
@@ -212,27 +212,27 @@ class AddTarget extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: 8.w),
                     child: Text(
                       "target.budget_amount".tr,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 10.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderRadius: BorderRadius.circular(15.r),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.1),
@@ -245,7 +245,7 @@ class AddTarget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10.h),
                         TextField(
                           onChanged: (value) {
                             controller.selectedBudget(value);
