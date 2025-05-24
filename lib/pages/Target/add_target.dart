@@ -188,6 +188,7 @@ class AddTarget extends StatelessWidget {
                                 icon: const Icon(Icons.calendar_today),
                                 onPressed: () async {
                                   DateTime? pickedDate = await showDatePicker(
+                                    locale: Localizations.localeOf(context),
                                     context: context,
                                     initialDate: DateTime.now(),
                                     firstDate: DateTime.now(),

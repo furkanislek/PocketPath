@@ -1,3 +1,4 @@
+import 'package:pocketPath/controller/cost/add_cost_controller.dart';
 import 'package:pocketPath/controller/formatter.dart';
 import 'package:pocketPath/controller/home/cost_controller.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class Costs extends StatelessWidget {
   });
 
   final CostController costController = Get.find<CostController>();
+  final AddCostController addCostController = Get.put(AddCostController());
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +123,7 @@ class Costs extends StatelessWidget {
                             style: const TextStyle(color: Color(0xFF868B88)),
                           ),
                           Text(
-                              '\$ ${Formatter().numberFormatter.format((costs['budget']))}'),
+                              '${addCostController.moneyType.value} ${Formatter().numberFormatter.format((costs['budget']))}'),
                         ],
                       ),
                     ),

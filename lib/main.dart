@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:pocketPath/services/ad_service.dart';
 import 'package:pocketPath/services/locale_services.dart';
 import 'package:pocketPath/utils/localization/app_translations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -82,7 +83,7 @@ class MyApp extends StatelessWidget {
             return MediaQuery(
               data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
               child: GetMaterialApp(
-                title: 'Flutter Demo',
+                title: 'Pocket Path',
                 locale: initialLocale,
                 translations: AppTranslations(),
                 fallbackLocale: const Locale('en', 'US'),
@@ -93,6 +94,29 @@ class MyApp extends StatelessWidget {
                   useMaterial3: true,
                 ),
                 home: child,
+                localizationsDelegates: [
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                supportedLocales: [
+                  const Locale('en', 'US'),
+                  const Locale('tr', 'TR'),
+                  const Locale('de', 'DE'),
+                  const Locale('fr', 'FR'),
+                  const Locale('es', 'ES'),
+                  const Locale('pt', 'BR'),
+                  const Locale('zh', 'CN'),
+                  const Locale('hi', 'IN'),
+                  const Locale('ar', 'SA'),
+                  const Locale('ru', 'RU'),
+                  const Locale('ms', 'MY'),
+                  const Locale('id', 'ID'),
+                  const Locale('bn', 'BD'),
+                  const Locale('ja', 'JP'),
+                  const Locale('ko', 'KR'),
+                  const Locale('it', 'IT'),
+                ],
               ),
             );
           },
