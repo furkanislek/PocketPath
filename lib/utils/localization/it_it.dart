@@ -40,7 +40,7 @@ const Map<String, String> itIT = {
 </head>
 <body>
 <h1>Informativa sulla Privacy di PocketPath</h1>
-<p>Ultimo aggiornamento: 15/05/2025</p>
+<p>Ultimo aggiornamento: 24/05/2025</p>
 
 <h2>Introduzione</h2>
 <p>Diamo grande importanza alla tua privacy durante l'utilizzo dell'applicazione PocketPath. Questa Informativa sulla Privacy spiega come PocketPath raccoglie, utilizza e protegge le tue informazioni personali.</p>
@@ -82,7 +82,7 @@ const Map<String, String> itIT = {
 </html>""",
   'developer': 'Sviluppatore: Furkan Akif ISLEK',
   'noEmail': 'Nessuna email trovata',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Elimina account',
   'profile.deleteAccountImportantText':
       'Sei sicuro di voler eliminare il tuo account? Questa azione non può essere annullata.',

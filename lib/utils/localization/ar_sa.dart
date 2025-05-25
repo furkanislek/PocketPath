@@ -43,7 +43,7 @@ body {direction: rtl; text-align: right;}
 </head>
 <body>
 <h1>سياسة الخصوصية لتطبيق PocketPath</h1>
-<p>آخر تحديث: 15/05/2025</p>
+<p>آخر تحديث: 24/05/2025</p>
 
 <h2>مقدمة</h2>
 <p>نحن نقدر خصوصيتك أثناء استخدام تطبيق PocketPath. توضح سياسة الخصوصية هذه كيفية جمع PocketPath للمعلومات الشخصية واستخدامها وحمايتها.</p>
@@ -85,7 +85,7 @@ body {direction: rtl; text-align: right;}
 </html>""",
   'developer': 'المطور: Furkan Akif ISLEK',
   'noEmail': 'لم يتم العثور على بريد إلكتروني',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'حذف الحساب',
   'profile.deleteAccountImportantText':
       'هل أنت متأكد من رغبتك في حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء.',

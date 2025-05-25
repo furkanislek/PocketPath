@@ -40,7 +40,7 @@ const Map<String, String> esES = {
 </head>
 <body>
 <h1>Política de Privacidad de PocketPath</h1>
-<p>Última actualización: 15/05/2025</p>
+<p>Última actualización: 24/05/2025</p>
 
 <h2>Introducción</h2>
 <p>Valoramos su privacidad mientras utiliza la aplicación PocketPath. Esta Política de Privacidad explica cómo PocketPath recopila, utiliza y protege su información personal.</p>
@@ -82,7 +82,7 @@ const Map<String, String> esES = {
 </html>""",
   'developer': 'Desarrollador: Furkan Akif ISLEK',
   'noEmail': 'No se encontró correo electrónico',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Eliminar Cuenta',
   'profile.deleteAccountImportantText':
       '¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.',

@@ -40,7 +40,7 @@ const Map<String, String> ruRU = {
 </head>
 <body>
 <h1>Политика конфиденциальности PocketPath</h1>
-<p>Последнее обновление: 15/05/2025</p>
+<p>Последнее обновление: 24/05/2025</p>
 
 <h2>Введение</h2>
 <p>Мы ценим вашу конфиденциальность при использовании приложения PocketPath. Эта Политика конфиденциальности объясняет, как PocketPath собирает, использует и защищает вашу личную информацию.</p>
@@ -82,7 +82,7 @@ const Map<String, String> ruRU = {
 </html>""",
   'developer': 'Разработчик: Furkan Akif ISLEK',
   'noEmail': 'Электронная почта не найдена',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Удалить аккаунт',
   'profile.deleteAccountImportantText':
       'Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить.',

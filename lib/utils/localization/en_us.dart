@@ -40,7 +40,7 @@ const Map<String, String> enUS = {
 </head>
 <body>
 <h1>PocketPath Privacy Policy</h1>
-<p>Last updated: 15/05/2025</p>
+<p>Last updated: 24/05/2025</p>
 
 <h2>Introduction</h2>
 <p>We value your privacy while using the PocketPath application. This Privacy Policy explains how PocketPath collects, uses, and protects your personal information.</p>

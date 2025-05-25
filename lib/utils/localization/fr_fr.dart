@@ -40,7 +40,7 @@ const Map<String, String> frFR = {
 </head>
 <body>
 <h1>Politique de Confidentialité de PocketPath</h1>
-<p>Dernière mise à jour: 15/05/2025</p>
+<p>Dernière mise à jour: 24/05/2025</p>
 
 <h2>Introduction</h2>
 <p>Nous accordons une grande importance à votre vie privée lors de l'utilisation de l'application PocketPath. Cette politique de confidentialité explique comment PocketPath collecte, utilise et protège vos informations personnelles.</p>

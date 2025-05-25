@@ -38,7 +38,7 @@ const Map<String, String> ptBR = {
 </head>
 <body>
 <h1>Política de Privacidade do PocketPath</h1>
-<p>Última atualização: 15/05/2025</p>
+<p>Última atualização: 24/05/2025</p>
 
 <h2>Introdução</h2>
 <p>Valorizamos sua privacidade ao utilizar o aplicativo PocketPath. Esta Política de Privacidade explica como o PocketPath coleta, usa e protege suas informações pessoais.</p>
@@ -80,7 +80,7 @@ const Map<String, String> ptBR = {
 </html>""",
   'developer': 'Desenvolvedor: Furkan Akif ISLEK',
   'noEmail': 'Nenhum e-mail encontrado',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Excluir Conta',
   'profile.deleteAccountImportantText':
       'Tem certeza de que deseja excluir sua conta? Esta ação não pode ser desfeita.',

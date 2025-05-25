@@ -40,7 +40,7 @@ const Map<String, String> trTR = {
 </head>
 <body>
 <h1>PocketPath Gizlilik Politikası</h1>
-<p>Son güncelleme: 15.05.2025</p>
+<p>Son güncelleme: 24.05.2025</p>
 
 <h2>Giriş</h2>
 <p>PocketPath uygulamasını kullanırken gizliliğinize büyük önem veriyoruz. Bu Gizlilik Politikası, PocketPath'in kişisel bilgilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklamaktadır.</p>
@@ -82,7 +82,7 @@ const Map<String, String> trTR = {
 </html>""",
   'developer': 'Geliştirici: Furkan Akif İŞLEK',
   'noEmail': 'E-posta bulunamadı',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Hesabı Sil',
   'profile.deleteAccountImportantText':
       'Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.',

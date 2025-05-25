@@ -40,7 +40,7 @@ const Map<String, String> koKR = {
 </head>
 <body>
 <h1>PocketPath 개인정보 처리방침</h1>
-<p>최종 업데이트: 15/05/2025</p>
+<p>최종 업데이트: 24/05/2025</p>
 
 <h2>소개</h2>
 <p>저희는 PocketPath 애플리케이션을 사용하는 동안 귀하의 개인정보를 중요하게 생각합니다. 이 개인정보 처리방침은 PocketPath가 개인정보를 어떻게 수집, 사용 및 보호하는지 설명합니다.</p>
@@ -82,7 +82,7 @@ const Map<String, String> koKR = {
 </html>""",
   'developer': '개발자: Furkan Akif ISLEK',
   'noEmail': '이메일이 없습니다',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': '계정 삭제',
   'profile.deleteAccountImportantText': '정말로 계정을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.',
   'profile.cancel': '취소',

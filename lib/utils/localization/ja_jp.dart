@@ -40,7 +40,7 @@ const Map<String, String> jaJP = {
 </head>
 <body>
 <h1>PocketPath プライバシーポリシー</h1>
-<p>最終更新日: 15/05/2025</p>
+<p>最終更新日: 24/05/2025</p>
 
 <h2>はじめに</h2>
 <p>PocketPathアプリケーションを使用する際のプライバシーを重視しています。このプライバシーポリシーでは、PocketPathがどのように個人情報を収集、使用、保護するかを説明します。</p>
@@ -82,7 +82,7 @@ const Map<String, String> jaJP = {
 </html>""",
   'developer': '開発者: Furkan Akif ISLEK',
   'noEmail': 'メールが見つかりません',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'アカウントを削除',
   'profile.deleteAccountImportantText': '本当にアカウントを削除しますか？この操作は元に戻せません。',
   'profile.cancel': 'キャンセル',

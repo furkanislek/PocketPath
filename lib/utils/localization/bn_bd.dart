@@ -38,7 +38,7 @@ const Map<String, String> bnBD = {
 </head>
 <body>
 <h1>PocketPath গোপনীয়তা নীতি</h1>
-<p>সর্বশেষ আপডেট: 15/05/2025</p>
+<p>সর্বশেষ আপডেট: 24/05/2025</p>
 
 <h2>ভূমিকা</h2>
 <p>আমরা PocketPath অ্যাপ্লিকেশন ব্যবহার করার সময় আপনার গোপনীয়তাকে সম্মান করি। এই গোপনীয়তা নীতি ব্যাখ্যা করে কিভাবে PocketPath আপনার ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার এবং সুরক্ষিত রাখে।</p>
@@ -80,7 +80,7 @@ const Map<String, String> bnBD = {
 </html>""",
   'developer': 'ডেভেলপার: ফুরকান আকিফ ইসলেক',
   'noEmail': 'কোন ইমেল পাওয়া যায়নি',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'অ্যাকাউন্ট মুছুন',
   'profile.deleteAccountImportantText':
       'আপনি কি নিশ্চিত যে আপনি আপনার অ্যাকাউন্ট মুছতে চান? এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না।',

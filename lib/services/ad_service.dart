@@ -17,8 +17,8 @@ class AdService {
   int _targetAddCounter = 0;
 
   final String _interstitialAdUnitId = kDebugMode
-      ? 'ca-app-pub-3940256099942544/1033173712' 
-      : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; 
+      ? 'ca-app-pub-3940256099942544/1033173712'
+      : 'ca-app-pub-8683429044318430/9649358335';
 
   Future<void> initialize() async {
     await MobileAds.instance.initialize();
@@ -26,11 +26,13 @@ class AdService {
   }
 
   void _loadInterstitialAd() {
+    print('AdService: Reklam yükleniyor...');
     InterstitialAd.load(
       adUnitId: _interstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
+          print('AdService: Reklam başarıyla yüklendi!');
           _interstitialAd = ad;
           _isAdLoaded = true;
 
@@ -38,12 +40,14 @@ class AdService {
           _interstitialAd!.fullScreenContentCallback =
               FullScreenContentCallback(
             onAdDismissedFullScreenContent: (InterstitialAd ad) {
+              print('AdService: Reklam kapatıldı');
               ad.dispose();
               _isAdLoaded = false;
               _loadInterstitialAd();
             },
             onAdFailedToShowFullScreenContent:
                 (InterstitialAd ad, AdError error) {
+              print('AdService: Reklam gösterim hatası: ${error.message}');
               ad.dispose();
               _isAdLoaded = false;
               _loadInterstitialAd();
@@ -51,6 +55,7 @@ class AdService {
           );
         },
         onAdFailedToLoad: (LoadAdError error) {
+          print('AdService: Reklam yükleme hatası: ${error.message}');
           _isAdLoaded = false;
           _interstitialAd = null;
           Future.delayed(const Duration(minutes: 1), _loadInterstitialAd);
@@ -64,7 +69,7 @@ class AdService {
 
     if (_costAddCounter >= 2) {
       showInterstitialAd();
-      _costAddCounter = 0; 
+      _costAddCounter = 0;
     }
   }
 
@@ -73,7 +78,7 @@ class AdService {
 
     if (_targetAddCounter >= 1) {
       showInterstitialAd();
-      _targetAddCounter = 0; 
+      _targetAddCounter = 0;
     }
   }
 

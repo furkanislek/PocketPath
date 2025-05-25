@@ -40,7 +40,7 @@ const Map<String, String> hiIN = {
 </head>
 <body>
 <h1>PocketPath गोपनीयता नीति</h1>
-<p>अंतिम अद्यतन: 15/05/2025</p>
+<p>अंतिम अद्यतन: 24/05/2025</p>
 
 <h2>परिचय</h2>
 <p>हम PocketPath एप्लिकेशन का उपयोग करते समय आपकी गोपनीयता का सम्मान करते हैं। यह गोपनीयता नीति बताती है कि PocketPath आपकी व्यक्तिगत जानकारी को कैसे एकत्र करता है, उपयोग करता है और सुरक्षित रखता है।</p>
@@ -82,7 +82,7 @@ const Map<String, String> hiIN = {
 </html>""",
   'developer': 'डेवलपर: फ़ुरकान अकीफ़ इस्लेक',
   'noEmail': 'कोई ईमेल नहीं मिला',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'खाता हटाएं',
   'profile.deleteAccountImportantText':
       'क्या आप वाकई अपना खाता हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।',

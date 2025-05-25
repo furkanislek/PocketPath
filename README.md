@@ -1,4 +1,6 @@
-## PocketPath: Your Personal Finance Tracker
+## 🚀 PocketPath Now Live on Google Play!
+
+📲 **[Download PocketPath from Google Play](https://play.google.com/store/apps/details?id=com.pocket.pocketPath)**
 
 ![Cream Simple Get App Instagram Story](https://github.com/user-attachments/assets/2605967e-39d5-484b-b2a9-958ba08df418)
 

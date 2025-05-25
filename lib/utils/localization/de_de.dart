@@ -40,7 +40,7 @@ const Map<String, String> deDE = {
 </head>
 <body>
 <h1>PocketPath Datenschutzrichtlinie</h1>
-<p>Zuletzt aktualisiert: 15.05.2025</p>
+<p>Zuletzt aktualisiert: 24.05.2025</p>
 
 <h2>Einleitung</h2>
 <p>Wir legen großen Wert auf Ihre Privatsphäre bei der Nutzung der PocketPath-Anwendung. Diese Datenschutzrichtlinie erklärt, wie PocketPath Ihre persönlichen Daten sammelt, verwendet und schützt.</p>

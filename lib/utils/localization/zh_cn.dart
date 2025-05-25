@@ -40,7 +40,7 @@ const Map<String, String> zhCN = {
 </head>
 <body>
 <h1>PocketPath 隐私政策</h1>
-<p>最后更新: 15/05/2025</p>
+<p>最后更新: 24/05/2025</p>
 
 <h2>介绍</h2>
 <p>我们非常重视您在使用 PocketPath 应用程序时的隐私。本隐私政策解释了 PocketPath 如何收集、使用和保护您的个人信息。</p>
@@ -82,7 +82,7 @@ const Map<String, String> zhCN = {
 </html>""",
   'developer': '开发者: Furkan Akif ISLEK',
   'noEmail': '未找到电子邮箱',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': '删除账户',
   'profile.deleteAccountImportantText': '您确定要删除您的账户吗？此操作无法撤销。',
   'profile.cancel': '取消',

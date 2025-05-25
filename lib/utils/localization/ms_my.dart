@@ -40,7 +40,7 @@ const Map<String, String> msMY = {
 </head>
 <body>
 <h1>Dasar Privasi PocketPath</h1>
-<p>Terakhir dikemas kini: 15/05/2025</p>
+<p>Terakhir dikemas kini: 24/05/2025</p>
 
 <h2>Pengenalan</h2>
 <p>Kami menghormati privasi anda semasa menggunakan aplikasi PocketPath. Dasar privasi ini menerangkan bagaimana PocketPath mengumpul, menggunakan, dan melindungi maklumat peribadi anda.</p>
@@ -82,7 +82,7 @@ const Map<String, String> msMY = {
 </html>""",
   'developer': 'Pembangun: Furkan Akif ISLEK',
   'noEmail': 'Tiada e-mel ditemui',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Padamkan Akaun',
   'profile.deleteAccountImportantText':
       'Adakah anda pasti mahu memadamkan akaun anda? Tindakan ini tidak boleh dibatalkan.',

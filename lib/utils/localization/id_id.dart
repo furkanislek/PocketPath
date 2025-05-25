@@ -40,7 +40,7 @@ const Map<String, String> idID = {
 </head>
 <body>
 <h1>Kebijakan Privasi PocketPath</h1>
-<p>Terakhir diperbarui: 15/05/2025</p>
+<p>Terakhir diperbarui: 24/05/2025</p>
 
 <h2>Pendahuluan</h2>
 <p>Kami menghormati privasi Anda saat menggunakan aplikasi PocketPath. Kebijakan privasi ini menjelaskan bagaimana PocketPath mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.</p>
@@ -82,7 +82,7 @@ const Map<String, String> idID = {
 </html>""",
   'developer': 'Pengembang: Furkan Akif ISLEK',
   'noEmail': 'Email tidak ditemukan',
-  'version.number': '1.0.0',
+  'version.number': '1.0.1',
   'profile.deleteAccountImportant': 'Hapus Akun',
   'profile.deleteAccountImportantText':
       'Apakah Anda yakin ingin menghapus akun Anda? Tindakan ini tidak dapat dibatalkan.',
